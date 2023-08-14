@@ -1,0 +1,587 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: montserrat_en;
+    /* src: url(../fonts/montserrat-en/Mongoli); */
+}
+
+@font-face {
+    font-family: montserrat_ar;
+    src: url(../fonts/montserrat-ar/Montserrat-Arabic\ Regular\ 400.otf);
+}
+
+body{
+    font-family: montserrat_en;
+    overflow-x: hidden;
+}
+
+   /* Grouping */
+
+:root{
+    --basicColor: #7D25F5;  
+    --blackColor: black;  
+    --weightColor: #fff;
+    --grayColor: gray;
+ }
+
+ .clr_basic{
+    color: var(--basicColor);
+ }
+
+ .bg_basic{
+    font-family: montserrat_en;
+    background-color: var(--basicColor);
+    color: var(--weightColor);
+    letter-spacing: .8px;
+ }
+
+ 
+button:focus, input:focus{
+    outline: none!important
+}
+
+
+select{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+select option{
+    padding: 15px;
+}
+
+a , a:focus , a:hover{
+   text-decoration: none;
+   transition: 0.5s;
+}
+
+.navbar-toggler:focus , select , input{
+    box-shadow: none!important;
+}
+
+select option:hover{
+    background-color: var(--basicColor)!important;
+    color: var(--weightColor)!important;
+}
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1100px;
+}
+}
+/* =================================== */
+/* =================================== */
+    /*Btn Direction  */
+    .btn_direction{
+        display: none;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        background-color: var(--blue);
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border: 0px;
+        border-radius: 10px;
+        font-size: 30px;
+        position: absolute;
+        right: 30px;
+        top: 550px;
+        position: fixed;
+    }
+
+/* ================              =================== */
+/* ================  Index Page  =================== */
+/* ================              =================== */
+
+/* Navbar Section */
+.navbar{
+    margin: 7px 0;
+}
+
+.nav-item{
+    margin: 0 22px;
+}
+
+.nav-item , .nav-item a , .nav-item button { 
+  font-size: 18px;
+}
+
+.language-selection select{
+    width: 80px!important;
+    border: 0!important;
+}
+
+.btn_nav{
+ transition: all .4s ease-in-out;
+}
+
+.btn_nav:hover{
+    color: var(--basicColor)!important;
+   border: 1px solid var(--basicColor)!important;
+}
+
+@media (min-width:320px) and (max-width:768px) {
+      .navbar-brand  img {
+         display: block!important;
+      }
+}
+
+/* Language Code */
+
+.custom-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.selected-option {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.options {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.options li {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.options li:hover {
+    background-color: #f0f0f0;
+}
+
+/* <!-- Login section -->   */
+
+.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social button , .form_SignUp .form-outline > select{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
+}
+
+.form_SignUp .form-outline > input , .form_SignUp .form-outline > select , #show_hide_password input{
+    padding: 0px 35px 0px 24px!important;
+    /* width: 565px; */
+    height: 50px;
+    color: #2d2d2d;
+    font-size: 20px;
+    transition:all 0.4s ease-in-out;
+    border-radius: 4px!important;
+}
+
+.form-outline select{
+    opacity: 0.8!important;
+}
+
+.forget_pass{
+    color: #808080;
+    padding-right: 9px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-check-input[type=checkbox]{
+    border-radius: 0!important;
+}
+
+.form_SignUp .lbl_checked{
+    font-size: 16px;
+    letter-spacing: -.40px!important;
+    color: var(--blackColor);
+}
+
+.icon_hidden_pass{
+    position: absolute;
+    right: 13px;
+    top: 12px;
+    font-size: 18px;
+}
+
+.icon_hidden_pass a{
+    color: var(--blackColor);
+    opacity: 0.8;
+}
+
+.form_SignUp .form-outline > input:focus , #show_hide_password input:focus{
+    border-color: var(--blackColor)!important;
+    box-shadow: none!important
+}
+
+.div_btn_social button:nth-child(1){
+    background-color: #3B5998;
+    color: var(--weightColor);
+}
+
+.div_btn_social button:nth-child(2){
+    background-color: #fff;
+    color: var(--blackColor);
+    border: 1px solid #F1584D;
+    stroke-width: 1px;
+}
+
+.div_btn_social button i {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.submit_signUp{
+    width: 100%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.submit_signUp:hover{
+    background-color: var(--weightColor);
+    color: var(--basicColor);
+    border: 1px solid var(--basicColor);
+}
+
+.form-select:focus{
+   border: 1px solid var(--blackColor);
+}
+/* 
+.form-select option:hover{
+    background-color: var(--basicColor)!important;
+    color: #fff;
+} */
+
+
+@media (max-width:320px) {
+    .form_SignUp .lbl_checked{
+        font-size: 13px!important;
+    }
+}
+
+
+
+/* Start Section Loading and Start Section Non Search */
+.loading_sec , .nonSearch_sec{
+    width: 100vw;
+    height: 100vh;
+}
+
+.circle_load_left , .circle_load_right , .circle_load_bottom{
+    width: 250px;
+    height: 250px;  
+    position: fixed;
+    background-color: #f1e9fe;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.circle_load_left {
+    top: -135px;
+    left: -135px;
+}
+
+ .circle_load_right{
+    top: 30vh;
+    right: -190px;
+}
+
+.circle_load_bottom{
+   bottom: -135px;
+   left: -135px; 
+}
+
+.head_nonSearch{
+ font-family: montserrat_ar;
+ font-weight: bolder;
+ letter-spacing: 0.7px;
+}
+
+.par_nonSearch{
+    color: #100F0F;
+    font-family: montserrat_en;
+    letter-spacing: 0.7px;
+    font-size: 22px;
+}
+
+@media (min-width:769px)  {
+    .circle_load_left {
+        top: -60px;
+        left: -60px;
+    }
+    
+     .circle_load_right{
+        top: 30vh;
+        right: -60px;
+    }
+    
+    .circle_load_bottom{
+       bottom: -100px;
+       left: -40px; 
+    }
+}
+
+/* ================              =================== */
+/* ================  Home Page  =================== */
+/* ================              =================== */
+
+/* <!-- Start Header section =>(Home) -->   */
+
+.bg_header{
+    /* width: fit-content;  */
+    width: 550px;
+    border-radius: 50%;
+    background-color: #f6efff;
+}
+
+.bg_header_gray{
+    border-radius: 50%;
+    background-color: #f6efff;
+}
+
+
+.bg_exper{
+    background-color: #fff!important;
+}
+
+/* .div_img_header{
+  width: 100%;
+    height: 100%;
+    background-image: url(../images/home/header.svg);
+    background-size: cover;
+    background-position:right;
+    background-repeat: no-repeat;
+} */
+
+.title_header{
+  font-family: montserrat_ar;
+  font-size: 35px;
+}
+
+.header_sec .search{
+    position: relative;
+    box-shadow: 0 3px 8px -4px gray;
+    border-radius: 8px;
+}
+
+.header_sec .search input{
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+    font-family: monospace;
+    padding: 15px;
+    padding-top: 20px;
+    padding-left: 23px;
+    font-size: 17px;
+    transition: all .4s ease-in-out;
+}
+
+.header_sec .search input:focus{
+    box-shadow: none;
+    border: 1px solid black;
+}
+
+.header_sec .search i{
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    opacity: .8;
+    font-size: 27px;
+}
+
+.header_sec .search a{
+    position: absolute;
+    top: -10px;
+    right: -16px;
+    width: 90px;
+    height: 90px;
+    /* background: var(--basicColor); */
+    border-radius: 7px;
+}
+.header_sec .search a img{
+    width: inherit;
+}
+
+/* <!-- End Header section =>(Home) -->   */
+
+/* <!-- Start Experience section =>(Home) -->   */
+.experience_sec{
+
+}
+
+.circle_steps{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--weightColor);
+    text-align: center;
+   box-shadow: 0 1.5px 0px 1px rgb(215, 215, 215);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: initial;
+}
+
+.left_col_experience{
+    padding-top: 80px;
+}
+
+
+.circle_steps h4{
+    padding: 12px;
+    color :#100F0F;
+    font-family: montserrat_ar;
+}
+
+.icon_right{
+   color: var(--basicColor);
+   font-weight: bold;
+   font-size: 35px;
+}
+
+.title_experience{
+    color: #100F0F;
+    font-size: 25px;
+}
+
+/* <!-- End Experience section =>(Home) -->   */
+
+/* <!-- Start Cultures section =>(Home) -->   */
+.cultures_sec .card{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #f2e8fe;
+    color: var(--basicColor);
+    font-family: montserrat_ar ;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+}
+
+/* <!-- End Cultures section =>(Home) -->   */
+
+/* <!-- Start Meal Type section =>(Home) -->   */
+.title_mealType , .title_cultures , .mealType__sec h6{
+    font-family: montserrat_ar;
+}
+
+.mealType__sec h6{
+  
+}
+
+/* <!-- End Meal Type section =>(Home) -->   */
+
+
+
+/* ================              =================== */
+/* ================  Q Page  =================== */
+/* ================              =================== */
+
+
+/* ================              =================== */
+/* ================  Index Page  =================== */
+/* ================              =================== */
+
+
+
+/* ================              =================== */
+/* ================  Index Page  =================== */
+/* ================              =================== */
+
+
+
+
+
+
+  /*  Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) { 
+  
+  }
+ 
+ /*  Small devices (landscape phones, 576px and up) */
+ @media (min-width: 576px) and (max-width: 767.98px) { 
+   
+  }
+ 
+ /*  Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) and (max-width: 991.98px) { 
+   
+  }
+ 
+ /*  Large devices (desktops, 992px and up) */
+ @media (min-width: 992px) and (max-width: 1199.98px) { 
+   
+  }
+ 
+ /*  Extra large devices (large desktops, 1200px and up) */
+ @media (min-width: 1200px) { 
+   
+  }  
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

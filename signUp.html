@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Log In</title>
+    <!-- FAVICON -->
+    <link rel="stylesheet icon" href="assets/images/x-icon/logo.png" type="image/logo">
+
+    <!-- file Icons -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <!-- file bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- file style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body>
+
+<!-- start navbar section -->
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container">
+        <a class="navbar-brand w-50" href="#">
+          <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="60px" class="d-none">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+       
+        <div class="d-flex  justify-content-start w-100">
+          <ul class="navbar-nav mb-2 mb-lg-0 mt-4 mt-md-0">
+            <li class="nav-item sm:mb-2 mb-0">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item sm:mb-2 mb-0">
+              <div class="custom-dropdown nav-link">
+                <div class="selected-option">
+                  <span>En</span>
+                  <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2">
+                </div>
+                <ul class="options">
+                    <li data-value="english">
+                      En
+                      <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2">
+                    </li>
+                    <li data-value="arabic">
+                      Ar
+                      <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2">
+                    </li>
+                </ul>
+            </div>
+            </li>
+            <li class="nav-item sm:mb-2 mb-0">
+              <a class="nav-link clr_basic" aria-current="page" href="login.html" >login</a>
+            </li>
+            <li class="nav-item sm:mb-2 mb-0">
+              <a href="signUp.html"><button type="button" class="btn bg_basic btn_nav">Sign Up</button></a>
+            </li>
+         </ul>  
+       </div>
+      </div>
+    </div>
+  </nav>
+<!-- end navbar section -->  
+
+    
+<!-- Start Sign Up section -->  
+    <section class="">
+        <div class="container">
+              <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center text-md-start  img_signUp">
+                          <img src="assets/images/sign/signUp.svg" alt="sign Up" width="80%"  loading="lazy">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 py-md-5 px-md-5">
+                       <form action="home.html" method="post"  class="form_SignUp mt-3 mt-md-3 pt-md-4 ">
+                            <div class=" form-outline mb-4">
+                                    <!-- <span class="error"> </span> -->
+                                    <input type="text" name="name" id="name" class="form-control p-2" pattern="[a-zA-Z][0-9]"
+                                    placeholder="Name" />
+                            </div>
+        
+                            <div class="form-outline mb-4">
+                                    <!-- <span class="error"></span> -->
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
+                            </div>
+
+                           <div class="form-outline mb-4">
+                                    <select name="" id="" class="form-select">
+                                        <option value="city"  >City</option>
+                                        <option value="Al_Qaseem">Al Qaseem</option>
+                                        <option value="city1">City 1</option>
+                                        <option value="city2">City 2</option>
+                                        <option value="city3">City 3</option>
+                                    </select>
+                           </div>
+
+                           <div class="form-outline form-group mb-4">
+                                    <span class="error"></span>
+                                    <div class="input-group" id="show_hide_password">
+                                      <input type="password" id="password" class="form-control" placeholder="Password" />
+                                      <div class="input-group-addon icon_hidden_pass">
+                                          <a href=""><i class="fa ri-eye-off-line" aria-hidden="true"></i></a>
+                                      </div>
+                                    </div>
+                          </div>
+                           <div class="form-group d-flex justify-content-between div_checked gap-2 mb-2">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="checkbox" required>
+                                      <label class="form-check-label mx-1 lbl_checked" for="checkbox"  >
+                                        I agree to the Google Terms of <a href="#">Service and Privacy Policy</a>
+                                      </label>
+                                    </div>
+                           </div>
+                           <div class="form-outline pt-2  mb-3">
+                                    <a href="py-2 px-4">
+                                    <button type="submit" class="btn   submit_signUp bg_basic ">login</button>
+                                    </a> 
+                           </div>
+                           <div class="form-outline text-center mb-4">
+                                  <a href="login.html" class="clr_basic a_to_login">
+                                    Are you already a member?
+                                  </a> 
+                            </div>
+                       </form>
+                   </div>
+              </div>
+        </div> 
+    </section>
+<!-- End Sign Up section -->  
+
+
+<!-- Add Image With Tag Option  (Language) -->
+<script>
+    const dropdown = document.querySelector('.custom-dropdown');
+  const selectedOption = dropdown.querySelector('.selected-option');
+  const optionsList = dropdown.querySelector('.options');
+  const options = optionsList.querySelectorAll('li');
+  
+  selectedOption.addEventListener('click', () => {
+      optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
+  });
+  
+  options.forEach(option => {
+      option.addEventListener('click', () => {
+          const value = option.getAttribute('data-value');
+          const text = option.textContent;
+          const icon = option.querySelector('.language-icon').cloneNode(true);
+  
+          selectedOption.innerHTML = '';
+          selectedOption.appendChild(icon);
+          selectedOption.insertAdjacentHTML('beforeend', `<span>${text}</span>`);
+  
+          optionsList.style.display = 'none';
+      });
+  });
+  
+  // Close the options list if user clicks outside
+  document.addEventListener('click', (event) => {
+      if (!dropdown.contains(event.target)) {
+          optionsList.style.display = 'none';
+      }
+  });
+  </script>
+  
+
+</script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery.txt"></script>
+    <!-- file bootstrap js -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- javascript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
