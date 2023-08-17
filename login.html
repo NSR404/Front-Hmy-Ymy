@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  Sign Up</title>
+    <title> Sign In</title>
     <!-- FAVICON -->
     <link rel="stylesheet icon" href="assets/images/x-icon/logo.png" type="image/logo">
 
@@ -26,57 +26,70 @@
       <![endif]-->
 </head>
 <body>
-    
-
-<!--Start btn direction -->
-    <!-- <div class="btn_direction"><i class="fas fa-arrow-to-top"></i></div> -->
-<!--End btn direction -->
+  
+<!--Start Code Preloading --> 
+      <section id="preloader">
+          <div  class="loading_sec bg-white w-100  d-flex flex-column justify-content-center align-items-center gap-3">
+            <div class="circle_load_left"></div>
+            <div class="circle_load_right"></div>
+            <div class="circle_load_bottom"></div>
+            <img src="assets/images/x-icon/logo.png" alt="logo" loading="lazy" width="110px">
+            <h2  class="fw-bold mt-2">Loading  <img src="assets/images/x-icon/loading-48.png" alt="loading" loading="lazy" class="rotate_ico"></h2>
+        </div>
+      </section>
+<!--End Code Preloading -->
 
 <!-- start navbar section -->
-    <nav class="navbar navbar-expand-lg navbar-light ">
-      <div class="container">
-          <a class="navbar-brand w-50" href="#">
-            <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="60px" class="d-none">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-         
-          <div class="d-flex  justify-content-start w-100">
-            <ul class="navbar-nav mb-2 mb-lg-0 mt-4 mt-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand w-50" href="#">
+              <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="90px" class="ml_11">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          
+            <div class="d-flex  justify-content-end w-100 " >
+              <ul class="navbar-nav mb-2 mb-lg-0 mt-4 mt-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="aboutUs.html">About Us</a>
               </li>
-              <li class="nav-item">
-                <div class="custom-dropdown nav-link">
-                  <div class="selected-option">
-                    <span>En</span>
-                    <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2">
-                  </div>
-                  <ul class="options">
-                      <li data-value="english">
-                        En
-                        <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2">
-                      </li>
-                      <li data-value="arabic">
-                        Ar
-                        <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2">
-                      </li>
-                  </ul>
-              </div>
+                <li class="nav-item">
+                  <div class="custom-dropdown nav-link">
+                    <div class="selected-option">
+                      <span>En</span>
+                      <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                    </div>
+                    <ul class="options">
+                        <li data-value="english">
+                          En
+                          <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                        </li>
+                        <li data-value="arabic">
+                          Ar
+                          <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2" loading="lazy" width="100%">
+                        </li>
+                    </ul>
+                </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link clr_basic" aria-current="page" href="login.html" >login</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="faq.html" >FAQ</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link clr_basic" aria-current="page" href="login.html" >login</a>
+                <li class="nav-item">
+                <a href="signUp.html"><button type="button" class="btn bg_basic btn_nav">Sign Up</button></a>
               </li>
-              <li class="nav-item">
-                 <a href="signUp.html"><button type="button" class="btn bg_basic btn_nav">Sign Up</button></a>
-              </li>
-           </ul>  
-         </div>
+            </ul>  
+          </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 <!-- end navbar section -->  
 
 <!-- Start Sign Up section -->  
@@ -86,14 +99,17 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center text-md-start  img_signUp">
                           <img src="assets/images/sign/signUp.svg" alt="sign Up" width="80%"  loading="lazy">
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 py-md-5 px-md-5">
-                       <form action="home.html" method="post"  class="form_SignUp mt-3 mt-md-4 pt-md-4 ">
-                                 <div class=" form-outline mb-4">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pt-md-3 px-md-5">
+                      <div class="text-center d-none d-md-block mb-4">
+                          <img src="assets/images/x-icon/logo.png" alt="Logo" width="115px"  loading="lazy">
+                      </div>
+                       <form action="home.html" method="post"  class="form_SignUp mt-3 mt-md-4 pt-md-0 ">
+                                 <div class=" form-outline mb-3">
                                         <span class="error"> </span>
                                         <input type="text" id="e-mail=" class="form-control p-2" pattern="[a-zA-Z][0-9]"
                                           placeholder="E-mail" />
                                  </div>
-                                 <div class="form-outline form-group mb-4">
+                                 <div class="form-outline form-group mb-3">
                                        <span class="error"></span>
                                         <div class="input-group" id="show_hide_password">
                                           <input type="password" id="password" class="form-control" placeholder="Password" />
@@ -102,7 +118,7 @@
                                           </div>
                                         </div>
                                 </div>
-                                 <div class="form-group d-flex justify-content-between div_checked gap-2 mb-4">
+                                 <div class="form-group d-flex justify-content-between div_checked gap-2 mb-3">
                                         <div class="form-check">
                                           <input class="form-check-input" type="checkbox" value="" id="checkbox" required>
                                           <label class="form-check-label mx-1 lbl_checked" for="checkbox"  >
@@ -113,7 +129,7 @@
                                             <a href="#" class="forget_pass">Forgot password?</a>
                                         </div>
                                  </div>
-                                 <div class="form-group d-flex justify-content-between gap-3 text-center pt-2 mb-4 div_btn_social">
+                                 <div class="form-group d-flex justify-content-between gap-3 text-center pt-2 mb-3 div_btn_social">
                                         <button class="btn p-3 w-75 h-100">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="23" viewBox="0 0 13 23" fill="none" class="mx-1">
                                             <path d="M12.0217 0.562988H9.14268C5.90868 0.562988 3.81868 2.70699 3.81868 6.02599V8.54499H0.924681C0.804538 8.54499 0.689315 8.59271 0.604361 8.67767C0.519407 8.76262 0.47168 8.87785 0.47168 8.99799V12.648C0.47168 12.7681 0.519407 12.8834 0.604361 12.9683C0.689315 13.0533 0.804538 13.101 0.924681 13.101H3.81868V22.31C3.81868 22.4301 3.86641 22.5454 3.95136 22.6303C4.03631 22.7153 4.15154 22.763 4.27168 22.763H8.04768C8.16782 22.763 8.28305 22.7153 8.368 22.6303C8.45295 22.5454 8.50068 22.4301 8.50068 22.31V13.101H11.8847C12.0048 13.101 12.12 13.0533 12.205 12.9683C12.29 12.8834 12.3377 12.7681 12.3377 12.648V8.99799C12.3377 8.87785 12.29 8.76262 12.205 8.67767C12.12 8.59271 12.0048 8.54499 11.8847 8.54499H8.50068V6.40999C8.50068 5.38399 8.74568 4.86299 10.0827 4.86299H12.0217C12.1416 4.86272 12.2566 4.81488 12.3414 4.72995C12.4261 4.64503 12.4737 4.52996 12.4737 4.40999V1.01999C12.4742 0.960248 12.4629 0.900993 12.4404 0.845635C12.418 0.790278 12.3848 0.739911 12.3428 0.697435C12.3008 0.654958 12.2508 0.621212 12.1957 0.598138C12.1405 0.575064 12.0814 0.563118 12.0217 0.562988Z" fill="white"/>
@@ -130,12 +146,12 @@
                                           </svg>
                                            Gmail</button>
                                  </div>
-                                 <div class="form-outline pt-2  mb-4">
+                                 <div class="form-outline pt-2  mb-3">
                                       <a href="py-2 px-4">
                                         <button type="submit" class="btn   submit_signUp bg_basic ">login</button>
                                       </a> 
                                  </div>
-                                 <div class="form-outline text-center mb-4">
+                                 <div class="form-outline text-center mb-3">
                                   <a href="signUp.html" class="clr_basic a_to_login">
                                      Or log in as guest from Here
                                   </a> 
@@ -147,43 +163,11 @@
     </section>
 <!-- End Sign Up section -->  
 
-<!-- Add Image With Tag Option  (Language) -->
-<script>
-  const dropdown = document.querySelector('.custom-dropdown');
-const selectedOption = dropdown.querySelector('.selected-option');
-const optionsList = dropdown.querySelector('.options');
-const options = optionsList.querySelectorAll('li');
-
-selectedOption.addEventListener('click', () => {
-    optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
-});
-
-options.forEach(option => {
-    option.addEventListener('click', () => {
-        const value = option.getAttribute('data-value');
-        const text = option.textContent;
-        const icon = option.querySelector('.language-icon').cloneNode(true);
-
-        selectedOption.innerHTML = '';
-        selectedOption.appendChild(icon);
-        selectedOption.insertAdjacentHTML('beforeend', `<span>${text}</span>`);
-
-        optionsList.style.display = 'none';
-    });
-});
-
-// Close the options list if user clicks outside
-document.addEventListener('click', (event) => {
-    if (!dropdown.contains(event.target)) {
-        optionsList.style.display = 'none';
-    }
-});
-</script>
 
     <!-- jQuery -->
     <script src="assets/js/jquery.txt"></script>
     <!-- file bootstrap js -->
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- javascript -->
     <script src="assets/js/main.js"></script>
 </body>
