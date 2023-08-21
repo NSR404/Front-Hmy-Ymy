@@ -14,9 +14,12 @@
     src: url(../fonts/montserrat-ar/Montserrat-Arabic\ Regular\ 400.otf);
 }
 
+html{
+    overflow-x: hidden!important;
+  }
+
 body{
     font-family: montserrat_en;
-    overflow-x: hidden;
 }
 
    /* Grouping */
@@ -71,10 +74,6 @@ a , a:focus , a:hover{
     box-shadow: none!important;
 }
 
-select option:hover{
-    background-color: var(--basicColor)!important;
-    color: var(--weightColor)!important;
-}
 
 
 .pointr_cursor{
@@ -186,6 +185,7 @@ select option:hover{
     padding: 0;
     margin: 0;
     list-style: none;
+    z-index: 9998;
 }
 
 .options li {
@@ -201,7 +201,7 @@ select option:hover{
 
 /* <!-- Login section -->   */
 
-.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social button , .form_SignUp .form-outline > select{
+.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social a , .form_SignUp .form-outline > select{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
 }
 
@@ -252,21 +252,28 @@ select option:hover{
     box-shadow: none!important
 }
 
-.div_btn_social button:nth-child(1){
+.div_btn_social a.facebook{
     background-color: #3B5998;
     color: var(--weightColor);
 }
 
-.div_btn_social button:nth-child(2){
+.div_btn_social a.google{
     background-color: #fff;
     color: var(--blackColor);
     border: 1px solid #F1584D;
     stroke-width: 1px;
 }
 
-.div_btn_social button i {
+.div_btn_social a i {
     font-weight: bold;
     font-size: 21px;
+}
+
+.error{
+    color: rgb(224, 7, 7);
+    margin: 0 !important;
+    margin-top: 2px !important;
+    padding: 0;
 }
 
 .submit_signUp{
@@ -288,16 +295,16 @@ select option:hover{
 .form-select:focus{
    border: 1px solid var(--blackColor);
 }
-/* 
-.form-select option:hover{
-    background-color: var(--basicColor)!important;
-    color: #fff;
-} */
+
 
 
 @media (max-width:320px) {
     .form_SignUp .lbl_checked{
         font-size: 13px!important;
+    }
+
+    .privacyPolicy_sec .title_mealType h3{
+        font-size: 22px;
     }
 }
 
@@ -307,6 +314,33 @@ select option:hover{
 .loading_sec , .nonSearch_sec{
     width: 100vw;
     height: 100vh;
+}
+
+select option:checked{
+    background-color: var(--basicColor)!important;
+    color: var(--weightColor);
+}
+
+select option:focus{
+    background-color: var(--basicColor)!important;
+    color: var(--weightColor);
+}
+
+select option:hover{
+    background-color: var(--basicColor)!important;
+    color: var(--weightColor);
+}
+select option:disabled{
+    background-color: var(--basicColor)!important;
+    color: var(--weightColor)!important;
+}
+
+
+
+@media (min-width:768px) and (max-width:1025px) {
+     .search_sec .w_70_1024{
+        width: 70%!important;
+     }
 }
 
 .circle_load_left , .circle_load_right , .circle_load_bottom{
@@ -373,7 +407,7 @@ select option:hover{
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;
+    z-index: 99999999999;
     max-height: 100vh;
 }
 
@@ -419,49 +453,27 @@ select option:hover{
         padding-left: 0!important;
         padding-right: 0!important;
     }
+
+    .ingredientFood_sec .parentCircle .circle_load_border{
+        width:480px!important;
+        height: 540px!important;
+    }
+    
+    .ingredientFood_sec .parentCircle .circle_load_blue {
+        width: 510px!important;
+        height: 540px!important;
+    }
 }
 
-/* Error Page Media */
-#body_404{
-    width: 100vw;
-    height: 100vh;
-   overflow: hidden;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+/* Page 404 and 500 */
+@media (min-width:600px) {
+    .w_media_error_404  img{
+        width: 550px!important;
+    }
+    .w_media_error_500 img{
+        width: 400px!important;
+    }
 }
-
-#p_404{
- background-image: url(../images/error/404.svg);
- background-repeat: no-repeat;
- background-size: contain;
- width: 60%!important;
- height: 75vh; 
-}
-
-.w_media_error{
- width: 480px;
- height: 480px;
-}
-
-.w_media_error_404{
-    padding-top: 70px;
-    width: 600px;
-    height: 500px;
-}
-
-@media (max-width:595px) {
-    .w_media_error{
-        padding-top: 10vh;
-        width: 300px;
-        height: 300px;
-  }  
-  #p_404{      
-        width: 100%!important;
-        height: 55vh; 
-   }
-}
-
 /* ================              =================== */
 /* ================  Home Page  =================== */
 /* ================              =================== */
@@ -515,11 +527,197 @@ select option:hover{
     transition: all .4s ease-in-out;
 }
 
+footer .w_90{
+    width: 90%;
+}
+
+@media (max-width:555px) {
+   footer .div_Add_email .search input{
+        margin-bottom: 3px!important;
+    }
+    .div_Add_email .search a{
+        display: contents!important;
+    }
+}
+
+@media (max-width:282px) {
+   footer .div_Add_email .search input{
+        width: 248px!important;
+    }
+}
+
 @media (max-width:550px) {
     .header_sec .search input, footer .search input {
         padding: 20px 30px 15px 23px!important;
     }
 }
+
+
+@media (min-width:595px) and (max-width:610px) {
+    .header_sec .bg_header {
+       padding: 0px 73px;
+     }
+    .header_sec .bg_header , .experience_sec .bg_header{
+        width: 100%!important;
+       text-align: center;
+       margin-top: 0;
+    }
+    .header_sec .w_600 , .experience_sec .w_600{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width:767px) and (max-width:769px) {
+    .header_sec .bg_header {
+        width: 410px!important;
+    }
+
+    #home_page .rootMain {
+        padding-right: 0!important;
+        padding-left: 0!important;
+    }
+
+    .header_sec .search input{
+        padding: 20px 0 15px 23px!important;
+    }
+
+    .experience_sec .bg_header{
+        padding: 0;
+        text-align: center;
+        width: 290px!important;
+        height: fit-content;
+    }
+    .experience_sec .bg_header img{
+        width: 100%!important;
+    }
+    .experience_sec .pickChef{
+        width: max-content!important;
+    }
+
+    .Experience_of_day .box{
+        width: 240px!important;
+        height: 240px!important;
+    }
+
+    .Experience_of_day .inner_descr_swiper_slide{
+        flex-direction: column!important;
+    }
+
+    .Experience_of_day .star_box_food_1{
+        padding: 0px 4px!important;
+    }
+
+    .Experience_of_day .star_box_food_2{
+        right: 5px!important;
+        padding: 2px 6px;
+    }
+    .cultures_sec .card{
+        width: 148px!important;
+        height: 148px!important;
+    }
+
+   .mealType__sec .media_600_bt{
+        padding-right: 0!important;
+    }
+
+    .mealType__sec .width_full_768{
+        width: 100%!important;
+        padding-left: 0;
+    }
+
+    .mealType__sec .card{
+        width: 166px!important;
+        height: 166px!important;
+    }
+}
+
+@media (max-width:737px) {
+    .media_600_bt{
+       justify-content: space-around!important;
+   }
+   .experience_sec .bg_header{
+    text-align: center;
+}
+
+.Experience_of_day .swiper-button-prev , .Experience_of_day .swiper-button-next{
+    transform: rotate(0deg)!important;
+}
+}
+
+@media (min-width:798px) and (max-width:913px) {
+    #home_page .rootMain {
+        padding-right: 0!important;
+        padding-left: 0!important;
+    }
+
+    .header_sec .bg_header {
+        width: 375px!important;
+    }
+    .header_sec .search input{
+        padding: 20px 0 15px 23px!important;
+    }
+
+    .experience_sec .bg_header{
+        padding: 0;
+        text-align: center;
+        width: 290px!important;
+        height: fit-content;
+    }
+    .experience_sec .bg_header img{
+        width: 100%!important;
+    }
+    .experience_sec .pickChef{
+        width: max-content!important;
+    }
+
+
+    .cultures_sec .px_800_812_0{
+        padding: 0!important;
+    }
+
+
+
+    .Experience_of_day .box{
+        width: 240px!important;
+        height: 240px!important;
+    }
+
+    .Experience_of_day .inner_descr_swiper_slide{
+        flex-direction: column!important;
+    }
+
+    .Experience_of_day .star_box_food_1{
+        padding: 0px 4px!important;
+    }
+
+    .Experience_of_day .star_box_food_2{
+        right: 5px!important;
+        padding: 2px 6px;
+    }
+    .cultures_sec .card{
+        width: 148px!important;
+        height: 148px!important;
+    }
+
+
+    .mealType__sec .width_full_768{
+        width: 100%!important;
+        padding-left: 0;
+    }
+
+    .mealType__sec .card{
+        width: 166px!important;
+        height: 166px!important;
+    }
+
+    .header_sec .title_header br , .experience_sec .title_experience br{
+        display: none !important ;
+    }
+}
+
+
+
 
 .header_sec .search input:focus , footer .search input:focus{
     box-shadow: none;
@@ -571,7 +769,7 @@ select option:hover{
     transition: all 0.5s ease-in-out;
 }
 
-.header_sec .modal-footer button:hover{
+.header_sec .modal-footer button:hover , .add_comment_div button:hover {
     border: 1px solid var(--basicColor);
     color: var(--basicColor);
     background-color: var(--weightColor);
@@ -586,8 +784,9 @@ select option:hover{
     opacity: 1!important;
     color: var(--basicColor);
     padding-right: 33px!important;
-
 }
+
+
 
 .header_sec .modal-dialog{
     max-width: fit-content!important;
@@ -665,11 +864,22 @@ select option:hover{
       transform: rotate(90deg);
     }
 
-   .Experience_of_day .swiper-button-prev {
-      left: 20px;
-      transform: rotate(90deg);
+    .Experience_of_day .swiper-slide{
+        margin-right: 0!important;
+        margin-right: 0!important;
+        margin-right: 0!important;
+        margin-right: 0!important;
+        margin-right: 0!important;
     }
   }
+
+  @media (max-width: 602px) { 
+     .Experience_of_day .swiper-slide{
+         margin-right: 0!important;
+         margin-right: 0!important;
+         padding-right: 0!important;
+     }
+   }
 
  .Experience_of_day .swiper-slide{
     margin-bottom: 10px;
@@ -756,7 +966,7 @@ select option:hover{
 .star_box_food_2{
     background-color: var(--weightColor);
     border-radius: 50%; 
-    right: 11px;
+    right: 35px;
     top: 11px;
     padding: 8px 11px;
     font-size: 16px;
@@ -926,6 +1136,9 @@ select option:hover{
         padding: 11px!important;
         font-size: 13px!important;
     }
+    footer .search i {
+       display: none!important;
+    }
 }
 
 .question_sec .accordion-item{
@@ -967,6 +1180,15 @@ select option:hover{
     color: var(--basicColor)!important;
 }
 
+.hide-after::after{
+  position: absolute;
+  left: 10px;
+}
+.display_none::after{
+    display: none!important;
+}
+
+
 /* <!-- End Questions section =>(Home) -->   */
 
 /* <!-- Start Footer section =>(Home) -->   */
@@ -974,7 +1196,7 @@ footer{
     background-color: #000;
     margin-top: 200px;
     padding-top: 400px;
-    margin-bottom: 0;
+    margin-bottom: -1px!important;
 }
 .add_email_Sec{
     display: flex;
@@ -987,7 +1209,6 @@ footer{
   border-radius: 22px;
   margin: auto;
   color: var(--weightColor);
-  width: 1000px;
   height: 270px;
 }
 
@@ -1024,13 +1245,19 @@ footer .search a button{
     transition: all 0.4s ease-in-out;
 }
 
-footer .search a button:hover , .detailsFood_sec .btn_book_now:hover  {
+footer .search a button:hover , .detailsFood_sec .btn_book_now:hover , .back_home:hover{
   border: 1px solid var(--basicColor);
   color: var(--basicColor)!important;
 }
 
 .content_footer{
     margin-top: 200px;
+}
+
+.content_footer > .row {
+   width: inherit!important;
+   margin-left: 0!important;
+   margin-right: 0!important;
 }
 
 .clr_li_footer{
@@ -1048,7 +1275,7 @@ footer .hr_line{
     background-color: gray;
 }
 
-@media (max-width:550px) {
+@media (min-width:320px) and  (max-width:550px) {
      .div_Add_email h3 {
         font-size: larger!important;
       }
@@ -1064,9 +1291,17 @@ footer .hr_line{
          background-color: var(--weightColor);
          color: var(--basicColor);
       }
-      .div_Add_email .search input{
-        width: 295px!important;
+    footer  .div_Add_email .search input{
+        width: 280px!important;
         font-size: small;
+      }
+}
+
+@media (max-width:321px) {
+   footer .div_Add_email .search input{
+        width: 260px!important;
+        height: 50px;
+        padding: 20px 8px 15px 23px!important;
       }
 }
 /* <!-- End Footer section =>(Home) -->   */
@@ -1076,18 +1311,28 @@ footer .hr_line{
 /* ================  About Us Page  =================== */
 /* ================              =================== */
 .aboutUs_sec img.img_aboutUs{
-  width: inherit;
+  width: fit-content;
+  height: 400px;
 }
 
 .aboutUs_sec .parg_aboutUs{
-    font-size: 19px;
     font-family: montserrat_en;
-    padding: 0 38px;
-    padding: 0 38px;
-    line-height: 1.9;
+    line-height: 2;
+    text-align: initial;
 }
 
-@media (max-width:769px) {
+
+.aboutUs_sec .ar_img_whoAre_we , .ar_img_homeCalender{
+    display: none;
+}
+
+@media (min-width:910px) and (max-width:913px) {
+    .aboutUs_sec .ar_img_whoAre_we, .ar_img_homeCalender{
+        margin-top: 40px!important;
+    }
+}
+
+@media (max-width:913px) {
      #aboutUs .rootMain {
         padding-right: 0!important;
         padding-left: 0!important;
@@ -1098,11 +1343,31 @@ footer .hr_line{
     }
 }
 
-@media (min-width:767px) {
+@media (max-width:415px) {
+    .aboutUs_sec img.img_aboutUs {
+        width: inherit!important;
+        height: 280px;
+    }
+}
+
+/* @media (min-width:767px) {
     .aboutUs_sec img.img_aboutUs{
         width: 92%!important;
      }   
+} */
+
+@media (min-width:768px) and (max-width:913px) {
+    
+    .flex_column_820{
+        flex-direction: column!important;
+    }
+    .flex_column_reverse_820 div , .flex_column_820 div{
+        width: inherit!important;
+    }
+
+  
 }
+
 
 /* ================              =================== */
 /* ================  Search Page  =================== */
@@ -1120,9 +1385,14 @@ footer .hr_line{
   border: 0;
 }
 
+
 .search_sec .search  i , .search_sec .search input::placeholder , .search_sec .search input {
     opacity: 1;
     color: var(--weightColor)!important;
+}
+
+.search_sec .search i{
+    left: 9px!important;
 }
 
 .search_sec .search_sec .search input::placeholder{
@@ -1188,6 +1458,10 @@ footer .hr_line{
     background-color: #e8d8fe;
 }
 
+.text_start{
+    text-align: start!important;
+}
+
 .detailsFood_sec .title_food , .detailsFood_sec .number_request{
     color: #100F0F;
     font-family: Mongolian;
@@ -1215,7 +1489,7 @@ footer .hr_line{
   font-family: Mongolian;
 }
 
-.detailsFood_sec .quantity-box , .btn_book_now{
+.detailsFood_sec .quantity-box , .btn_book_now , .bookingNow_sec .quantity-box{
     position: relative;
     border: 1.5px solid #AAAAAA;
     border-radius: 3px;
@@ -1223,11 +1497,11 @@ footer .hr_line{
     transition: all 0.5s ease-in-out;
 }
 
-.detailsFood_sec .quantity-box{
+.detailsFood_sec .quantity-box , .bookingNow_sec .quantity-box{
     width: 115px;
 }
 
-.detailsFood_sec .quantity-input {
+.detailsFood_sec .quantity-input , .bookingNow_sec .quantity-input {
     text-align: center;
     border: none;
     padding: 5px;
@@ -1237,7 +1511,7 @@ footer .hr_line{
     
 }
 
-.detailsFood_sec .quantity-button {
+.detailsFood_sec .quantity-button , .bookingNow_sec .quantity-button {
     position: absolute;
     padding: 0 10px;
     cursor: pointer;
@@ -1246,11 +1520,11 @@ footer .hr_line{
     background: none;
 }
 
-.detailsFood_sec .quantity-button:nth-child(1) {
+.detailsFood_sec .quantity-button:nth-child(1) ,  .bookingNow_sec .quantity-button:nth-child(1) {
     top: 14px;
 }
 
-.detailsFood_sec .quantity-button:nth-child(3) {
+.detailsFood_sec .quantity-button:nth-child(3) ,  .bookingNow_sec .quantity-button:nth-child(3) {
     top: 14px;
     right: 0;
 }
@@ -1289,6 +1563,9 @@ footer .hr_line{
     z-index:-9999 ;
 }
 
+.alsoServe_sec  .star_box_food_2 , .detailsFood_sec .star_box_food_2{
+   right: 5px!important;
+}
 
 @media (min-width:1020px) {
      .rootMain{
@@ -1299,10 +1576,230 @@ footer .hr_line{
      }
 }
 
+/* <!-- Start ingredient Food Section --> */
+.ingredientFood_sec{
+    position: relative;
+}
+
+
+.ingredientFood_sec .padding_style p ,.ingredientFood_sec .padding_style h4{
+    font-family: 'montserrat_en';
+}
+
+.ingredientFood_sec .padding_style p{
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+@media (width:820px) {
+    #privacyPolicy .rootMain{
+       padding-right: 0!important;
+       padding-left: 0!important;
+       margin-right: 0!important;
+       margin-right: 0!important;
+    }
+
+    #privacyPolicy .w_100_767_769{
+        width: 100%!important;
+    }
+
+}
+
+@media (min-width:819px) and (max-width:913px){
+    .onlineReview_sec .bg_img_review {
+        top: 133px!important;
+        width: 406px!important;
+    }
+
+    .ingredientFood_sec .padding_style{
+        width: 63%!important;
+    }
+
+    .ingredientFood_sec  .h_555px {
+        margin-left: 95px!important;
+    }
+}
+
+@media (width:540px){
+    .ingredientFood_sec .padding_style{
+        padding-top: 88px!important;
+        width: 84%!important;
+    }
+}
+
+
+@media (min-width:767px) and (max-width:769px) {
+   
+    .padding_style p{
+        padding-right: 20px!important;
+    }
+     .px_0_md{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+
+    #privacyPolicy .rootMain{
+       padding-right: 0!important;
+       padding-left: 0!important;
+       margin-right: 0!important;
+       margin-left: 0!important;
+    }
+
+    #privacyPolicy .w_100_767_769 ,.onlineReview_sec .w_100_767_769{
+        width: 100%!important;
+    }
+    
+}
+
+@media (min-width:820px) and (max-width:1180px) {
+     .px_0_md{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+}
+
+
+
+.ingredientFood_sec .parentCircle .circle_load_border{
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    z-index: -9999;  background-color: var(--weightColor);
+    border: 1px solid var(--basicColor);
+}
+
+.ingredientFood_sec .parentCircle .circle_load_blue{
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 558px;
+    height: 558px;
+    background-color: var(--basicColor);
+    border-radius: 50%;
+    z-index: -999;
+    padding-top: 100px;
+}
+
+.ingredientFood_sec .parentCircle .circle_load_blue{
+    padding: 0 58px;
+}
+
+@media (min-width:765px) and (max-width:769px) {
+    .ingredientFood_sec .parentCircle .circle_load_blue{
+        left: -15px;
+    }
+   .ingredientFood_sec .padding_style{
+        padding-left: 70px!important;
+    }
+}
+
+
+@media (max-width:415px) {
+    .ingredientFood_sec .padding_style{
+        width: 90%!important;
+        padding-left: 3px!important;
+        padding-right: 3px!important;
+    }
+
+    .ingredientFood_sec .h_555px{
+        height: auto!important;
+    }
+
+    .ingredientFood_sec .parentCircle .circle_load_blue , .ingredientFood_sec .parentCircle .circle_load_border {
+        display: none !important;
+    }
+
+   .ingredientFood_sec .padding_style h4{
+        font-weight: bolder;
+        color: var(--basicColor)!important;
+    }
+
+   .ingredientFood_sec .padding_style p{
+        color: black!important;
+    }
+
+    .ingredientFood_sec .padding_style{
+        width: 99%!important;
+    }
+}
+
+@media (min-width:590px) and (max-width:610px) {
+   .ingredientFood_sec .padding_style{
+        padding-top: 100px;
+    }
+}
+
+@media (max-width:415px) {
+    .ingredientFood_sec .circle_load_blue p{
+        width: 65%;
+        padding: 0 8px!important;
+    } 
+}
+
+.ingredientFood_sec .ingredientTable{
+    box-shadow: 0 1px 8px -2px var(--grayColor);
+    width: 75%;
+}
+
+@media (max-width:1080px) {
+    .ingredientFood_sec .ingredientTable{
+        width: 95%;
+    } 
+}
+.ingredientFood_sec .h_555px{
+    height: 555px;
+}
+
+.ingredientFood_sec .ingredientTable .head_table{
+letter-spacing: 1.4px;
+}
+
+.ingredientFood_sec .ingredientTable tr{
+    line-height: 2;
+}
+
+.ingredientFood_sec table tbody ,.ingredientFood_sec td ,.ingredientFood_sec tfoot ,.ingredientFood_sec th ,.ingredientFood_sec thead , tr{
+    border-style: none;
+}
+
+.ingredientFood_sec .ingredientTable tr th{
+    letter-spacing: 1.6;
+}
+
+.ingredientFood_sec .ingredientTable tr th:nth-child(1){
+    border-top-left-radius:7px;
+    border-bottom-left-radius:7px;
+}
+
+.ingredientFood_sec .ingredientTable tr th:nth-child(2){
+    border-top-right-radius:7px;
+    border-bottom-right-radius:7px;
+}
+
+
+/* <!-- End ingredient Food Section --> */
+
+
+
+
+
 /* <!-- Start Online Review Section --> */
 
 .onlineReview_sec{
    margin-bottom: 130px!important;
+}
+
+.onlineReview_sec > div{
+    width: 100%!important;
+}
+
+@media (max-width:769px) {
+    .onlineReview_sec{
+        margin-bottom: 0!important;
+     }
 }
 
 .onlineReview_sec .box_reviw{
@@ -1311,13 +1808,15 @@ footer .hr_line{
    text-align: center;
  }
 
+
+
 .onlineReview_sec .name_review , .onlineReview_sec .desc_review{
     font-family: montserrat_ar;
  }
 
 .onlineReview_sec .desc_review{
     color: #060606;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .onlineReview_sec .name_review{
@@ -1329,9 +1828,11 @@ footer .hr_line{
  }
 
 
+
+
  .onlineReview_sec .bg_img_review {
     background-image: url(../images/online_review/Online_Review.svg);
-    top: -18px;
+    top: 42px;
     right: 0px;
     width: 460px;
     height: 400px;
@@ -1341,11 +1842,24 @@ footer .hr_line{
     position: absolute;
 }
 
+.onlineReview_sec .ar_bg_img_review {
+    background-image: url(../images/online_review/ar_Online_Review.svg);
+    position: absolute;
+    top: 42px;
+    left: 0px;
+    width: 460px;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 15px!important;
+    display: none;
+}
+
 .onlineReview_sec .swiper-button-prev, .swiper-rtl .swiper-button-next{
     left: 3px;
 }
 .onlineReview_sec .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled ,.onlineReview_sec .swiper-button-next, .swiper-rtl .swiper-button-prev{
-    right: 2px;
+    /* right: 2px; */
 }
 
 .onlineReview_sec .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
@@ -1358,7 +1872,7 @@ footer .hr_line{
 
 @media (max-width:600px) {
     .onlineReview_sec{
-        padding-right: 22px;
+        /* padding-right: 22px; */
     }
 }
 
@@ -1367,7 +1881,7 @@ footer .hr_line{
    #detailsFood .rootMain{
         padding-right: 0px!important;
     }
-     .onlineReview_sec .bg_img_review{
+     .onlineReview_sec .bg_img_review ,.onlineReview_sec .ar_bg_img_review{
         background-image: none;
      }
 }
@@ -1378,12 +1892,17 @@ footer .hr_line{
 /* <!-- Start (Also Serve ) section =>(Home) -->   */
 .alsoServe_sec .title_alsoServe svg:nth-child(1){
         transform: rotate(31deg);
-        margin-right: -16px;
+        margin-right: -23px;
 }
 
 .alsoServe_sec .title_alsoServe svg:nth-child(2){
         transform: rotate(-31deg);
         margin-left: -23px;
+}
+@media (min-width:767px) and (max-width:1081px) {
+      .alsoServe_sec  div .p_left_0{
+           width: 100%!important;
+      }
 }
 
 @media (max-width:376px) {
@@ -1398,9 +1917,349 @@ footer .hr_line{
 }
 /* <!-- End (Also Serve ) section =>(Home) -->   */
 
-
  /* <!-- End Details Food Section --> */
 
+
+/* ================              =================== */
+/* ================  Service and Privacy Policy  ============ */
+/* ================              =================== */
+/* <!-- Start Service and Privacy Policy section -->   */
+.privacyPolicy_sec p , .privacyPolicy_sec li{
+    color: black;
+}
+
+#privacyPolicy .circle_load_left{
+    width: 600px;
+    height: 600px;
+    z-index: -999;
+    top: -280px;
+    left: -200px;
+}
+
+.privacyPolicy_sec ul{
+ list-style: auto;
+ padding-left: 17px!important;
+ margin-right: 17px;
+}
+/* <!-- End Service and Privacy Policy section -->   */
+
+.detailsFood_sec .swiper-slide-active ,.onlineReview_sec .swiper-slide-active{
+    margin-right: 0!important;
+}
+
+/* ================              =================== */
+/* ================  Booking Now Page  ============ */
+/* ================              =================== */
+/* <!-- Start Booking Now Section --> */
+
+.bookingNow_sec .calendar {
+    width: 403px;
+    margin: 0 auto;
+}
+
+.bookingNow_sec .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+.bookingNow_sec .calendar-day {
+    position: relative;
+    text-align: center;
+    padding: 5px 11px 0 11px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 3px;
+    color: var(--basicColor);
+}
+
+.bookingNow_sec .calendar-day.selected_day{
+    background-color: #cba8fb;
+    color: #263238;
+    height: 32px;
+    margin-top: 4px;
+}
+
+.bookingNow_sec .calendar-day.booked {
+    background-color: #EBEBEB;
+    color: #263238;
+    font-weight: 400;
+    padding: 5px;
+    margin: 3px;
+}
+
+.bookingNow_sec .calendar-day.selected {
+    background-color: #cba8fb;
+    color: #263238;
+}
+
+
+.bookingNow_sec .nameDays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.bookingNow_sec .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(125, 37, 245, 0.5);
+    display: none;
+}
+
+.bookingNow_sec .overlay.active {
+    display: block;
+}
+
+.bookingNow_sec .calendar-selects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.bookingNow_sec #monthSelect,.bookingNow_sec #yearSelect {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.bookingNow_sec .form-check-input:checked {
+    background-color: var(--basicColor);
+    border-color: var(--basicColor);
+}
+
+@media (max-width:415px) {
+    .bookingNow_sec .w_sm_100{
+        width: 100%!important;
+    }
+    .bookingNow_sec .calendar{
+        width: inherit;
+    }
+    .bookingNow_sec .img_calender{
+        width: -webkit-fill-available;
+    }
+}
+
+.bookingNow_sec .circle_bookNow_1{
+        position: absolute;
+        top: -10px;
+        right: -315px;
+        height: 575px;
+        width: 680px;
+        background-color: #ebdefe;
+        border-radius: 50%;
+        z-index: -99;
+}
+
+.bookingNow_sec .circle_bookNow_2{
+    position: absolute;
+    top: -14px;
+    right: -285px;
+    height: 575px;
+    width: 690px;
+    border-radius: 50%;
+    background-color: #f4ecfc;
+    z-index: -999;
+}
+
+.bookingNow_sec .circle_bookNow_3{
+    position: absolute;
+    top: -18px;
+    right: -265px;
+    height: 575px;
+    width: 700px;
+    border-radius: 50%;
+    z-index: -9999;
+    background-color: #faf6ff;
+}
+
+.bookingNow_sec .hr_line{
+    height: 2px;
+    background-color: #263238;
+}
+
+.bookingNow_sec .right_img{
+    height: -webkit-fill-available;
+    margin-bottom: -130px;
+}
+
+
+.booking_hours{
+    display: none;
+}
+
+/* <!-- start radio (Dine in - Pick up - Out door ) --> */
+.radio_div_select{
+   z-index: 995;
+ }
+
+.radio_div_select label , .radio_div_select input{
+    color: #100F0F;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media (max-width:1025px) {
+     .radio_div_select_d_p_o{
+        width: 91%!important;
+        padding-left: 11px;
+     }
+}
+
+
+@media (min-width:1075px) and (max-width:1081px) {
+    .radio_div_select_d_p_o{
+       padding: 0!important;
+    }
+}
+
+@media (min-width:766px) and (max-width:769px) {
+    .radio_div_select_d_p_o{
+        margin-top: 120px!important;
+    }
+}
+
+/* <!-- End radio (Dine in - Pick up - Out door ) --> */
+
+
+/* <!--Start Div Number of guests --> */
+.box_checkbox_2  , .box_checkbox_1{
+   background-color: #cfc7da;
+   box-shadow: 0 2px 7px -2px var(--basicColor);
+   border-radius: 16px;
+}
+
+.box_checkbox_1 img{
+    width: fit-content;
+    height: 228px;
+    margin-left: -100px;
+    position: absolute;
+    top: -48px;
+    left: -17px!important;
+}
+
+@media (max-width:415px) {
+    .box_checkbox_1 img{
+             display: none!important;
+     }
+     .box_checkbox_1 .ml_box{
+          margin-left: 0!important;
+     }
+     .box_checkbox_2 .leftPart_box svg{
+        display: none!important;
+     }
+}
+
+@media (min-width:590px) and (max-width:610px) {
+    .box_checkbox_2 .leftPart_box svg {
+        margin-left: -42px!important;
+    }
+}
+
+
+
+.box_checkbox_1 .ml_box{
+    margin-left: 60px;
+}
+
+.rightPart_box .form-outline label{
+    color: #100F0F;
+    font-family: Mongolian;
+}
+
+.bookingNow_sec .rightPart_box h5{
+    font-family: Mongolian ;
+    font-weight: bolder;
+}
+
+.bookingNow_sec .rightPart_box .quantity-box{
+  border: none;
+}
+
+.bookingNow_sec .rightPart_box .quantity-input{
+     height: 70%!important;
+     border: 1px solid var(--basicColor);
+}
+
+.bookingNow_sec .quantity-button:nth-child(1) , .bookingNow_sec .quantity-button:nth-child(3){
+    top: 8px!important;
+}
+
+.box_checkbox_2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.box_checkbox_2 .leftPart_box svg {
+    margin-left: -150px;
+    margin-bottom: -18px;
+}
+
+.box_checkbox_2 .form-check-label{
+    color :#100F0F;
+    font-family: system-ui;
+    letter-spacing: 0.8px;
+}
+
+.box_checkbox_2 p{
+    color: #707070;
+    font-size: small;
+    line-height: 2;
+}
+
+.box_checkbox_2 .form-check-input[type=checkbox] {
+    border-radius: 5px!important;
+    padding: 10px;
+    border: 1px solid var(--basicColor);
+}
+
+/* <!--End Div Number of guests --> */
+
+
+/* <!-- Start Div Add Comment (Booking Now) --> */
+.bookingNow_sec textarea:focus{
+   box-shadow: none;
+   border: 1px solid var(--basicColor);
+}
+
+.bookingNow_sec textarea{
+    resize: none;
+    box-shadow:0 2px 7px -2px var(--grayColor);
+    border: 1px solid var(--basicColor);
+    padding: 18px;
+}
+
+.add_comment_div button{
+   font-family: montserrat_ar;
+   transition: all 0.5s ease-in-out;
+}
+
+
+
+@media (max-width:325px) {
+     .add_comment_div .title_mealType h5 {
+        font-size: large;
+    }
+}
+
+@media (max-width:375px) {
+    .add_comment_div .form-outline{
+        width: 100%!important;
+   }
+}
+/* <!-- End Div Add Comment (Booking Now) --> */
+
+/* <!-- End Booking Now Section --> */
+
+
+/* ================              =================== */
+/* ================  Details Food Page  ============ */
+/* ================              =================== */
+ 
 
 
   /*  Extra small devices (portrait phones, less than 576px) */
