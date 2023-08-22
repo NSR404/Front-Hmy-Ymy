@@ -252,8 +252,8 @@ window.onload = function () {
       
         if (screenWidth > 819 && screenWidth <= 822) {
           if (padding_style_820) {
-            padding_style_820.style.setProperty("width", "84%", "important");
-            padding_style_820.style.setProperty("padding-right", "80px", "important");
+            // padding_style_820.style.setProperty("width", "84%", "important");
+            // padding_style_820.style.setProperty("padding-right", "80px", "important");
             console.log("run code");
           }
         } else {
@@ -286,9 +286,9 @@ window.onload = function () {
         const padding_style_820 = document.querySelector(".padding_style");
         const screenWidth = window.innerWidth;
       
-        if (screenWidth > 767 && screenWidth <= 769) {
+        if (screenWidth > 1278 && screenWidth <= 1285) {
           if (padding_style_820) {
-            padding_style_820.style.setProperty("padding-right", "125px", "important");
+            padding_style_820.style.setProperty("width", "85%", "important");
             console.log("run code 3");
           }
         } else {
@@ -297,8 +297,8 @@ window.onload = function () {
       }
       
       document.addEventListener("DOMContentLoaded", paddingTextDetailsFood_768);
-      window.addEventListener("resize", paddingTextDetailsFood_768);
-      
+      // window.addEventListener("resize", paddingTextDetailsFood_768);
+      paddingTextDetailsFood_768();
       
       
 

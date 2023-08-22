@@ -14,16 +14,20 @@
     src: url(../fonts/montserrat-ar/Montserrat-Arabic\ Regular\ 400.otf);
 }
 
+
 html{
     overflow-x: hidden!important;
-  }
-
-body{
-    font-family: montserrat_en;
 }
 
-   /* Grouping */
+body {
+    font-family: montserrat_en;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden!important;
+}
 
+
+   /* Grouping */
 :root{
     --basicColor: #7D25F5;  
     --blackColor: black;  
@@ -42,6 +46,10 @@ body{
     letter-spacing: .8px;
  }
 
+
+ .rootMain{
+    width: 95vw;
+ }
  
 button:focus, input:focus{
     outline: none!important
@@ -201,11 +209,38 @@ a , a:focus , a:hover{
 
 /* <!-- Login section -->   */
 
-.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social a , .form_SignUp .form-outline > select{
+.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social a , .form_SignUp .form-outline > select , .signUp_sec .form-outline > button span{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
 }
 
-.form_SignUp .form-outline > input , .form_SignUp .form-outline > select , #show_hide_password input{
+.signUp_sec .form-outline > button{
+    text-align: inherit!important;
+}
+
+.signUp_sec .form-outline > button span{
+    color: #2d2d2d;
+    opacity: 0.8!important;
+    font-size: 20px;
+}
+
+.form-outline .searchCountry{
+    border-radius: 0!important;
+    box-shadow: none!important;
+}
+
+.form-outline .dropdown-menu{
+    border: 1px solid var(--basicColor)!important;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 10px!important;
+}
+
+.searchCountry:focus{
+  border: 1px solid var(--basicColor);
+}
+
+.form_SignUp .form-outline > input , .form_SignUp .form-outline > select , #show_hide_password input , .signUp_sec .form-outline > button{
     padding: 0px 35px 0px 24px!important;
     /* width: 565px; */
     height: 50px;
@@ -247,9 +282,9 @@ a , a:focus , a:hover{
     opacity: 0.8;
 }
 
-.form_SignUp .form-outline > input:focus , #show_hide_password input:focus{
+.form_SignUp .form-outline > input:focus , #show_hide_password input:focus , .signUp_sec .form-outline > button:focus{
     border-color: var(--blackColor)!important;
-    box-shadow: none!important
+    box-shadow: none!important;
 }
 
 .div_btn_social a.facebook{
@@ -290,6 +325,7 @@ a , a:focus , a:hover{
 
 .form-select{
          background-image: none!important;
+         padding: 0 0 0 6px!important;
     }
 
 .form-select:focus{
@@ -342,6 +378,8 @@ select option:disabled{
         width: 70%!important;
      }
 }
+
+
 
 .circle_load_left , .circle_load_right , .circle_load_bottom{
     width: 250px;
@@ -1059,6 +1097,9 @@ footer .w_90{
   
 }
 
+
+
+
 @media (min-width:590px) and  (max-width:610px)  {
     .media_600_bt{
          justify-content: space-between!important;
@@ -1196,7 +1237,6 @@ footer{
     background-color: #000;
     margin-top: 200px;
     padding-top: 400px;
-    margin-bottom: -1px!important;
 }
 .add_email_Sec{
     display: flex;
@@ -1321,15 +1361,26 @@ footer .hr_line{
     text-align: initial;
 }
 
+#aboutUs .rootMain {
+    width: 96%!important;
+}
+
 
 .aboutUs_sec .ar_img_whoAre_we , .ar_img_homeCalender{
     display: none;
+}
+
+@media (min-width:910px)  {
+    .aboutUs_sec .description_aboutUs div{
+        padding-right: 65px!important;
+    }
 }
 
 @media (min-width:910px) and (max-width:913px) {
     .aboutUs_sec .ar_img_whoAre_we, .ar_img_homeCalender{
         margin-top: 40px!important;
     }
+  
 }
 
 @media (max-width:913px) {
@@ -1339,7 +1390,7 @@ footer .hr_line{
      }
       
     .aboutUs_sec .parg_aboutUs{
-        padding: 0!important;
+        /* padding-right: 30px!important; */
     }
 }
 
@@ -1418,6 +1469,10 @@ footer .hr_line{
 /* ================  Details Food Page  ============ */
 /* ================              =================== */
  /* <!-- start Details Food Section --> */
+ #detailsFood .rootMain{
+   width: 100vw!important;
+}
+
  .detailsFood_sec figure img{
     height: 100%;
 }
@@ -1611,14 +1666,41 @@ footer .hr_line{
         width: 406px!important;
     }
 
+    /* .mealType__sec .media_600_bt{
+        padding-right: 0!important;
+     } */
+
+
+}
+
+@media (min-width:767px) and (max-width:913px){
     .ingredientFood_sec .padding_style{
-        width: 63%!important;
+        width: 100%!important;
+    }
+
+    .ingredientFood_sec .parentCircle .circle_load_border , .ingredientFood_sec .parentCircle .circle_load_blue{
+        display: none!important;
+    }
+
+    .ingredientFood_sec .padding_style p, .ingredientFood_sec .padding_style h4{
+        color: #000!important;
+        font-weight: 600;
     }
 
     .ingredientFood_sec  .h_555px {
-        margin-left: 95px!important;
+       height: inherit!important;
     }
+    .ingredientFood_sec{
+        margin-top: 0!important;
+        padding-top: 0!important;
+    }
+    /* .mealType__sec .media_600_bt{
+        padding-right: 0!important;
+     } */
+
+
 }
+
 
 @media (width:540px){
     .ingredientFood_sec .padding_style{
@@ -1699,7 +1781,7 @@ footer .hr_line{
 
 @media (max-width:415px) {
     .ingredientFood_sec .padding_style{
-        width: 90%!important;
+        width: 100%!important;
         padding-left: 3px!important;
         padding-right: 3px!important;
     }
@@ -1721,9 +1803,6 @@ footer .hr_line{
         color: black!important;
     }
 
-    .ingredientFood_sec .padding_style{
-        width: 99%!important;
-    }
 }
 
 @media (min-width:590px) and (max-width:610px) {
@@ -1746,9 +1825,17 @@ footer .hr_line{
 
 @media (max-width:1080px) {
     .ingredientFood_sec .ingredientTable{
-        width: 95%;
+        width: 100%;
     } 
 }
+
+@media (min-width:1023px) and (max-width:1025px) {
+    .ingredientFood_sec .ingredientTable{
+        width: 95%!important;
+    }
+}
+
+
 .ingredientFood_sec .h_555px{
     height: 555px;
 }
@@ -1793,7 +1880,7 @@ letter-spacing: 1.4px;
 }
 
 .onlineReview_sec > div{
-    width: 100%!important;
+    /* width: 100%!important; */
 }
 
 @media (max-width:769px) {
@@ -1879,7 +1966,7 @@ letter-spacing: 1.4px;
 
 @media (min-width:610px) and (max-width:769px) {
    #detailsFood .rootMain{
-        padding-right: 0px!important;
+        /* padding-right: 0px!important; */
     }
      .onlineReview_sec .bg_img_review ,.onlineReview_sec .ar_bg_img_review{
         background-image: none;
@@ -2238,7 +2325,11 @@ letter-spacing: 1.4px;
    transition: all 0.5s ease-in-out;
 }
 
-
+@media (max-width:415px) {
+  .add_comment_div .form-outline{
+    width: 100%!important;
+  }
+}
 
 @media (max-width:325px) {
      .add_comment_div .title_mealType h5 {

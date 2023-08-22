@@ -115,7 +115,7 @@
                                     <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
                             </div>
 
-                           <div class="form-outline mb-3">
+                           <!-- <div class="form-outline mb-3">
                                     <select name="" id="" class="form-select">
                                         <option value="city"  >City</option>
                                         <option value="Al_Qaseem">Al Qaseem</option>
@@ -123,7 +123,24 @@
                                         <option value="city2">City 2</option>
                                         <option value="city3">City 3</option>
                                     </select>
-                           </div>
+                           </div> -->
+                           <div class="form-outline mb-3 dropdown dselect-wrapper ">
+                                <button class="form-select "  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="dselect-placeholder form-control border-0 p-0">Country</span>
+                                </button>
+                                <div class="dropdown-menu w-100 py-0" >
+                                  <div class="d-flex flex-column">
+                                        <input onkeydown="return event.key !== 'Enter'" onkeyup="dselectSearch(event, this, 'dselect-wrapper', 'form-select', false)" type="text" class="form-control searchCountry" placeholder="Search" autofocus="">
+                                        <div class="dselect-items" style="max-height:360px;overflow:auto">
+                                          <button hidden="" class="dropdown-item active" data-dselect-value="" type="button" onclick="dselectUpdate(this, 'dselect-wrapper', 'form-select')">Select Country</button>
+                                          <button class="dropdown-item" data-dselect-value="Afghanistan" type="button" onclick="dselectUpdate(this, 'dselect-wrapper', 'form-select')">Afghanistan</button>
+                                          <button class="dropdown-item" data-dselect-value="City 1" type="button" onclick="dselectUpdate(this, 'dselect-wrapper', 'form-select')">City 1</button>
+                                          <button class="dropdown-item" data-dselect-value="City 2" type="button" onclick="dselectUpdate(this, 'dselect-wrapper', 'form-select')">City 2</button>
+                                        </div>
+                                        <div class="dselect-no-results d-none">No results found</div>
+                                  </div>
+                                </div>
+                          </div>
 
                            <div class="form-outline form-group mb-3">
                                     <span class="error"></span>
