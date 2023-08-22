@@ -233,11 +233,13 @@ window.onload = function () {
      const screenWidth = window.innerWidth;
       if (screenWidth > 765 && screenWidth < 769) {
         if (padding_style) {
-               padding_style.style.setProperty("padding-left", "0px", "important");
-               padding_style.style.setProperty("padding-right", "110px", "important");
+              //  padding_style.style.setProperty("padding-left", "0px", "important");
+              //  padding_style.style.setProperty("padding-right", "110px", "important");
              }
         } else{
-               padding_style.style.setProperty("padding-right", "0px", "important");
+              if (padding_style) {
+                // padding_style.style.setProperty("padding-right", "0px", "important");
+              }
         }     
   }
 
@@ -271,8 +273,8 @@ window.onload = function () {
       
         if (screenWidth > 911 && screenWidth <= 915) {
           if (padding_style_820) {
-            padding_style_820.style.setProperty("width", "84%", "important");
-            padding_style_820.style.setProperty("padding-right", "170px", "important");
+            // padding_style_820.style.setProperty("width", "84%", "important");
+            // padding_style_820.style.setProperty("padding-right", "170px", "important");
             // console.log("run code 2");
           }
         } else {
@@ -321,6 +323,18 @@ window.onload = function () {
           label.style.setProperty("display", "flex", "important");
           label.style.setProperty("flex-direction", "row-reverse", "important");
          });
+      }
+//  Live The Experience in Booking Now Page
+      const form_checkBookingNow= document.querySelector('.rightPart_box .form-check');
+      const form_checLabelkBookingNow= document.querySelector('.rightPart_box .form-check-label');
+      if (form_checkBookingNow) {
+        form_checkBookingNow.style.setProperty("display", "flex", "important");
+        form_checkBookingNow.style.setProperty("flex-direction", "row", "important");
+        form_checkBookingNow.style.setProperty("padding", "0px", "important");
+        console.log("very good man");
+      }
+      if(form_checLabelkBookingNow){
+        form_checLabelkBookingNow.style.setProperty("margin-right" , "30px" , "important");
       }
 
         

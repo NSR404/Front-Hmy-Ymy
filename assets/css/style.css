@@ -342,6 +342,10 @@ a , a:focus , a:hover{
     .privacyPolicy_sec .title_mealType h3{
         font-size: 22px;
     }
+    .Experience_of_day .box{
+        width: 265px!important;
+        height: 265px!important;
+    }
 }
 
 
@@ -907,16 +911,12 @@ footer .w_90{
   }
 
   @media (max-width: 760px) {
-   .Experience_of_day  .swiper-button-next {
-      right: 20px;
+   .Experience_of_day .swiper-button-next {
+      right: 3px;
       transform: rotate(90deg);
     }
 
     .Experience_of_day .swiper-slide{
-        margin-right: 0!important;
-        margin-right: 0!important;
-        margin-right: 0!important;
-        margin-right: 0!important;
         margin-right: 0!important;
     }
   }
@@ -1661,10 +1661,17 @@ footer .hr_line{
     font-family: 'montserrat_en';
 }
 
+@media (min-width:1279px) and (max-width:1281px) {
+    .padding_style{
+        width:80%!important;
+     }
+}
+
 .ingredientFood_sec .padding_style p{
     font-weight: 100;
     line-height: 1.7;
 }
+
 
 @media (width:820px) {
     #privacyPolicy .rootMain{
@@ -1675,6 +1682,10 @@ footer .hr_line{
     }
 
     #privacyPolicy .w_100_767_769{
+        width: 100%!important;
+    }
+
+    .ingredientFood_sec .padding_style{
         width: 100%!important;
     }
 
@@ -1828,11 +1839,7 @@ footer .hr_line{
 
 }
 
-@media (min-width:590px) and (max-width:610px) {
-   .ingredientFood_sec .padding_style{
-        padding-top: 100px;
-    }
-}
+
 
 @media (max-width:415px) {
     .ingredientFood_sec .circle_load_blue p{
@@ -1855,6 +1862,10 @@ footer .hr_line{
 @media (min-width:1023px) and (max-width:1025px) {
     .ingredientFood_sec .ingredientTable{
         width: 95%!important;
+    }
+
+    .box_checkbox_2 .leftPart_box svg{
+        display: none!important;
     }
 }
 
@@ -2063,7 +2074,7 @@ letter-spacing: 1.4px;
 /* <!-- Start Booking Now Section --> */
 
 .bookingNow_sec .calendar {
-    width: 403px;
+    width: inherit;
     margin: 0 auto;
 }
 
@@ -2134,6 +2145,7 @@ letter-spacing: 1.4px;
 .bookingNow_sec #monthSelect,.bookingNow_sec #yearSelect {
     padding: 5px;
     font-weight: bold;
+    color: #000!important;
 }
 
 .bookingNow_sec .form-check-input:checked {
@@ -2141,6 +2153,45 @@ letter-spacing: 1.4px;
     border-color: var(--basicColor);
 }
 
+@media (min-width:1023px) and (max-width:1025px) {
+    .booking_hours .w_sm_100{
+        width: 80%!important;
+    }
+}
+
+@media (max-width:441px) {
+    .bookingNow_sec .w_sm_100{
+        width: 100%!important;
+        padding: 0;
+    }    
+}
+
+@media (min-width:427px) and (max-width:429px) {
+    .bookingNow_sec .radio_div_select_d_p_o{
+        width: 100%!important;
+    }    
+    
+   .ingredientFood_sec .circle_load_blue ,.ingredientFood_sec .circle_load_border{
+        display: none!important;
+    }
+
+    .ingredientFood_sec .padding_style{
+        width: 100%!important;
+    }
+
+    .ingredientFood_sec .padding_style p, .ingredientFood_sec .padding_style h4{
+       color: #000!important;
+    }
+   
+    .ingredientFood_sec .h_555px{
+        height: auto;
+    }
+
+    .add_comment_div .form-outline{
+        width: 100%!important;
+      }
+
+}
 @media (max-width:415px) {
     .bookingNow_sec .w_sm_100{
         width: 100%!important;
@@ -2150,9 +2201,13 @@ letter-spacing: 1.4px;
     }
     .bookingNow_sec .img_calender{
         width: -webkit-fill-available;
+        width: 100%;
     }
 }
 
+.bookingNow_sec .img_calender{
+    width: 100%;
+}
 .bookingNow_sec .circle_bookNow_1{
         position: absolute;
         top: -10px;
@@ -2247,7 +2302,11 @@ letter-spacing: 1.4px;
    border-radius: 16px;
 }
 
-.box_checkbox_1 img{
+.bookingNow_sec .rightPart_box {
+    z-index: 3;
+}
+
+.bookingNow_sec .box_checkbox_1 img{
     width: fit-content;
     margin-left: -100px;
     position: absolute;
@@ -2255,6 +2314,8 @@ letter-spacing: 1.4px;
     left: -17px!important;
     height: 241px;
     margin-left: -100px;
+    z-index: 0;
+    opacity: 0.9;
 }
 
 @media (max-width:415px) {
@@ -2272,6 +2333,10 @@ letter-spacing: 1.4px;
 @media (min-width:590px) and (max-width:610px) {
     .box_checkbox_2 .leftPart_box svg {
         margin-left: -42px!important;
+    }
+    .ingredientFood_sec .padding_style{
+        margin-top: 60px!important;
+
     }
 }
 
@@ -2332,9 +2397,7 @@ letter-spacing: 1.4px;
     .bookingNow_sec .nameDays  .calendar-day{
         padding: 5px 9px 0 11px!important;
     }
-    .bookingNow_sec .img_calender{
-        width:260px!important;
-    }
+  
     .p_0_375{
         padding: 0!important;
     }
@@ -2373,6 +2436,18 @@ letter-spacing: 1.4px;
     border-radius: 5px!important;
     padding: 10px;
     border: 1px solid var(--basicColor);
+}
+
+@media (min-width:611px) and (max-width:768px) {
+     .box_checkbox_2 .svg_Live_Experience{
+         display: none!important;
+     }
+}
+
+@media (min-width:415px) and (max-width:590px) {
+     .box_checkbox_2 .svg_Live_Experience{
+         display: none!important;
+     }
 }
 
 /* <!--End Div Number of guests --> */
