@@ -1366,8 +1366,18 @@ footer .hr_line{
 }
 
 
-.aboutUs_sec .ar_img_whoAre_we , .ar_img_homeCalender{
+.aboutUs_sec .ar_img_whoAre_we{
     display: none;
+}
+
+.bookingNow_sec .ar_img_homeCalender{
+    display: none!important;
+}
+
+@media (max-width:991px)  {
+    .bookingNow_sec .ar_img_homeCalender , .bookingNow_sec .en_img_homeCalender{
+        display: none!important;
+    }
 }
 
 @media (min-width:910px)  {
@@ -1706,6 +1716,9 @@ footer .hr_line{
     .ingredientFood_sec .padding_style{
         padding-top: 88px!important;
         width: 84%!important;
+    }
+    .box_checkbox_2 .leftPart_box svg{
+        display: none!important;
     }
 }
 
@@ -2189,6 +2202,10 @@ letter-spacing: 1.4px;
     cursor: pointer;
 }
 
+.radio_div_select label{
+    padding: 0 5px;
+}
+
 
 @media (max-width:1025px) {
      .radio_div_select_d_p_o{
@@ -2222,11 +2239,12 @@ letter-spacing: 1.4px;
 
 .box_checkbox_1 img{
     width: fit-content;
-    height: 228px;
     margin-left: -100px;
     position: absolute;
     top: -48px;
     left: -17px!important;
+    height: 241px;
+    margin-left: -100px;
 }
 
 @media (max-width:415px) {
@@ -2261,6 +2279,7 @@ letter-spacing: 1.4px;
 .bookingNow_sec .rightPart_box h5{
     font-family: Mongolian ;
     font-weight: bolder;
+    padding-top: 13px;
 }
 
 .bookingNow_sec .rightPart_box .quantity-box{
@@ -2284,6 +2303,48 @@ letter-spacing: 1.4px;
 .box_checkbox_2 .leftPart_box svg {
     margin-left: -150px;
     margin-bottom: -18px;
+}
+
+@media (min-width:1023px) and (max-width:1281px) {
+    .box_checkbox_2 .leftPart_box svg{
+       opacity: 0.6;
+    }
+}
+
+@media (min-width:359px) and (max-width:376px) {
+    .p_0_375{
+       padding: 0!important;
+    }
+}
+
+
+@media (max-width:321px) {
+    .bookingNow_sec .nameDays  .calendar-day{
+        padding: 5px 9px 0 11px!important;
+    }
+    .bookingNow_sec .img_calender{
+        width:260px!important;
+    }
+    .p_0_375{
+        padding: 0!important;
+    }
+
+    .radio_div_select_d_p_o{
+        width: 100%!important;
+    }
+
+    .radio_div_select:nth-child(2){
+        margin-right: 0!important;
+    }
+}
+
+.box_checkbox_2 .leftPart_box svg{
+    opacity: 0.7;
+    z-index: -10;
+}
+
+.box_checkbox_2  .rightPart_box {
+    z-index: 10;
 }
 
 .box_checkbox_2 .form-check-label{

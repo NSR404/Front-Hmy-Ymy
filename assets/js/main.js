@@ -64,27 +64,27 @@ window.onload = function () {
         ar_img_whoAre_we.style.setProperty("display", "block", "important");
       }
 
-      // convert image in about us
-      const en_img_homeCalender = document.querySelector('.en_img_homeCalender'); 
-      const ar_img_homeCalender = document.querySelector('.ar_img_homeCalender');
-
-      function applyResponsiveStyles() {
+      // convert image in Calender
+      function applyResponsiveStylesBookingNow() {
         const screenWidth = window.innerWidth;
-      
-        if (screenWidth < 610) {
-          if (en_img_homeCalender) {
-            en_img_homeCalender.style.setProperty("display", "none", "important");
-          }
-          if (ar_img_homeCalender) {
-            ar_img_homeCalender.style.setProperty("display", "none", "important");
-          }
-        } else {
+        const ar_img_homeCalender = document.querySelector('.ar_img_homeCalender');
+        const en_img_homeCalender = document.querySelector('.en_img_homeCalender'); 
+        if (screenWidth > 991) {
             if (en_img_homeCalender) {
               en_img_homeCalender.style.setProperty("display", "none", "important");
             }
             if (ar_img_homeCalender) {
               ar_img_homeCalender.style.setProperty("display", "block", "important");
-            }          
+            }
+        }
+        else{
+          if (en_img_homeCalender) {
+            en_img_homeCalender.style.setProperty("display", "none", "important");
+
+          }
+          if (ar_img_homeCalender) {
+            ar_img_homeCalender.style.setProperty("display", "none", "important");
+          }
         }
       }
       window.addEventListener("DOMContentLoaded", applyResponsiveStylesHome);
@@ -93,8 +93,9 @@ window.onload = function () {
       window.addEventListener("resize", applyResponsiveStylesHome_768);
       window.addEventListener("DOMContentLoaded", paddingStileDetailsFood);
       window.addEventListener("resize", paddingStileDetailsFood);
-      // window.addEventListener("DOMContentLoaded", paddingTextDetailsFood);
-      // window.addEventListener("resize", paddingTextDetailsFood);
+      // window.addEventListener("DOMContentLoaded", applyResponsiveStylesBookingNow);
+      window.addEventListener("resize", applyResponsiveStylesBookingNow);
+      applyResponsiveStylesBookingNow();
 
 
       const bgImgReview = document.querySelector(".bg_img_review");
@@ -254,10 +255,10 @@ window.onload = function () {
           if (padding_style_820) {
             // padding_style_820.style.setProperty("width", "84%", "important");
             // padding_style_820.style.setProperty("padding-right", "80px", "important");
-            console.log("run code");
+            // console.log("run code");
           }
         } else {
-           console.log("stop");
+          //  console.log("stop");
         }
       }
       
@@ -272,10 +273,10 @@ window.onload = function () {
           if (padding_style_820) {
             padding_style_820.style.setProperty("width", "84%", "important");
             padding_style_820.style.setProperty("padding-right", "170px", "important");
-            console.log("run code 2");
+            // console.log("run code 2");
           }
         } else {
-           console.log("stop 2");
+           console.log("");
         }
       }
       
@@ -289,10 +290,9 @@ window.onload = function () {
         if (screenWidth > 1278 && screenWidth <= 1285) {
           if (padding_style_820) {
             padding_style_820.style.setProperty("width", "85%", "important");
-            console.log("run code 3");
           }
         } else {
-           console.log("stop 3");
+           console.log("");
         }
       }
       
@@ -300,7 +300,30 @@ window.onload = function () {
       // window.addEventListener("resize", paddingTextDetailsFood_768);
       paddingTextDetailsFood_768();
       
-      
+      // Booking Now Page
+      const radio_div_select = document.querySelectorAll(".radio_div_select");
+      const radio_div_selectLabel = document.querySelectorAll(".radio_div_select label");
+      if (radio_div_select) {
+        radio_div_select.forEach((select) => {
+          select.style.setProperty("display", "flex", "important");
+          select.style.setProperty("flex-direction", "row", "important");
+        });
+        if (radio_div_selectLabel) {
+          radio_div_selectLabel.forEach((label) => {
+              label.style.setProperty("padding-right", "40px", "important");
+          });
+        }
+      }
+
+      const quantityBoxBookNow= document.querySelectorAll('.rightPart_box .quantity-box');
+      if (quantityBoxBookNow) {
+        quantityBoxBookNow.forEach((label) => {
+          label.style.setProperty("display", "flex", "important");
+          label.style.setProperty("flex-direction", "row-reverse", "important");
+         });
+      }
+
+        
 
       // ===============================================
       ar_handleResizeSize_414();
@@ -383,6 +406,53 @@ window.onload = function () {
       if (ar_img_whoAre_we) {
         ar_img_whoAre_we.style.setProperty("display", "none", "important");
       }
+         // convert image in Calender
+      function applyResponsiveStylesBookingNow() {
+        const screenWidth = window.innerWidth;
+        const ar_img_homeCalender = document.querySelector('.ar_img_homeCalender');
+        const en_img_homeCalender = document.querySelector('.en_img_homeCalender'); 
+        if (screenWidth > 991) {
+            if (en_img_homeCalender) {
+              en_img_homeCalender.style.setProperty("display", "block", "important");
+            }
+            if (ar_img_homeCalender) {
+              ar_img_homeCalender.style.setProperty("display", "none", "important");
+            }
+        }
+        else{
+          if (en_img_homeCalender) {
+            en_img_homeCalender.style.setProperty("display", "none", "important");
+          }
+          if (ar_img_homeCalender) {
+            ar_img_homeCalender.style.setProperty("display", "none", "important");
+          }
+        }
+      }
+      // window.addEventListener("DOMContentLoaded", applyResponsiveStylesBookingNow);
+      window.addEventListener("resize", applyResponsiveStylesBookingNow);
+      applyResponsiveStylesBookingNow();
+      const quantityBoxBookNow= document.querySelectorAll('.rightPart_box .quantity-box');
+      if (quantityBoxBookNow) {
+        quantityBoxBookNow.forEach((label) => {
+          label.style.setProperty("display", "flex", "important");
+          label.style.setProperty("flex-direction", "row", "important");
+         });
+      }
+       
+       // Booking Now Page
+       const radio_div_select = document.querySelectorAll(".radio_div_select");
+       const radio_div_selectLabel = document.querySelectorAll(".radio_div_select label");
+       if (radio_div_select) {
+         radio_div_select.forEach((select) => {
+           select.style.setProperty("display", "block", "important");
+         });
+         if (radio_div_selectLabel) {
+           radio_div_selectLabel.forEach((label) => {
+               label.style.setProperty("padding-right", "0px", "important");
+           });
+         }
+       }
+
         en_handleResizeSize_414();
       
     }
