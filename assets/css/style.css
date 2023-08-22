@@ -853,12 +853,22 @@ footer .w_90{
    justify-content: center;
    align-items: center;
    font-size: initial;
+   margin-top: 15px;
 }
 
 .left_col_experience{
     padding-top: 80px;
 }
 
+.d_none_block_320{
+    display: none!important;
+}
+
+@media (max-width:321px) {
+    .d_none_block_320{
+        display: block!important;
+    }  
+}
 
 .circle_steps h4{
     padding: 12px;
