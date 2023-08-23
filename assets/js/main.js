@@ -159,60 +159,59 @@ window.onload = function () {
 
 
       // Home Page
-        const ar_rotate_180 = document.querySelectorAll('.ar_rotate_180');
-        if (ar_rotate_180) {
-          ar_rotate_180.forEach(element => {
-            element.style.setProperty("transform", "rotate(180deg)", "important");
-          });
-        }
+      const ar_rotate_180 = document.querySelectorAll('.ar_rotate_180');
+      if (ar_rotate_180) {
+        ar_rotate_180.forEach(element => {
+          element.style.setProperty("transform", "rotate(180deg)", "important");
+        });
+      }
 
-        const nextButtonSwiperHome = document.querySelector('.Experience_of_day .swiper-button-next');
-        if (nextButtonSwiperHome) {
-          nextButtonSwiperHome.style.setProperty("display", "none", "important");
-        }
+      const nextButtonSwiperHome = document.querySelector('.Experience_of_day .swiper-button-next');
+      if (nextButtonSwiperHome) {
+        nextButtonSwiperHome.style.setProperty("display", "none", "important");
+      }
 
-        function applyResponsiveStylesHome() {
-          const screenWidth = window.innerWidth;
-        
-          if (screenWidth < 602) {
-            const swiperSlideExperience = document.querySelectorAll('.Experience_of_day .swiper-slide');
-            if (swiperSlideExperience) {
-              swiperSlideExperience.forEach(item => {
-                item.style.setProperty("margin-right", "0", "important");
-              });
-            }
+      function applyResponsiveStylesHome() {
+        const screenWidth = window.innerWidth;
+      
+        if (screenWidth < 602) {
+          const swiperSlideExperience = document.querySelectorAll('.Experience_of_day .swiper-slide');
+          if (swiperSlideExperience) {
+            swiperSlideExperience.forEach(item => {
+              item.style.setProperty("margin-right", "0", "important");
+            });
           }
         }
+      }
 
-        function applyResponsiveStylesHome_768() {
-          const screenWidth = window.innerWidth;
-        
-          if (screenWidth > 767 && screenWidth < 770) {
-            const inputSearchHome = document.querySelector('.header_sec .search input');
-            if (inputSearchHome) {
-              inputSearchHome.style.setProperty("padding-right", "34px", "important");
-            }
+      function applyResponsiveStylesHome_768() {
+        const screenWidth = window.innerWidth;
+      
+        if (screenWidth > 767 && screenWidth < 770) {
+          const inputSearchHome = document.querySelector('.header_sec .search input');
+          if (inputSearchHome) {
+            inputSearchHome.style.setProperty("padding-right", "34px", "important");
           }
         }
+      }
 
-        const inner_descr_swiper_slides = document.querySelectorAll('.Experience_of_day .inner_descr_swiper_slide');
-        if (inner_descr_swiper_slides) {
-          inner_descr_swiper_slides.forEach(slide => {
-            slide.style.setProperty("text-align", "start", "important");
-          });
-        }
+      const inner_descr_swiper_slides = document.querySelectorAll('.Experience_of_day .inner_descr_swiper_slide');
+      if (inner_descr_swiper_slides) {
+        inner_descr_swiper_slides.forEach(slide => {
+          slide.style.setProperty("text-align", "start", "important");
+        });
+      }
 
-        
-        const px_800_812_0 = document.querySelector('.px_800_812_0');
-        if (px_800_812_0) {
-          px_800_812_0.style.setProperty("padding-right", "0px", "important");
-        }
-          //  Code Modal
-        const modalHeader = document.querySelector(".modal-header");
-        if (modalHeader) {
-          modalHeader.style.setProperty("flex-direction", "row-reverse", "important");
-        }
-  // End Page Home
+      const px_800_812_0 = document.querySelector('.px_800_812_0');
+      if (px_800_812_0) {
+        px_800_812_0.style.setProperty("padding-right", "0px", "important");
+      }
+        //  Code Modal
+      const modalHeader = document.querySelector(".modal-header");
+      if (modalHeader) {
+        modalHeader.style.setProperty("flex-direction", "row-reverse", "important");
+      }
+     // End Page Home
 
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -226,22 +225,22 @@ window.onload = function () {
         }
       });
 
-// Details Food Page
-   function paddingStileDetailsFood(e){
-    e.preventDefault();
-     const padding_style = document.querySelector(".padding_style");
-     const screenWidth = window.innerWidth;
-      if (screenWidth > 765 && screenWidth < 769) {
-        if (padding_style) {
-              //  padding_style.style.setProperty("padding-left", "0px", "important");
-              //  padding_style.style.setProperty("padding-right", "110px", "important");
-             }
-        } else{
-              if (padding_style) {
-                // padding_style.style.setProperty("padding-right", "0px", "important");
-              }
-        }     
-  }
+      // Details Food Page
+      function paddingStileDetailsFood(e){
+        e.preventDefault();
+        const padding_style = document.querySelector(".padding_style");
+        const screenWidth = window.innerWidth;
+          if (screenWidth > 765 && screenWidth < 769) {
+            if (padding_style) {
+                  //  padding_style.style.setProperty("padding-left", "0px", "important");
+                  //  padding_style.style.setProperty("padding-right", "110px", "important");
+                }
+            } else{
+                  if (padding_style) {
+                    // padding_style.style.setProperty("padding-right", "0px", "important");
+                  }
+            }     
+      }
 
       const quantityBoxDetailsFood = document.querySelector('.quantity-box');
       if (quantityBoxDetailsFood) {
@@ -324,7 +323,7 @@ window.onload = function () {
           label.style.setProperty("flex-direction", "row-reverse", "important");
          });
       }
-//  Live The Experience in Booking Now Page
+      //  Live The Experience in Booking Now Page
       const form_checkBookingNow= document.querySelector('.rightPart_box .form-check');
       const form_checLabelkBookingNow= document.querySelector('.rightPart_box .form-check-label');
       if (form_checkBookingNow) {
@@ -342,35 +341,35 @@ window.onload = function () {
       // ===============================================
       ar_handleResizeSize_414();
       ar_handleResizeSize_1024();
-   //  FAQ Page      
-   function icon_accordion_button() {
-    const screenWidth = window.innerWidth;
-    const accordionButtons = document.querySelectorAll(".accordion-button");
-  
-    if (screenWidth > 1020 && screenWidth <= 1950) {
-      if (accordionButtons) {
-        accordionButtons.forEach(button => {
-          button.classList.add("hide-after");
-          button.classList.remove("display_none"); 
-        });
+      //  FAQ Page      
+      function icon_accordion_button() {
+        const screenWidth = window.innerWidth;
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+      
+        if (screenWidth > 1020 && screenWidth <= 1950) {
+          if (accordionButtons) {
+            accordionButtons.forEach(button => {
+              button.classList.add("hide-after");
+              button.classList.remove("display_none"); 
+            });
+          }
+        } else {
+          if (accordionButtons) {
+            accordionButtons.forEach(button => {
+              button.classList.remove("hide-after"); 
+              button.classList.add("display_none");
+            });
+          }
+        }
       }
-    } else {
-      if (accordionButtons) {
-        accordionButtons.forEach(button => {
-          button.classList.remove("hide-after"); 
-          button.classList.add("display_none");
-        });
-      }
-    }
-  }
   
-  window.addEventListener("DOMContentLoaded", icon_accordion_button);
-  window.addEventListener("resize", icon_accordion_button);
-  
-    window.addEventListener("DOMContentLoaded", icon_accordion_button);
-    window.addEventListener("resize", icon_accordion_button);
-    icon_accordion_button();
-  
+      window.addEventListener("DOMContentLoaded", icon_accordion_button);
+      window.addEventListener("resize", icon_accordion_button);
+      
+      window.addEventListener("DOMContentLoaded", icon_accordion_button);
+      window.addEventListener("resize", icon_accordion_button);
+      icon_accordion_button();
+      
       // ===============================================
       radioDivs.forEach((div) => {
         div.classList.add("d-flex", "flex-row");
@@ -381,11 +380,12 @@ window.onload = function () {
       arMarginRightLabels.forEach((label) => {
         label.style.setProperty("margin-right", "30px", "important");
       });
+
       radio_div.forEach((div) => {
         div.style.setProperty("padding", "0px", "important");
       });
-      // ===============================================
-     
+
+      // ===============================================  
 
       document.addEventListener("DOMContentLoaded", function () {
       const boxCheckbox2 = document.querySelector(".box_checkbox_2");
@@ -399,28 +399,57 @@ window.onload = function () {
       });
       
       // ===============================================
-      
+
+// ================== New Code in Page (Reset Password) ====================
+
+      // <!-- Start section Reset Password -->
+      // Convert Name User whit word Hi User
+      var titleUser = document.querySelector('.resetPass_sec .nameUser');
+      if (titleUser) { 
+        titleUser.style.display = 'flex';
+      } 
+
+      // convert image Reset Password
+      var en_img_resetPass = document.querySelector('.resetPass_sec .en_img_resetPass');
+      var ar_img_resetPass = document.querySelector('.resetPass_sec .ar_img_resetPass');
+      if (ar_img_resetPass) { 
+        ar_img_resetPass.style.setProperty("display", "block", "important");
+        en_img_resetPass.style.setProperty("display", "none", "important");
+      }
+      // <!-- End section Reset Password -->
+
+      //  <!-- Start section Reset By Email -->
+      // Convert image reset By Email
+      var en_img_resetByEmail = document.querySelector('.resetByEmail_sec .en_img_resetByEmail');
+      var ar_img_resetByEmail = document.querySelector('.resetByEmail_sec .ar_img_resetByEmail');
+      if (ar_img_resetByEmail) { 
+        ar_img_resetByEmail.style.setProperty("display", "block", "important");
+        en_img_resetByEmail.style.setProperty("display", "none", "important");
+      }
+      //  <!-- End section Reset By Email -->
+
       
       
       // ===============================================
     } else {
       htmlTag.setAttribute("lang", "en");
       htmlTag.setAttribute("dir", "ltr");
-        //  Code Modal
-        const modalHeader = document.querySelector(".modal-header");
-        if (modalHeader) {
-          modalHeader.style.setProperty("flex-direction", "row", "important");
-        }
+      //  Code Modal
+      const modalHeader = document.querySelector(".modal-header");
+      if (modalHeader) {
+        modalHeader.style.setProperty("flex-direction", "row", "important");
+      }
       // convert image in about us
       const ar_img_whoAre_we = document.querySelector(".ar_img_whoAre_we");
       const en_img_whoAre_we = document.querySelector(".en_img_whoAre_we");
       if (en_img_whoAre_we) {
         en_img_whoAre_we.style.setProperty("display", "block", "important");
       }
+
       if (ar_img_whoAre_we) {
         ar_img_whoAre_we.style.setProperty("display", "none", "important");
       }
-         // convert image in Calender
+      // convert image in Calender
       function applyResponsiveStylesBookingNow() {
         const screenWidth = window.innerWidth;
         const ar_img_homeCalender = document.querySelector('.ar_img_homeCalender');
@@ -453,22 +482,48 @@ window.onload = function () {
          });
       }
        
-       // Booking Now Page
-       const radio_div_select = document.querySelectorAll(".radio_div_select");
-       const radio_div_selectLabel = document.querySelectorAll(".radio_div_select label");
-       if (radio_div_select) {
-         radio_div_select.forEach((select) => {
-           select.style.setProperty("display", "block", "important");
-         });
-         if (radio_div_selectLabel) {
-           radio_div_selectLabel.forEach((label) => {
-               label.style.setProperty("padding-right", "0px", "important");
-           });
-         }
-       }
+      // Booking Now Page
+      const radio_div_select = document.querySelectorAll(".radio_div_select");
+      const radio_div_selectLabel = document.querySelectorAll(".radio_div_select label");
+      if (radio_div_select) {
+        radio_div_select.forEach((select) => {
+          select.style.setProperty("display", "block", "important");
+        });
+        if (radio_div_selectLabel) {
+          radio_div_selectLabel.forEach((label) => {
+              label.style.setProperty("padding-right", "0px", "important");
+          });
+        }
+      }
 
-        en_handleResizeSize_414();
-      
+      en_handleResizeSize_414();
+// ======================================================
+      // <!-- Start section Reset Password -->
+      // Convert Name User whit word Hi User
+      var titleUser = document.querySelector('.resetPass_sec .nameUser');
+      if(titleUser) { 
+        titleUser.style.display = 'block';
+        // titleUser.style.flexDirection = 'row';
+      }
+
+      // convert image Reset Password
+      var en_img_resetPass = document.querySelector('.resetPass_sec .en_img_resetPass');
+      var ar_img_resetPass = document.querySelector('.resetPass_sec .ar_img_resetPass');
+       if(ar_img_resetPass) { 
+        ar_img_resetPass.style.setProperty("display", "none", "important");
+        en_img_resetPass.style.setProperty("display", "block", "important");
+      }
+      // <!-- End section Reset Password -->
+
+      //  <!-- Start section Reset By Email -->
+      // Convert image reset By Email
+      var en_img_resetByEmail = document.querySelector('.resetByEmail_sec .en_img_resetByEmail');
+      var ar_img_resetByEmail = document.querySelector('.resetByEmail_sec .ar_img_resetByEmail');
+      if (ar_img_resetByEmail) { 
+        ar_img_resetByEmail.style.setProperty("display", "none", "important");
+        en_img_resetByEmail.style.setProperty("display", "block", "important");
+      }
+      //  <!-- End section Reset By Email -->
     }
   }
 
@@ -826,3 +881,5 @@ calendarDayElements.forEach((dayElement) => {
     bookingHours.style.display = "block";
   });
 });
+
+

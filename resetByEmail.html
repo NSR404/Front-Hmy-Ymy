@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset password </title>
+    <!-- FAVICON -->
+    <link rel="stylesheet icon" href="assets/images/x-icon/logo.png" type="image/logo">
+
+    <!-- file Icons -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <!-- file bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- file style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+   <!-- start btn direction -->
+        <div class="btn_direction b_pos"><i class="ri-arrow-up-s-line"></i></div>
+   <!-- end btn direction -->
+    
+       
+   <!-- start navbar section -->
+         <nav class="navbar navbar-expand-lg navbar-light ">
+               <div class="container">
+               <a class="navbar-brand w-50" href="#">
+                     <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="90px" class="ml_11">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+         
+               <div class="d-flex  justify-content-end w-100 " >
+                     <ul class="navbar-nav mb-2 mb-lg-0 mt-4 mt-md-0">
+                     <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="aboutUs.html">About Us</a>
+                     </li>
+                     <li class="nav-item">
+                     <div class="custom-dropdown nav-link">
+                           <div class="selected-option">
+                           <span>En</span>
+                           <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                           </div>
+                           <ul class="options">
+                           <li data-value="english">
+                                 En
+                                 <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                           </li>
+                           <li data-value="arabic">
+                                 Ar
+                                 <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2" loading="lazy" width="100%">
+                           </li>
+                           </ul>
+                     </div>
+                     </li>
+                     <li class="nav-item">
+                     <a class="nav-link clr_basic" aria-current="page" href="login.html" >login</a>
+                     </li>
+                     <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="faq.html" >FAQ</a>
+                     </li>
+                     <li class="nav-item">
+                     <a href="signUp.html"><button type="button" class="btn bg_basic btn_nav">Sign Up</button></a>
+                     </li>
+               </ul>  
+               </div>
+               </div>
+               </div>
+         </nav>
+   <!-- end navbar section -->  
+
+   
+
+   <!-- Start section Reset By Email -->
+       <section class="resetByEmail_sec w-100 my-4 px-1">
+               <div class="container-fluid">
+                  <div class="row flex-wrap flex-md-row flex-column-reverse">
+                        <div class="col-lx-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3 px_0_max_415">
+                             <div class="infoSection h-100 text-center d-flex align-items-center justify-content-center flex-column">
+                                    <h2 class="title_restByEmail clr_basic my-4">Enter Your Email</h2>
+                                    <form action="" method="get" class="w-75 w_100_max_415">
+                                          <div class="form-outline mt-md-4 mb-md-5 my-4">
+                                                <!-- <span class="error"> </span> -->
+                                                <input type="email" id="email" name="email" class="p-3 form-control" placeholder="Your Email" required />
+                                          </div>  
+                                          <div class="form-outline my-4">
+                                          <button type="submit" class="btn bg_basic fw-bold btnResetByEmail px-5 mt-2">Done</button>
+                                          </div> 
+                                          <p class="desc_resetByEmail mt-5 pt-3">We sent a link to your email. Click <a href="#" class="fw-bolder clr_basic">here</a> to reset your password <br class="d-none d-md-block"> <span>This link is valid for 3 hours</span> </p>
+                                    </form>
+                             </div>
+                        </div>
+                        <div class="col-lx-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 px_0_max_415">
+                              <div class="imageInfo">
+                                    <img src="assets/images/resetByEmail/en_resetByEmail.svg" class="en_img_resetByEmail" alt="Reset Password" loading="lazy" width="100%" height="100%">
+                                    <img src="assets/images/resetByEmail/ar_resetByEmail.svg" class="ar_img_resetByEmail" alt="Reset Password" loading="lazy" width="100%" height="100%">
+                              </div>
+                        </div>
+                  </div>
+               </div>
+       </section>
+   <!-- End section Reset By Email -->
+
+
+   <!-- Start Section Footer -->
+      <footer class="position-relative pt-0">
+         <section class="add_email_Sec">
+                  <div class="position-absolute w_90">
+                     <div class="div_Add_email container text-center d-flex flex-column justify-content-center align-items-center py-4">
+                              <h3 class="my-4">Do you have any questions?</h3>
+                              <p class="my-2 opacity-75">put your email address and get connected</p>
+                              <div class="form-outline my-4">
+                                       <div class="search">
+                                          <i class="ri-mail-open-line clr_basic"></i>
+                                          <input type="search" class="form-control" placeholder="Enter your email address here">
+                                          <a href="">
+                                             <button class="btn bg_basic">Continue</button>
+                                          </a>
+                                       </div>
+                              </div>
+                     </div>
+                  </div>
+         </section>
+         <section class="content_footer w-100">
+               <div class="row">
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center align-items-center mb-md-0 mb-3 px-0">
+                           <img src="assets/images/x-icon/logo.png" alt="logo" loading="lazy" width="140px">
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mx-md-0 ">
+                           <h4 class="clr_basic my-2">Shopping Online</h4>
+                           <ul class="p-0">
+                                 <a href="" class="my-2">
+                                       <li class="text-uppercase clr_li_footer">Shipping & Return</li>
+                                 </a>
+                                 <a href="" class="my-2">
+                                       <li class="text-uppercase clr_li_footer">Team and Conditions  </li>
+                                 </a>
+                                 <a href="" class="my-2">
+                                       <li class="text-uppercase clr_li_footer">F.A.Q</li>
+                                 </a>
+                                 <a href="" class="my-2">
+                                       <li class="text-uppercase clr_li_footer">Contact Us</li>
+                                 </a>
+                                 <a href="" class="my-2">
+                                       <li class="text-uppercase clr_li_footer">Shipping & Return</li>
+                                 </a>
+                           </ul>
+                        
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mx-md-0">
+                        <h4 class="clr_basic my-2">Information</h4>
+                     <ul class="p-0">
+                           <a href="" class="my-2">
+                                 <li class="text-uppercase clr_li_footer">Shipping </li>
+                           </a>
+                           <a href="" class="my-2">
+                                 <li class="text-uppercase clr_li_footer">Team an  </li>
+                           </a>
+                           <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer">F.A.Q</li>
+                           </a>
+                           <a href="" class="my-2">
+                                 <li class="text-uppercase clr_li_footer">Contact Us</li>
+                           </a>
+                           <a href="" class="my-2">
+                                 <li class="text-uppercase clr_li_footer"> Return</li>
+                           </a>
+                     </ul>
+                     
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mx-md-0">
+                        <h4 class="clr_basic my-2">Shop</h4>
+                     <ul class="p-0">
+                           <a href="" class="my-2">
+                                 <li class="text-uppercase clr_li_footer">  Return</li>
+                           </a>
+                           <a href="" class="my-2">
+                                 <li class="text-uppercase clr_li_footer"> Conditions  </li>
+                           </a>
+                           <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer">F.A.Q</li>
+                           </a>
+                           <a href="" class="my-2">
+                                 <li class="text-uppercase clr_li_footer">Contact Us</li>
+                           </a>
+                           <a href="" class="my-2">
+                                 <li class="text-uppercase clr_li_footer">Shipping </li>
+                           </a>
+                     </ul>
+                     
+                     </div>
+                     <div class="container">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                           <ul class="d-flex justify-content-start align-items-center px-0 mb-0  mx-md-0">
+                                 <a href="" class="margin_r h5 clr_basic">
+                                       <li class="text-uppercase"><i class="ri-facebook-fill"></i></li>
+                                 </a>
+                                 <a href="" class="margin_r h5 clr_basic">
+                                       <li class="text-uppercase"><i class="ri-twitter-fill"></i></li>
+                                 </a>
+                                 <a href="" class="margin_r h5 clr_basic">
+                                    <li class="text-uppercase"><i class="ri-linkedin-fill"></i></li>
+                                 </a>
+                                 <a href="" class="margin_r h5 clr_basic">
+                                       <li class="text-uppercase"><i class="ri-instagram-fill"></i></li>
+                                 </a>
+                                 <a href="" class="margin_r h5 clr_basic">
+                                       <li class="text-uppercase"><i class="ri-youtube-fill"></i></li>
+                                 </a>
+                           </ul>
+                     </div>
+                        <hr class="hr_line">
+                     </div>
+                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center text-center">
+                        <p class="text-uppercase text-white-50">Admin8925Hmy.com- 2021.ALL Rights Reserved</p>
+                     </div>
+               
+               </div>
+         </section>
+      </footer>
+   <!-- End Section Footer -->
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- file bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+   <!-- javascript -->
+   <script src="assets/js/main.js" defer></script>
+</body>
+</html>
