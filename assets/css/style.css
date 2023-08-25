@@ -72,6 +72,7 @@ select option{
 a , a:focus , a:hover{
    text-decoration: none;
    transition: 0.5s;
+   outline: none;
 }
 
 .ml_11{
@@ -209,11 +210,11 @@ a , a:focus , a:hover{
 
 /* <!-- Login section -->   */
 
-.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social a , .form_SignUp .form-outline > select , .signUp_sec .form-outline > button span{
+.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social a , .form_SignUp .form-outline > select , .signUp_sec .form-outline > button span , .contentDashboard .form-outline button span{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
 }
 
-.signUp_sec .form-outline > button{
+.signUp_sec .form-outline > button ,  .contentDashboard .form-outline > button{
     text-align: inherit!important;
 }
 
@@ -240,9 +241,8 @@ a , a:focus , a:hover{
   border: 1px solid var(--basicColor);
 }
 
-.form_SignUp .form-outline > input , .form_SignUp .form-outline > select ,.signUp_sec #show_hide_password input , .signUp_sec .form-outline > button{
+.form_SignUp .form-outline > input , .form_SignUp .form-outline > select ,.signUp_sec #show_hide_password input , .signUp_sec .form-outline > button ,  .contentDashboard .form-outline > button{
     padding: 0px 35px 0px 24px!important;
-    /* width: 565px; */
     height: 50px;
     color: #2d2d2d;
     font-size: 20px;
@@ -282,7 +282,7 @@ a , a:focus , a:hover{
     opacity: 0.8;
 }
 
-.form_SignUp .form-outline > input:focus ,.signUp_sec #show_hide_password input:focus , .signUp_sec .form-outline > button:focus{
+.form_SignUp .form-outline > input:focus ,.signUp_sec #show_hide_password input:focus , .signUp_sec .form-outline > button:focus ,  .contentDashboard .form-outline button:focus{
     border-color: var(--blackColor)!important;
     box-shadow: none!important;
 }
@@ -2681,10 +2681,417 @@ letter-spacing: 1.4px;
 /* <!-- End section Reset By Email  --> */
 
 
-/* ================              =================== */
-/* ================  Forget Password Page  ============ */
-/* ================              =================== */
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+ /*========================  Dashboard Style CSS     ==================================================================*/
+
+ /* ==================================== */
+ /* =======  Dashboard Page ============ */ 
+/* End Navbar Dashboard Section */
+
+.navbarDashboard .nav-item{
+    margin: 0 13px!important;
+    
+}
+
+.navbarDashboard .profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.navbarDashboard .profile-image , .sidebar_sec .imageInfo_User img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.navbarDashboard .profile-dropdown {
+    position: absolute;
+    top: 55px;
+    right: -55px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbarDashboard .profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbarDashboard .profile-dropdown ul li {
+    padding: 10px 0;
+}
+
+@media (max-width:1024px) {
+    .navbarDashboard .profile-dropdown{
+        top: -161px!important;
+        right: 74px!important;
+        width: 140px!important;
+    }
+}
+
+
+.sidebar_sec .li_btnSignOut a{
+    display: block!important;
+}
+
+.navbarDashboard .profile-wrapper.active .profile-dropdown {
+    display: block;
+    z-index: 998;
+}
+
+.navbarDashboard .profile-wrapper ul li{
+ transition: all 0.5s;
+}
+
+.navbarDashboard .profile-wrapper ul li:hover{
+    transform: scale(1.04);
+}
+
+.navbarDashboard .navbar-nav{
+  border-radius: 40px;
+  padding: 7px 15px;
+  box-shadow: 0 0 5px -2px gray;
+}
+
+
+/* End Navbar Dashboard Section */
+
+/* Start Sidebar Section */
+.rootSections_Dashboard .sidebar {
+    margin-left: 3px;
+    width: 280px;
+    position: fixed;
+    top: 55px;
+    left: -299px;
+    background-color: var(--weightColor);
+    transition: left 0.3s;
+    box-shadow: 0 1px 2px 1px gray;
+    border-radius: 15px;
+    z-index: 1000;
+}
+
+.rootSections_Dashboard .sidebar.active {
+    left: 0;
+}
+
+.sidebar.active .navbarDashboard .main-content button {
+    transform: rotate(180deg)!important;
+}
+
+
+.rootSections_Dashboard .sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rootSections_Dashboard .sidebar_sec .nameUser , .sidebar_sec .ul_listPage li a{
+    color: #100F0F;
+    text-decoration: none;
+}
+
+.sidebar_sec .ul_listPage .li_btnSignOut a{
+    margin: auto;
+    width: fit-content;
+}
+
+.rootSections_Dashboard .sidebar_sec .nameUser {
+    font-family: montserrat_ar;
+}
+
+.rootSections_Dashboard .sidebar_sec .ul_listPage li.nav-list {
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    text-align: inherit;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s; 
+    cursor: pointer;
+}
+
+.rootSections_Dashboard .sidebar_sec .ul_listPage .nav-list.active {
+    background-color: #dfc9fc; 
+    color: var(--basicColor); 
+}
+
+.sidebar_sec .ul_listPage li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.sidebar_sec .btn_signOut{
+    color: var(--weightColor)!important;
+    transition: all 0.4s ease-in-out;
+}
+
+.sidebar_sec .btn_signOut:hover{
+    color: var(--basicColor)!important;
+    border: 1px solid var(--basicColor);
+}
+
+.sidebar_sec hr , .navbarDashboard .profile-wrapper hr{
+    height: 2px;
+    background-color: var(--basicColor);
+    opacity: 1;
+}
+
+.navbarDashboard  .profile-wrapper hr{
+    margin: 4px;
+}
+
+.navbarDashboard  .profile-wrapper ul li a{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.navbarDashboard .navbar-brand img{
+    display: none!important;
+}
+
+.navbarDashboard .main-content {
+    margin-left: 120px;
+}
+
+.navbarDashboard .main-content button{
+    border: 0;
+    border-radius: 4px;
+    padding: 0px 10px!important;
+    color: var(--basicColor);
+    font-weight: bolder;
+    box-shadow:0 0 1px 1px rgba(209, 209, 209, 0.949);
+    background-color: var(--weightColor);
+}
+
+.navbarDashboard .main-content button i{
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .sidebar.sidebar_sec {
+        left: -299px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .navbarDashboard .main-content {
+        margin-left: 0;
+    }
+
+    .navbarDashboard .navbar-nav{
+        border-radius: 10px;
+    }
+}
+
+.sidebar_sec .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar_sec .close-btn {
+        display: block;
+    }
+
+    .sidebar.sidebar_sec {
+        left: -299px;
+    }
+
+    .sidebar_sec.active {
+        left: 0;
+    }
+
+   .navbarDashboard .main-content {
+        margin-left: 0;
+    }
+}
+#sidebar .ul_listPage{
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+
+#sidebar .ul_listPage::-webkit-scrollbar{
+ width: 9px !important ;
+  background:#f4f4f4!important;
+  border-top-right-radius: 100px!important;
+  border-top-left-radius: 100px!important;
+}
+
+#sidebar .ul_listPage::-webkit-scrollbar-thumb{
+     border-radius: 35px;
+     width: 14px !important ;
+     background: var(--basicColor)!important;
+     height: calc(100% -40px);
+    border-top-right-radius: 100px!important;
+    border-top-left-radius: 100px!important;
+
+   }
+
+@media (min-width: 885px) {
+    .sidebar.sidebar_sec {
+        left: 0;
+    }
+
+    .navbarDashboard .main-content {
+        margin-left: 280px;
+    }
+
+    .sidebar_sec .close-btn {
+        display: none;
+    }
+}
+
+@media (min-width:767px) and (max-width:913px) {
+    .navbarDashboard .main-content{
+        margin-left: 10px!important;
+    }
+}
+
+@media (min-width:1280px) and (max-width:1285px) {
+    .rootSections_Dashboard .sidebar{
+        top: 128px!important;
+    }
+}
+
+/* End Sidebar Section */
+
+/* <!-- Start Content List ==> (Dashboard) --> */
+    .contentPages_Dashboard{
+        width: 100%;
+        margin-left: 0px;
+        padding: 20px 0px;
+    }
+    
+    @media (min-width:1023px) {
+        .rootSections_Dashboard .sidebar {
+            margin-left: 18px;
+            top: 75px;
+        }
+        .contentPages_Dashboard{
+            width: calc(100vw - 330px);
+            margin-left: 315px;
+            padding: 20px 10px;
+        }
+        .navbarDashboard .navbar-brand img{
+            display: block!important;
+        }
+        .navbarDashboard .profile-wrapper.active .profile-dropdown{
+            z-index: 1001;
+        }
+    }
+    
+    .contentDashboard .form-outline button.form-select{
+        background-color: var(--basicColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }  
+    .contentDashboard .form-outline button.form-select:focus{
+        border: 1px solid var(--basicColor);
+    }
+    .contentDashboard .form-outline .dselect-items button {
+        text-align: initial!important;
+    }   
+    
+    .contentDashboard .form-outline .dropdown-toggle::after{
+        color: var(--weightColor)!important;
+    }
+    
+    .contentDashboard .form-outline button span{
+        color: var(--weightColor);
+        background-color: var(--basicColor);
+        font-family: Arial, Helvetica, sans-serif!important;
+        letter-spacing: 0.6px;
+    }
+    
+    .contentDashboard .totalOrder h5{
+        font-size: 17px;
+        font-weight: 600;
+    }
+    
+    .tableView_dateFilter thead tr th{
+     font-weight: 300;
+    }
+    
+    .tableView_dateFilter td:not(:last-child){
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+    }
+    
+    .tableView_dateFilter thead tr th:nth-child(1){
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+    }
+    
+    .tableView_dateFilter thead tr th:last-child{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .tableView_dateFilter tbody tr td{
+        padding-top: 20px!important;
+    }
+    
+    .tableView_dateFilter tbody tr td:nth-child(1) span {
+        color: #C2C2C2;
+        font-size: 14px;
+       }
+    
+    .tableView_dateFilter tbody tr td:nth-child(2) {
+     color: #7D7D7D;
+    }
+    
+    .table-responsive{
+        overflow-x: scroll!important;
+        overflow-y: initial!important;
+    }
+    
+    .table-responsive::-webkit-scrollbar{
+        border-radius: 2px;
+        height: 14px;
+    }
+    
+    .table-responsive::-webkit-scrollbar-thumb {
+        background-color: var(--basicColor)!important; 
+        border-radius: 2px;
+    }
+    
+    .table-responsive::-webkit-scrollbar-track {
+        background-color: #f4f4f4!important; 
+    }
+    
+/* <!-- End Content List ==> (Dashboard) --> */
+
+
  
+/* ==================================== */
+/* =======  Dashboard Page ============ */ 
+
+/* ==================================== */
+/* =======  Dashboard Page ============ */ 
+
+/* ==================================== */
+/* =======  Dashboard Page ============ */ 
+
+/* ==================================== */
+/* =======  Dashboard Page ============ */ 
+
 
 
 
