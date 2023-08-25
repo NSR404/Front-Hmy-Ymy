@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Home </title>
+    <!-- FAVICON -->
+    <link rel="stylesheet icon" href="assets/images/x-icon/logo.png" type="image/logo">
+
+    <!-- file Icons -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <!-- file bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- file style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="dashboardPage">
+
+   <!-- start btn direction -->
+      <div class="btn_direction b_pos"><i class="ri-arrow-up-s-line"></i></div>
+   <!-- end btn direction -->
+      
+   <!-- start navbar section -->
+      <nav class="navbar navbar-expand-lg navbar-light pt-md-0 pt-2 navbarDashboard">
+            <div class="container">
+                  <a class="navbar-brand w-50" href="#">
+                        <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px" class="ml_11">
+                        <div class="main-content d-block d-lg-none">
+                              <button id="sidebarToggle"  type="button">
+                                    <i class="ri-arrow-right-double-line"></i>
+                              </button>
+                        </div>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                     <div class="d-flex  justify-content-end w-100 " >
+                           <ul class="navbar-nav mb-2 mb-lg-0 mt-2 mt-md-1 mt-lg-0">
+                           <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                           </li>
+                           <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="aboutUs.html">About Us</a>
+                           </li>
+                           <li class="nav-item">
+                           <div class="custom-dropdown nav-link">
+                                 <div class="selected-option">
+                                 <span>En</span>
+                                 <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </div>
+                                 <ul class="options">
+                                 <li data-value="english">
+                                       En
+                                       <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </li>
+                                 <li data-value="arabic">
+                                       Ar
+                                       <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </li>
+                                 </ul>
+                           </div>
+                           </li>
+                           <li class="nav-item">
+                           <a class="nav-link" aria-current="page" href="faq.html" >FAQ</a>
+                           </li>
+                           <li class="nav-item">
+                                 <div class="profile-wrapper" id="profileWrapper">
+                                       <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage">
+                                       <div class="profile-dropdown text-center" id="profileDropdown">
+                                          <ul>
+                                             <li><a href="#">Profile</a></li>
+                                             <li><a href="#">Settings</a></li>
+                                             <li><a href="#">Help</a></li>
+                                             <hr class="bg_basic">
+                                             <li><a href="#"> Sign Out</a></li>
+                                          </ul>
+                                       </div>
+                              </div>
+                           </li>
+                     </ul>  
+                     </div>
+                  </div>
+            </div>
+      </nav>
+   <!-- end navbar section -->  
+
+   <div class="rootSections_Dashboard">
+      <!-- Start Sidebar Section -->
+         <div class="sidebar sidebar_sec pt-3 px-4 mt-0 mt-md-1" id="sidebar">
+                <div class="imageInfo_User text-center">
+                     <img src="assets/images/profile/profile.png" class="profile-image" alt="image User" loading="lazy">
+                </div>
+               <h5 class="text-center mt-2 mb-md-3 mb-3 nameUser">Ahmed Mohammed</h5>
+               <hr class="text-center bg_basic">
+               <ul class="ul_listPage">
+                  <li class="nav-list active"><a href="#"><i class="ri-home-3-fill h4 px-1"></i> Dashboard</a></li>
+                  <li class="nav-list"><a href="#"><i class="ri-user-3-fill h4 px-1"></i> Manage Profile</a></li>
+                  <li class="nav-list"><a href="#"><i class="ri-bank-card-fill h4 px-1"></i> Payment Method</a></li>
+                  <li class="nav-list"><a href="#"><i class="ri-heart-fill h4 px-1"></i> Favorite meals</a></li>
+                  <li class="nav-list"><a href="#"><i class="ri-lock-password-fill h4 px-1"></i> Change Password</a></li>
+                  <li class="text-center mt-4 mb-2 li_btnSignOut"><a href="#" class="btn bg_basic px-4 btn_signOut">Sign Out</a></li>
+               </ul>
+               <!-- <div class="close-btn" id="closeBtn">
+                  <i class="ri-close-fill clr_basic fw-bolder h1"></i>
+               </div> -->
+         </div>
+      <!-- End Sidebar Section -->
+
+      <!-- Start Content Pages for Dashboard -->
+        <div class="contentPages_Dashboard">
+            <!-- Start Content List ==> (Dashboard) -->
+            <div class="contentDashboard mt-2">
+            <!-- /* start section Index Dashboard  */ -->
+                 <section class="indexDashboard">
+                     <div class="container">
+                        <div class="row justify-content-center">
+                              <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                    <div class="itemBox d-flex flex-column justify-content-center py-3 my-4">
+                                             <div class="titleItem d-flex align-items-center justify-content-center pb-4">
+                                                <svg class="mx-2" width="30" height="31" viewBox="0 0 50 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path d="M11.9883 28.3311H38.1693V31.2891H11.9883V28.3311ZM11.9883 41.3481H28.0123V44.3061H11.9883V41.3481Z" fill="black"/>
+                                                   <path d="M43.9384 60.33H6.17036C5.39274 60.3304 4.62245 60.1796 3.90237 59.886C3.21323 59.6101 2.59126 59.1897 2.07837 58.653C1.5524 58.1312 1.13354 57.5116 0.845368 56.829C0.551795 56.109 0.400998 55.3387 0.401368 54.5611V15.261C0.400998 14.4834 0.551795 13.7131 0.845368 12.993C1.12147 12.304 1.54189 11.6821 2.07837 11.1691C2.60017 10.6431 3.21979 10.2242 3.90237 9.93605C4.62245 9.64248 5.39274 9.49168 6.17036 9.49205H11.8894V12.401H6.17036C5.39926 12.4024 4.66011 12.7093 4.11485 13.2545C3.5696 13.7998 3.26269 14.5389 3.26137 15.31V54.61C3.26269 55.3812 3.5696 56.1203 4.11485 56.6656C4.66011 57.2108 5.39926 57.5177 6.17036 57.519H43.8894C44.6605 57.5177 45.3996 57.2108 45.9449 56.6656C46.4901 56.1203 46.797 55.3812 46.7984 54.61V15.264C46.797 14.4929 46.4901 13.7538 45.9449 13.2085C45.3996 12.6633 44.6605 12.3564 43.8894 12.355H38.2194V9.44605H43.9384C44.716 9.44568 45.4863 9.59647 46.2064 9.89005C46.8955 10.166 47.5175 10.5864 48.0304 11.123C48.5564 11.6448 48.9752 12.2645 49.2634 12.9471C49.5571 13.6671 49.7079 14.4374 49.7074 15.215V54.515C49.7079 55.2927 49.5571 56.063 49.2634 56.7831C48.9875 57.4722 48.567 58.0942 48.0304 58.607C47.5086 59.1331 46.889 59.5519 46.2064 59.84C45.4968 60.1722 44.7218 60.3407 43.9384 60.333V60.33Z" fill="black"/>
+                                                   <path d="M39.5506 18.17H10.5586V8.70698C10.5574 8.22746 10.651 7.75242 10.834 7.30917C11.0169 6.86591 11.2857 6.46318 11.6247 6.1241C11.9638 5.78503 12.3665 5.51629 12.8098 5.33333C13.253 5.15037 13.7281 5.0568 14.2076 5.05798H17.9586C18.6288 3.73739 19.6516 2.6282 20.9137 1.8534C22.1757 1.0786 23.6277 0.668457 25.1086 0.668457C26.5895 0.668457 28.0415 1.0786 29.3036 1.8534C30.5656 2.6282 31.5884 3.73739 32.2586 5.05798H36.0056C36.4851 5.05693 36.9601 5.15059 37.4033 5.3336C37.8465 5.5166 38.2492 5.78535 38.5882 6.1244C38.9273 6.46345 39.196 6.86613 39.379 7.30932C39.562 7.75252 39.6557 8.22749 39.6546 8.70698L39.5506 18.17ZM13.4676 15.261H36.6906V8.70698C36.6861 8.51216 36.6066 8.32659 36.4688 8.18879C36.331 8.05099 36.1454 7.97156 35.9506 7.96698H30.1816L29.8366 6.98098C29.4914 5.98757 28.8455 5.12631 27.9884 4.51681C27.1314 3.9073 26.1058 3.57981 25.0541 3.57981C24.0024 3.57981 22.9769 3.9073 22.1198 4.51681C21.2628 5.12631 20.6168 5.98757 20.2716 6.98098L19.9266 7.96698H14.1586C13.9638 7.97156 13.7782 8.05099 13.6404 8.18879C13.5026 8.32659 13.4232 8.51216 13.4186 8.70698V15.265L13.4676 15.261Z" fill="black"/>
+                                                   </svg>
+                                                   <h4 class="my-3"> Total Order</h4>
+                                             </div>
+                                             <h4 class="clr_basic number_total pt-3">41</h4>
+                                    </div>
+                              </div>
+                              <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                 <div class="itemBox d-flex flex-column justify-content-center py-3 my-4">
+                                          <div class="titleItem d-flex align-items-center justify-content-center pb-4">
+                                             <svg class="mx-2" width="30" height="31" viewBox="0 0 50 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.9883 28.3311H38.1693V31.2891H11.9883V28.3311ZM11.9883 41.3481H28.0123V44.3061H11.9883V41.3481Z" fill="black"/>
+                                                <path d="M43.9384 60.33H6.17036C5.39274 60.3304 4.62245 60.1796 3.90237 59.886C3.21323 59.6101 2.59126 59.1897 2.07837 58.653C1.5524 58.1312 1.13354 57.5116 0.845368 56.829C0.551795 56.109 0.400998 55.3387 0.401368 54.5611V15.261C0.400998 14.4834 0.551795 13.7131 0.845368 12.993C1.12147 12.304 1.54189 11.6821 2.07837 11.1691C2.60017 10.6431 3.21979 10.2242 3.90237 9.93605C4.62245 9.64248 5.39274 9.49168 6.17036 9.49205H11.8894V12.401H6.17036C5.39926 12.4024 4.66011 12.7093 4.11485 13.2545C3.5696 13.7998 3.26269 14.5389 3.26137 15.31V54.61C3.26269 55.3812 3.5696 56.1203 4.11485 56.6656C4.66011 57.2108 5.39926 57.5177 6.17036 57.519H43.8894C44.6605 57.5177 45.3996 57.2108 45.9449 56.6656C46.4901 56.1203 46.797 55.3812 46.7984 54.61V15.264C46.797 14.4929 46.4901 13.7538 45.9449 13.2085C45.3996 12.6633 44.6605 12.3564 43.8894 12.355H38.2194V9.44605H43.9384C44.716 9.44568 45.4863 9.59647 46.2064 9.89005C46.8955 10.166 47.5175 10.5864 48.0304 11.123C48.5564 11.6448 48.9752 12.2645 49.2634 12.9471C49.5571 13.6671 49.7079 14.4374 49.7074 15.215V54.515C49.7079 55.2927 49.5571 56.063 49.2634 56.7831C48.9875 57.4722 48.567 58.0942 48.0304 58.607C47.5086 59.1331 46.889 59.5519 46.2064 59.84C45.4968 60.1722 44.7218 60.3407 43.9384 60.333V60.33Z" fill="black"/>
+                                                <path d="M39.5506 18.17H10.5586V8.70698C10.5574 8.22746 10.651 7.75242 10.834 7.30917C11.0169 6.86591 11.2857 6.46318 11.6247 6.1241C11.9638 5.78503 12.3665 5.51629 12.8098 5.33333C13.253 5.15037 13.7281 5.0568 14.2076 5.05798H17.9586C18.6288 3.73739 19.6516 2.6282 20.9137 1.8534C22.1757 1.0786 23.6277 0.668457 25.1086 0.668457C26.5895 0.668457 28.0415 1.0786 29.3036 1.8534C30.5656 2.6282 31.5884 3.73739 32.2586 5.05798H36.0056C36.4851 5.05693 36.9601 5.15059 37.4033 5.3336C37.8465 5.5166 38.2492 5.78535 38.5882 6.1244C38.9273 6.46345 39.196 6.86613 39.379 7.30932C39.562 7.75252 39.6557 8.22749 39.6546 8.70698L39.5506 18.17ZM13.4676 15.261H36.6906V8.70698C36.6861 8.51216 36.6066 8.32659 36.4688 8.18879C36.331 8.05099 36.1454 7.97156 35.9506 7.96698H30.1816L29.8366 6.98098C29.4914 5.98757 28.8455 5.12631 27.9884 4.51681C27.1314 3.9073 26.1058 3.57981 25.0541 3.57981C24.0024 3.57981 22.9769 3.9073 22.1198 4.51681C21.2628 5.12631 20.6168 5.98757 20.2716 6.98098L19.9266 7.96698H14.1586C13.9638 7.97156 13.7782 8.05099 13.6404 8.18879C13.5026 8.32659 13.4232 8.51216 13.4186 8.70698V15.265L13.4676 15.261Z" fill="black"/>
+                                                </svg>
+                                                <h4 class="my-3"> Total Order</h4>
+                                          </div>
+                                          <h4 class="clr_basic number_total pt-3">41</h4>
+                                 </div>
+                              </div>
+                              <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                 <div class="itemBox d-flex flex-column justify-content-center py-3 my-4">
+                                          <div class="titleItem d-flex align-items-center justify-content-center pb-4">
+                                             <svg class="mx-2" width="30" height="31" viewBox="0 0 50 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.9883 28.3311H38.1693V31.2891H11.9883V28.3311ZM11.9883 41.3481H28.0123V44.3061H11.9883V41.3481Z" fill="black"/>
+                                                <path d="M43.9384 60.33H6.17036C5.39274 60.3304 4.62245 60.1796 3.90237 59.886C3.21323 59.6101 2.59126 59.1897 2.07837 58.653C1.5524 58.1312 1.13354 57.5116 0.845368 56.829C0.551795 56.109 0.400998 55.3387 0.401368 54.5611V15.261C0.400998 14.4834 0.551795 13.7131 0.845368 12.993C1.12147 12.304 1.54189 11.6821 2.07837 11.1691C2.60017 10.6431 3.21979 10.2242 3.90237 9.93605C4.62245 9.64248 5.39274 9.49168 6.17036 9.49205H11.8894V12.401H6.17036C5.39926 12.4024 4.66011 12.7093 4.11485 13.2545C3.5696 13.7998 3.26269 14.5389 3.26137 15.31V54.61C3.26269 55.3812 3.5696 56.1203 4.11485 56.6656C4.66011 57.2108 5.39926 57.5177 6.17036 57.519H43.8894C44.6605 57.5177 45.3996 57.2108 45.9449 56.6656C46.4901 56.1203 46.797 55.3812 46.7984 54.61V15.264C46.797 14.4929 46.4901 13.7538 45.9449 13.2085C45.3996 12.6633 44.6605 12.3564 43.8894 12.355H38.2194V9.44605H43.9384C44.716 9.44568 45.4863 9.59647 46.2064 9.89005C46.8955 10.166 47.5175 10.5864 48.0304 11.123C48.5564 11.6448 48.9752 12.2645 49.2634 12.9471C49.5571 13.6671 49.7079 14.4374 49.7074 15.215V54.515C49.7079 55.2927 49.5571 56.063 49.2634 56.7831C48.9875 57.4722 48.567 58.0942 48.0304 58.607C47.5086 59.1331 46.889 59.5519 46.2064 59.84C45.4968 60.1722 44.7218 60.3407 43.9384 60.333V60.33Z" fill="black"/>
+                                                <path d="M39.5506 18.17H10.5586V8.70698C10.5574 8.22746 10.651 7.75242 10.834 7.30917C11.0169 6.86591 11.2857 6.46318 11.6247 6.1241C11.9638 5.78503 12.3665 5.51629 12.8098 5.33333C13.253 5.15037 13.7281 5.0568 14.2076 5.05798H17.9586C18.6288 3.73739 19.6516 2.6282 20.9137 1.8534C22.1757 1.0786 23.6277 0.668457 25.1086 0.668457C26.5895 0.668457 28.0415 1.0786 29.3036 1.8534C30.5656 2.6282 31.5884 3.73739 32.2586 5.05798H36.0056C36.4851 5.05693 36.9601 5.15059 37.4033 5.3336C37.8465 5.5166 38.2492 5.78535 38.5882 6.1244C38.9273 6.46345 39.196 6.86613 39.379 7.30932C39.562 7.75252 39.6557 8.22749 39.6546 8.70698L39.5506 18.17ZM13.4676 15.261H36.6906V8.70698C36.6861 8.51216 36.6066 8.32659 36.4688 8.18879C36.331 8.05099 36.1454 7.97156 35.9506 7.96698H30.1816L29.8366 6.98098C29.4914 5.98757 28.8455 5.12631 27.9884 4.51681C27.1314 3.9073 26.1058 3.57981 25.0541 3.57981C24.0024 3.57981 22.9769 3.9073 22.1198 4.51681C21.2628 5.12631 20.6168 5.98757 20.2716 6.98098L19.9266 7.96698H14.1586C13.9638 7.97156 13.7782 8.05099 13.6404 8.18879C13.5026 8.32659 13.4232 8.51216 13.4186 8.70698V15.265L13.4676 15.261Z" fill="black"/>
+                                                </svg>
+                                                <h4 class="my-3"> Total Order</h4>
+                                          </div>
+                                          <h4 class="clr_basic number_total pt-3">41</h4>
+                                 </div>
+                              </div>
+                              <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                 <div class="itemBox d-flex flex-column justify-content-center py-3 my-4">
+                                          <div class="titleItem d-flex align-items-center justify-content-center pb-4">
+                                             <svg class="mx-2" width="30" height="31" viewBox="0 0 50 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.9883 28.3311H38.1693V31.2891H11.9883V28.3311ZM11.9883 41.3481H28.0123V44.3061H11.9883V41.3481Z" fill="black"/>
+                                                <path d="M43.9384 60.33H6.17036C5.39274 60.3304 4.62245 60.1796 3.90237 59.886C3.21323 59.6101 2.59126 59.1897 2.07837 58.653C1.5524 58.1312 1.13354 57.5116 0.845368 56.829C0.551795 56.109 0.400998 55.3387 0.401368 54.5611V15.261C0.400998 14.4834 0.551795 13.7131 0.845368 12.993C1.12147 12.304 1.54189 11.6821 2.07837 11.1691C2.60017 10.6431 3.21979 10.2242 3.90237 9.93605C4.62245 9.64248 5.39274 9.49168 6.17036 9.49205H11.8894V12.401H6.17036C5.39926 12.4024 4.66011 12.7093 4.11485 13.2545C3.5696 13.7998 3.26269 14.5389 3.26137 15.31V54.61C3.26269 55.3812 3.5696 56.1203 4.11485 56.6656C4.66011 57.2108 5.39926 57.5177 6.17036 57.519H43.8894C44.6605 57.5177 45.3996 57.2108 45.9449 56.6656C46.4901 56.1203 46.797 55.3812 46.7984 54.61V15.264C46.797 14.4929 46.4901 13.7538 45.9449 13.2085C45.3996 12.6633 44.6605 12.3564 43.8894 12.355H38.2194V9.44605H43.9384C44.716 9.44568 45.4863 9.59647 46.2064 9.89005C46.8955 10.166 47.5175 10.5864 48.0304 11.123C48.5564 11.6448 48.9752 12.2645 49.2634 12.9471C49.5571 13.6671 49.7079 14.4374 49.7074 15.215V54.515C49.7079 55.2927 49.5571 56.063 49.2634 56.7831C48.9875 57.4722 48.567 58.0942 48.0304 58.607C47.5086 59.1331 46.889 59.5519 46.2064 59.84C45.4968 60.1722 44.7218 60.3407 43.9384 60.333V60.33Z" fill="black"/>
+                                                <path d="M39.5506 18.17H10.5586V8.70698C10.5574 8.22746 10.651 7.75242 10.834 7.30917C11.0169 6.86591 11.2857 6.46318 11.6247 6.1241C11.9638 5.78503 12.3665 5.51629 12.8098 5.33333C13.253 5.15037 13.7281 5.0568 14.2076 5.05798H17.9586C18.6288 3.73739 19.6516 2.6282 20.9137 1.8534C22.1757 1.0786 23.6277 0.668457 25.1086 0.668457C26.5895 0.668457 28.0415 1.0786 29.3036 1.8534C30.5656 2.6282 31.5884 3.73739 32.2586 5.05798H36.0056C36.4851 5.05693 36.9601 5.15059 37.4033 5.3336C37.8465 5.5166 38.2492 5.78535 38.5882 6.1244C38.9273 6.46345 39.196 6.86613 39.379 7.30932C39.562 7.75252 39.6557 8.22749 39.6546 8.70698L39.5506 18.17ZM13.4676 15.261H36.6906V8.70698C36.6861 8.51216 36.6066 8.32659 36.4688 8.18879C36.331 8.05099 36.1454 7.97156 35.9506 7.96698H30.1816L29.8366 6.98098C29.4914 5.98757 28.8455 5.12631 27.9884 4.51681C27.1314 3.9073 26.1058 3.57981 25.0541 3.57981C24.0024 3.57981 22.9769 3.9073 22.1198 4.51681C21.2628 5.12631 20.6168 5.98757 20.2716 6.98098L19.9266 7.96698H14.1586C13.9638 7.97156 13.7782 8.05099 13.6404 8.18879C13.5026 8.32659 13.4232 8.51216 13.4186 8.70698V15.265L13.4676 15.261Z" fill="black"/>
+                                                </svg>
+                                                <h4 class="my-3"> Total Order</h4>
+                                          </div>
+                                          <h4 class="clr_basic number_total pt-3">41</h4>
+                                 </div>
+                              </div>
+                        </div>
+                     </div>
+                 </section>
+            <!-- /* start section Index Dashboard  */ -->
+
+            </div>
+            <!-- End Content List ==> (Dashboard) -->
+        </div>
+      <!-- End Content Pages for Dashboard -->
+   </div>
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- file bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+   <!-- javascript -->
+   <script src="assets/js/main.js" defer></script>
+   <script src="assets/js/mainDashboard.js"></script>
+</body>
+</html>

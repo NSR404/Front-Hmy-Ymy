@@ -309,7 +309,7 @@ window.onload = function () {
 
 
         // تحويل السايدبار الى الجهة اليمين في اللغة العربية
-        if (window.innerWidth > 884) {
+        if (window.innerWidth > 913) {
 
           var sidebar_Sec = document.querySelector(".sidebar.sidebar_sec");
           var mainContent_sidebar = document.querySelector(".navbarDashboard .main-content");
@@ -338,7 +338,7 @@ window.onload = function () {
         }
 
         // وضع السايدبار في جهة اليمين في الشاشات الصغيرة
-          if (window.innerWidth < 885) {
+          if (window.innerWidth < 913) {
             var sidebar_768 = document.querySelector(".sidebar.sidebar_sec");
             var mainContent_768 = document.querySelector(".navbarDashboard .main-content");
             var buttonAction_768 = document.querySelector(".navbarDashboard .main-content button");
@@ -604,7 +604,7 @@ window.onload = function () {
         }
 
         // تحويل السايدبار الى الجهة اليسار في اللغة الانجليزية
-        if (window.innerWidth >= 885) {
+        if (window.innerWidth >= 913) {
 
           var sidebar_Sec = document.querySelector(".sidebar.sidebar_sec");
           var mainContent_sidebar = document.querySelector(".navbarDashboard .main-content");
@@ -630,7 +630,7 @@ window.onload = function () {
         }
 
         // وضع السايدبار في جهة اليسار في الشاشات الصغيرة
-        if (window.innerWidth < 885) {
+        if (window.innerWidth < 913) {
           var sidebar_768 = document.querySelector(".sidebar.sidebar_sec");
           var mainContent_768 = document.querySelector(".navbarDashboard .main-content");
           var buttonAction_768 = document.querySelector(".navbarDashboard .main-content button");
