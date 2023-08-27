@@ -2947,6 +2947,17 @@ html[lang="ar"] .bookingNow_sec .rightPart_box .quantity-box ,html[lang="ar"] .b
     padding: 10px 0;
 }
 
+@media (min-width:1023px) and (max-width:1024px) {
+    html[lang="en"]  .navbarDashboard .profile-dropdown{
+        top: 52px!important;
+        right: -48px!important;
+    }
+     html[lang="ar"] .navbarDashboard .profile-dropdown{
+        top: 52px!important;
+        right: -55px !important;
+    }
+}
+
 .notificationDropdown {
     display: none;
   }
@@ -3070,7 +3081,7 @@ html[lang="ar"] .bookingNow_sec .rightPart_box .quantity-box ,html[lang="ar"] .b
      padding-right: 0!important;
   }
   
-@media (max-width:1024px) {
+@media (max-width:1020px) {
     .navbarDashboard .profile-dropdown{
         top: -161px!important;
         right: 74px!important;

@@ -283,7 +283,7 @@ window.onload = function () {
       }
 
         //  edit location dropdown profile in navbar in dashboard
-          if (window.innerWidth < 1025) {
+          if (window.innerWidth <= 1023) {
             var profileDropdown = document.querySelector(".navbarDashboard .profile-dropdown");
             
             profileDropdown.style.setProperty("right", "-176px", "important");
