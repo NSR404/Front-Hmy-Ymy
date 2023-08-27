@@ -1,5 +1,4 @@
-// =============================================================
-// =============================================================
+
 // =============================================================
 
 // <!-- // Code PreLoading -->
@@ -11,8 +10,6 @@ window.addEventListener("load", function () {
 });
 
 // =============================================================
-// =============================================================
-// =============================================================
 
 // Close the options list if user clicks outside
 document.addEventListener("click", (event) => {
@@ -22,18 +19,12 @@ document.addEventListener("click", (event) => {
 });
 
 // =============================================================
-// =============================================================
-// =============================================================
-
 // Convert language
 window.onload = function () {
   const languageOptions = document.querySelectorAll(".options li");
   const div_Add_email = document.querySelector(".div_Add_email .search a");
   const radioDivs = document.querySelectorAll(".radio_div");
   const justify_center_1024 = document.querySelector(".justify_center_1024");
-  //   convert radio input with label
-  const arMarginRightLabels = document.querySelectorAll(".ar_marginRight ");
-  const radio_div = document.querySelectorAll(".radio_div");
   const htmlTag = document.querySelector("html");
  
 
@@ -121,27 +112,18 @@ window.onload = function () {
         swiper_slide.style.setProperty("margin-right", "0px", "important");
       }
 
-      const circle_load_blue = document.querySelector(".circle_load_blue");
-       if (circle_load_blue) {
-         circle_load_blue.style.setProperty("left", "48px", "important");
-       }
-
-       const circle_load_border = document.querySelector(".circle_load_border");
-       if (circle_load_border) {
-         circle_load_border.style.setProperty("left", "16px", "important");
-      }
 
       const swiper_next_onlineReview_sec = document.querySelector(".swiper_next_onlineReview_sec");
        if (swiper_next_onlineReview_sec) {
          swiper_next_onlineReview_sec.style.setProperty("display","none","important");
        }
 
-     const svg_Live_Experience = document.querySelector(".svg_Live_Experience");
-      if (svg_Live_Experience) {
-      svg_Live_Experience.style.setProperty("width", "145px", "important");
-      svg_Live_Experience.style.setProperty("margin-left", "-53px", "important");
-      svg_Live_Experience.style.setProperty("margin-bottom", "0px", "important");
-      }
+    //  const svg_Live_Experience = document.querySelector(".svg_Live_Experience");
+    //   if (svg_Live_Experience) {
+    //   svg_Live_Experience.style.setProperty("width", "145px", "important");
+    //   svg_Live_Experience.style.setProperty("margin-left", "-53px", "important");
+    //   svg_Live_Experience.style.setProperty("margin-bottom", "0px", "important");
+    //   }
 
       const pr_0_lg = document.querySelector(".pr_0_lg");
       if (pr_0_lg){
@@ -371,41 +353,7 @@ window.onload = function () {
 // ===================================================================
 // ===================================================================
 
-      function paddingTextDetailsFood() {
-        const padding_style_820 = document.querySelector(".padding_style");
-        const screenWidth = window.innerWidth;
       
-        if (screenWidth > 819 && screenWidth <= 822) {
-          if (padding_style_820) {
-            // padding_style_820.style.setProperty("width", "84%", "important");
-            // padding_style_820.style.setProperty("padding-right", "80px", "important");
-            // console.log("run code");
-          }
-        } else {
-          //  console.log("stop");
-        }
-      }
-      
-      document.addEventListener("DOMContentLoaded", paddingTextDetailsFood);
-      window.addEventListener("resize", paddingTextDetailsFood);
-      
-      function paddingTextDetailsFood_912() {
-        const padding_style_820 = document.querySelector(".padding_style");
-        const screenWidth = window.innerWidth;
-      
-        if (screenWidth > 911 && screenWidth <= 915) {
-          if (padding_style_820) {
-            // padding_style_820.style.setProperty("width", "84%", "important");
-            // padding_style_820.style.setProperty("padding-right", "170px", "important");
-            // console.log("run code 2");
-          }
-        } else {
-           console.log("");
-        }
-      }
-      
-      document.addEventListener("DOMContentLoaded", paddingTextDetailsFood_912);
-      window.addEventListener("resize", paddingTextDetailsFood_912);
       
       function paddingTextDetailsFood_768() {
         const padding_style_820 = document.querySelector(".padding_style");
@@ -423,31 +371,8 @@ window.onload = function () {
       
       
       document.addEventListener("DOMContentLoaded", paddingTextDetailsFood_768);
-      // window.addEventListener("resize", paddingTextDetailsFood_768);
       paddingTextDetailsFood_768();
       
-      // Booking Now Page
-      const radio_div_select = document.querySelectorAll(".radio_div_select");
-      const radio_div_selectLabel = document.querySelectorAll(".radio_div_select label");
-      if (radio_div_select) {
-        radio_div_select.forEach((select) => {
-          select.style.setProperty("display", "flex", "important");
-          select.style.setProperty("flex-direction", "row", "important");
-        });
-        if (radio_div_selectLabel) {
-          radio_div_selectLabel.forEach((label) => {
-              label.style.setProperty("padding-right", "40px", "important");
-          });
-        }
-      }
-
-      const quantityBoxBookNow= document.querySelectorAll('.rightPart_box .quantity-box');
-      if (quantityBoxBookNow) {
-        quantityBoxBookNow.forEach((label) => {
-          label.style.setProperty("display", "flex", "important");
-          label.style.setProperty("flex-direction", "row-reverse", "important");
-         });
-      }
       //  Live The Experience in Booking Now Page
       const form_checkBookingNow= document.querySelector('.rightPart_box .form-check');
       const form_checLabelkBookingNow= document.querySelector('.rightPart_box .form-check-label');
@@ -686,28 +611,6 @@ window.onload = function () {
       // window.addEventListener("DOMContentLoaded", applyResponsiveStylesBookingNow);
       window.addEventListener("resize", applyResponsiveStylesBookingNow);
       applyResponsiveStylesBookingNow();
-      const quantityBoxBookNow= document.querySelectorAll('.rightPart_box .quantity-box');
-      if (quantityBoxBookNow) {
-        quantityBoxBookNow.forEach((label) => {
-          label.style.setProperty("display", "flex", "important");
-          label.style.setProperty("flex-direction", "row", "important");
-         });
-      }
-       
-      // Booking Now Page
-      const radio_div_select = document.querySelectorAll(".radio_div_select");
-      const radio_div_selectLabel = document.querySelectorAll(".radio_div_select label");
-      if (radio_div_select) {
-        radio_div_select.forEach((select) => {
-          select.style.setProperty("display", "block", "important");
-        });
-        if (radio_div_selectLabel) {
-          radio_div_selectLabel.forEach((label) => {
-              label.style.setProperty("padding-right", "0px", "important");
-          });
-        }
-      }
-
       en_handleResizeSize_414();
  // ======================================================
       // <!-- Start section Reset Password -->
@@ -789,11 +692,7 @@ window.onload = function () {
       });
 };
 
-
-
 // =============================================================
-// =============================================================
-
 // Code Hidden Password
 $(document).ready(function () {
   $("#show_hide_password a").on("click", function (event) {
@@ -810,8 +709,6 @@ $(document).ready(function () {
   });
 });
 
-// =============================================================
-// =============================================================
 // =============================================================
 
 // btn_direction Top
@@ -833,8 +730,6 @@ $(".btn_direction").on("click", function () {
   );
 });
 
-// =============================================================
-// =============================================================
 // =============================================================
 // <!-- Add Image With Tag Option (Language) -->
 const dropdown = document.querySelector(".custom-dropdown");
@@ -862,8 +757,6 @@ options.forEach((option) => {
 });
 
 // =============================================================
-// =============================================================
-// =============================================================
 // <!-- Start Slider Cultures -->
 let items = document.querySelectorAll(".carousel .carousel-item");
 items.forEach((el) => {
@@ -882,8 +775,6 @@ items.forEach((el) => {
 // <!-- End Slider Cultures -->
 
 // =============================================================
-// =============================================================
-// =============================================================
 //  <!-- Code Carousal For Section Food Box -->
 document.addEventListener("DOMContentLoaded", function () {
   var carousel = new bootstrap.Carousel(
@@ -895,8 +786,6 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
-// =============================================================
-// =============================================================
 // =============================================================
 //   <!-- Include plugin after Swiper -->
 function myPlugin({ swiper, extendParams, on }) {
@@ -946,8 +835,6 @@ function myPlugin({ swiper, extendParams, on }) {
 }
 
 // =============================================================
-// =============================================================
-// =============================================================
 // <!-- Swiper Code js -->
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper(".swiper", {
@@ -970,125 +857,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // =============================================================
-// =============================================================
-// =============================================================
-
-// <!-- Quantity Increment and Decrement in Details Food-->
-document.addEventListener("DOMContentLoaded", () => {
-  const quantityInput = document.getElementById("quantity");
-  const increaseButton = document.getElementById("increase");
-  const decreaseButton = document.getElementById("decrease");
-  increaseButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    quantityInput.value = parseInt(quantityInput.value) ;
-  });
-
-  decreaseButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    const currentValue = parseInt(quantityInput.value);
-    const current_quantityMale = parseInt(quantityMale.value);
-    const current_quantityFemale = parseInt(quantityFemale.value);
-    const current_quantityChildren = parseInt(quantityChildren.value);
-    if (currentValue > 0) {
-      quantityInput.value = currentValue - 1;
-    }
-  });
-});
-
-// <!-- Quantity Increment and Decrement in Booking Now -->
-document.addEventListener("DOMContentLoaded", () => {
-  const quantityBoxes = document.querySelectorAll(".quantity-box");
-
-  quantityBoxes.forEach((quantityBox) => {
-    const increaseButton = quantityBox.querySelector(".ri-add-line");
-    const decreaseButton = quantityBox.querySelector(".ri-subtract-fill");
-    const quantityInputBooking = quantityBox.querySelector(".quantity-input");
-
-    increaseButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      quantityInputBooking.value = parseInt(quantityInputBooking.value) + 1;
-    });
-
-    decreaseButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      const currentValue = parseInt(quantityInputBooking.value);
-      if (currentValue > 0) {
-        quantityInputBooking.value = currentValue - 1;
-        event.preventDefault();
-      }
-    });
-  });
-});
-
-// // =================================
-// // =================================
-
-// Display Block for booking hours for any day in month
-const monthSelect = document.getElementById("monthSelect");
-const yearSelect = document.getElementById("yearSelect");
-const calendarDays = document.querySelector(".calendar-days");
-
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-const daysInMonth = {
-  January: 31,
-  February: 28,
-  March: 31,
-  April: 30,
-  May: 31,
-  June: 30,
-  July: 31,
-  August: 31,
-  September: 30,
-  October: 31,
-  November: 30,
-  December: 31,
-};
-
-// Update month days based on selected month and year
-function updateCalendar() {
-  const selectedMonth = monthSelect.value;
-  const selectedYear = yearSelect.value;
-  const daysCount = daysInMonth[months[selectedMonth]];
-
-  //   Update the days of the month in the table
-  calendarDays.innerHTML = "";
-  for (let day = 1; day <= daysCount; day++) {
-    const dayElement = document.createElement("div");
-    dayElement.classList.add("calendar-day");
-    dayElement.classList.add("booked");
-    dayElement.textContent = day;
-    calendarDays.appendChild(dayElement);
-  }
-}
-
-// Add a change event month and year
-monthSelect.addEventListener("change", updateCalendar);
-yearSelect.addEventListener("change", updateCalendar);
-
-// Update the calendar for the first time
-updateCalendar();
-
-const calendarDayElements = document.querySelectorAll(".calendar-day");
-const bookingHours = document.querySelector(".booking_hours");
-
-// Add a click event for each day in the calendar
-calendarDayElements.forEach((dayElement) => {
-  dayElement.addEventListener("click", () => {
-    bookingHours.style.display = "block";
-  });
-});
-
 

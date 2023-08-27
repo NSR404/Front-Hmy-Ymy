@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Profile </title>
+    <!-- FAVICON -->
+    <link rel="stylesheet icon" href="assets/images/x-icon/logo.png" type="image/logo">
+
+    <!-- file Icons -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <!-- file bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- file style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- file Library Select css -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+</head>
+<body>
+
+   <!-- start btn direction -->
+      <div class="btn_direction b_pos"><i class="ri-arrow-up-s-line"></i></div>
+   <!-- end btn direction -->
+      
+   <!-- start navbar section -->
+      <nav class="navbar navbar-expand-lg navbar-light pt-md-0 pt-2 navbarDashboard">
+            <div class="container">
+                  <a class="navbar-brand w-50" href="#">
+                        <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px" class="ml_11">
+                        <div class="main-content d-block d-lg-none">
+                              <button id="sidebarToggle"  type="button">
+                                    <i class="ri-arrow-right-double-line"></i>
+                              </button>
+                        </div>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                     <div class="d-flex  justify-content-end w-100 " >
+                           <ul class="navbar-nav mb-2 mb-lg-0 mt-2 mt-md-1 mt-lg-0">
+                           <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                           </li>
+                           <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="aboutUs.html">About Us</a>
+                           </li>
+                           <li class="nav-item">
+                           <div class="custom-dropdown nav-link">
+                                 <div class="selected-option">
+                                 <span>En</span>
+                                 <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </div>
+                                 <ul class="options">
+                                 <li data-value="english">
+                                       En
+                                       <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </li>
+                                 <li data-value="arabic">
+                                       Ar
+                                       <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </li>
+                                 </ul>
+                           </div>
+                           </li>
+                           <li class="nav-item">
+                           <a class="nav-link" aria-current="page" href="faq.html" >FAQ</a>
+                           </li>
+                           <li class="nav-item">
+                                 <div class="profile-wrapper" id="profileWrapper">
+                                       <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage">
+                                       <div class="profile-dropdown text-center" id="profileDropdown">
+                                          <ul>
+                                             <li><a href="#">Profile</a></li>
+                                             <li><a href="#">Settings</a></li>
+                                             <li><a href="#">Help</a></li>
+                                             <hr class="bg_basic">
+                                             <li><a href="#"> Sign Out</a></li>
+                                          </ul>
+                                       </div>
+                              </div>
+                           </li>
+                     </ul>  
+                     </div>
+                  </div>
+            </div>
+      </nav>
+   <!-- end navbar section -->  
+
+   <div class="rootSections_Dashboard">
+      <!-- Start Sidebar Section -->
+         <div class="sidebar sidebar_sec pt-3 px-4 mt-0 mt-md-1" id="sidebar">
+                <div class="imageInfo_User text-center">
+                     <img src="assets/images/profile/profile.png" class="profile-image" alt="image User" loading="lazy">
+                </div>
+               <h5 class="text-center mt-2 mb-md-3 mb-3 nameUser">Ahmed Mohammed</h5>
+               <hr class="text-center bg_basic">
+               <ul class="ul_listPage">
+                  <li class="nav-list "><a href="indexDashboard.html"><i class="ri-home-3-fill h4 px-1"></i> Dashboard</a></li>
+                  <li class="nav-list active"><a href="manageProfile.html"><i class="ri-user-3-fill h4 px-1"></i> Manage Profile</a></li>
+                  <li class="nav-list"><a href="#"><i class="ri-bank-card-fill h4 px-1"></i> Payment Method</a></li>
+                  <li class="nav-list"><a href="#"><i class="ri-heart-fill h4 px-1"></i> Favorite meals</a></li>
+                  <li class="nav-list"><a href="#"><i class="ri-lock-password-fill h4 px-1"></i> Change Password</a></li>
+                  <li class="text-center mt-4 mb-2 li_btnSignOut"><a href="#" class="btn bg_basic px-4 btn_signOut">Sign Out</a></li>
+               </ul>
+               <!-- <div class="close-btn" id="closeBtn">
+                  <i class="ri-close-fill clr_basic fw-bolder h1"></i>
+               </div> -->
+         </div>
+      <!-- End Sidebar Section -->
+
+      <!-- Start Content Pages for Dashboard -->
+        <div class="contentPages_Dashboard">
+            <!-- Start Content List ==> (Dashboard) -->
+            <div class="contentDashboard mt-2">
+            <!-- /* start section Manage Profile  */ -->
+                  <section class="manageProfile">
+                        <div class="container">
+                             <div class="row">
+                                 <div class="col-12">
+                                       <div class="title_manageProfile text-center">
+                                            <h3 class="clr_basic"> Manage Profile </h3>
+                                       </div>
+                                 </div>
+                             </div>
+                             <form action="" method="get">
+                                <div class="row mt-5">
+                                   <div class="col-12 mb-2 mb-md-4">
+                                       <div class="form-outline form-group mb-3">
+                                             <!-- <span class="error"></span> -->
+                                             <div class="row input-group">
+                                                   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                                      <label for="nameUser">Your name</label>
+                                                   </div>
+                                                    <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                                                      <input type="text" id="nameUser" class="form-control" placeholder="Ahmed Mohammed" value="Ahmed Mohammed" />      
+                                                    </div>
+                                             </div>
+                                       </div>
+                                   </div>
+                                   <div class="col-12 mb-2 mb-md-4">
+                                       <div class="form-outline form-group mb-3">
+                                             <!-- <span class="error"></span> -->
+                                             <div class="row input-group">
+                                                   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                                      <label for="phoneUser">Your phone </label>
+                                                   </div>
+                                                   <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                                                      <input type="tel" id="phoneUser" class="form-control" placeholder="+681654522356" value="+681654522356" />      
+                                                   </div>
+                                             </div>
+                                       </div>
+                                </div>
+                                <div class="col-12 mb-2 mb-md-4">
+                                    <div class="form-outline mb-3" title="City">
+                                        <!-- <span class="error"></span> -->
+                                        <div class="row input-group">
+                                          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                             <label for="mySelect">Your city </label>
+                                          </div>
+                                          <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                                               <select name="City" id="mySelect" class="form-control">
+                                                   <option value="" selected>sudia</option>
+                                                   <option value="city_1">City 1</option>
+                                                   <option value="city_2">City 2</option>
+                                                   <option value="city_3">City 3</option>
+                                                </select>
+                                         </div>
+                                       </div>
+                                       </div>
+                               </div>
+                               <div class="col-12 mt-3">
+                                 <div class="form-outline text-center">
+                                    <button type="submit" class="btn btn_updateProfile">Update profile</button>
+                               </div>
+                               </div>
+                                </div>
+                             </form>
+                        </div>
+                  </section>
+            <!-- /* End section Manage Profile  */ -->
+
+            </div>
+            <!-- End Content List ==> (Dashboard) -->
+        </div>
+      <!-- End Content Pages for Dashboard -->
+   </div>
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- file bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+      <!-- file Select Library -->
+      <script src="assets/js/Selectjquery.min.js"></script>
+      <script src="assets/js/select2.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            $('#mySelect').select2();
+        });
+      </script>
+   <!-- javascript -->
+   <script src="assets/js/main.js" defer></script>
+   <script src="assets/js/mainDashboard.js"></script>
+</body>
+</html>

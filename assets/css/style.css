@@ -46,10 +46,6 @@ body {
     letter-spacing: .8px;
  }
 
-
- .rootMain{
-    width: 95vw;
- }
  
 button:focus, input:focus{
     outline: none!important
@@ -135,7 +131,7 @@ a , a:focus , a:hover{
     margin: 0 22px;
 }
 
-.nav-item a{
+.nav-item > a , .navbarDashboard .profile-wrapper ul li a{
     color: #100F0F!important;
     /* font-family: mongolian; */
 }
@@ -210,11 +206,11 @@ a , a:focus , a:hover{
 
 /* <!-- Login section -->   */
 
-.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social a , .form_SignUp .form-outline > select , .signUp_sec .form-outline > button span , .contentDashboard .form-outline button span{
+.form_SignUp  input , .form_SignUp  button , .lbl_checked , .a_to_login , .div_btn_social a , .form_SignUp .form-outline > select , .signUp_sec .form-outline > button span , .dashboardFilter_sec .form-outline > select{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
 }
 
-.signUp_sec .form-outline > button ,  .contentDashboard .form-outline > button{
+.signUp_sec .form-outline > button ,  .dashboardFilter_sec .form-outline > select{
     text-align: inherit!important;
 }
 
@@ -241,13 +237,24 @@ a , a:focus , a:hover{
   border: 1px solid var(--basicColor);
 }
 
-.form_SignUp .form-outline > input , .form_SignUp .form-outline > select ,.signUp_sec #show_hide_password input , .signUp_sec .form-outline > button ,  .contentDashboard .form-outline > button{
+.form_SignUp .form-outline > input , .form_SignUp .form-outline > select ,.signUp_sec #show_hide_password input , .signUp_sec .form-outline > button ,  .dashboardFilter_sec .form-outline > select , .select2-container--default .select2-selection--single{
     padding: 0px 35px 0px 24px!important;
     height: 50px;
     color: #2d2d2d;
     font-size: 20px;
     transition:all 0.4s ease-in-out;
     border-radius: 4px!important;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+    border-color: transparent transparent var(--basicColor) transparent!important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+    border-color: var(--basicColor) transparent transparent transparent!important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: var(--basicColor)!important;
 }
 
 .form-outline select{
@@ -282,7 +289,7 @@ a , a:focus , a:hover{
     opacity: 0.8;
 }
 
-.form_SignUp .form-outline > input:focus ,.signUp_sec #show_hide_password input:focus , .signUp_sec .form-outline > button:focus ,  .contentDashboard .form-outline button:focus{
+.form_SignUp .form-outline > input:focus ,.signUp_sec #show_hide_password input:focus , .signUp_sec .form-outline > button:focus ,  .dashboardFilter_sec .form-outline select:focus{
     border-color: var(--blackColor)!important;
     box-shadow: none!important;
 }
@@ -1190,6 +1197,15 @@ footer .w_90{
     footer .search i {
        display: none!important;
     }
+    .add_comment_div .title_mealType h5{
+        font-size: larger!important;
+    }
+}
+
+@media (max-width:320px) {
+    .add_comment_div .title_mealType h5{
+        font-size: 16px!important;
+    }
 }
 
 .question_sec .accordion-item{
@@ -1579,7 +1595,7 @@ footer .hr_line{
 .detailsFood_sec .quantity-input , .bookingNow_sec .quantity-input {
     text-align: center;
     border: none;
-    padding: 5px;
+    /* padding: 5px; */
     width: 100%;
     border-radius: 3px;
     height: 100%;
@@ -1659,6 +1675,14 @@ footer .hr_line{
 
 .ingredientFood_sec .padding_style p ,.ingredientFood_sec .padding_style h4{
     font-family: 'montserrat_en';
+}
+
+html[lang="ar"] .ingredientFood_sec .parentCircle .circle_load_blue{
+    left: 120px!important;
+}
+
+html[lang="ar"] .ingredientFood_sec .parentCircle .circle_load_border{
+    left: 90px!important;
 }
 
 @media (min-width:1279px) and (max-width:1281px) {
@@ -1767,6 +1791,42 @@ footer .hr_line{
     
 }
 
+html[lang="ar"] .swiper_prev_onlineReview_sec{
+    margin-left: 10px!important;
+}
+
+@media (min-width:499px) and (max-width:501px) {
+    html[lang="ar"] .ingredientFood_sec .parentCircle .circle_load_blue  , html[lang="ar"] .ingredientFood_sec .parentCircle .circle_load_border{
+        left: -32px!important;
+    }
+    .padding_style{
+        margin-top: 45px!important;
+        margin-right: 22px!important;
+    }
+}
+
+@media (min-width:799px) and (max-width:801px) {
+    .onlineReview_sec .bg_img_review{
+        top: 85px!important;
+        right: -35px!important;
+    }
+    html[lang="ar"] .onlineReview_sec .ar_bg_img_review{
+        top: 77px!important;
+    }
+}
+
+@media (min-width:799px) and (max-width:885px) {
+    html[lang="ar"] .onlineReview_sec .ar_bg_img_review{
+        top: 77px!important;
+    }
+}
+
+@media (max-width:415px) {
+      html[lang="ar"] .onlineReview_sec .w_100_767_769{
+            padding-right: 0px!important;
+      }
+}
+
 @media (min-width:820px) and (max-width:1180px) {
      .px_0_md{
         padding-left: 0!important;
@@ -1785,6 +1845,46 @@ footer .hr_line{
     border-radius: 50%;
     z-index: -9999;  background-color: var(--weightColor);
     border: 1px solid var(--basicColor);
+}
+
+
+@media (min-width:1919px) {
+    .parentCircle > .row{
+        width: 70%!important;
+    }
+}
+
+@media (min-width:1023px) and (max-width:1081px) {
+    html[lang="ar"] .padding_style{
+        padding-left: 54px!important;
+        padding-right: 0!important;
+    }
+}
+
+@media (min-width:1367px) {
+    .padding_style{
+        padding-left: 0px!important;
+        padding-right: 90px!important;
+    }
+}
+
+.onlineReview_sec .swiper-horizontal{
+    /* margin-left: 80px!important; */
+}
+
+@media (min-width:735px) and (max-width:737px) {
+    .padding_style{
+        padding-left: 0px!important;
+        padding-right: 90px!important;
+    }
+}
+
+@media (min-width:567px) and (max-width:569px) {
+    .padding_style{
+        padding-top: 70px!important;
+        padding-right: 0!important;
+        width: 70%!important;
+    }
 }
 
 .ingredientFood_sec .parentCircle .circle_load_blue{
@@ -1809,6 +1909,10 @@ footer .hr_line{
     }
    .ingredientFood_sec .padding_style{
         padding-left: 70px!important;
+    }
+    .ingredientFood_sec .padding_style p, .ingredientFood_sec .padding_style h4{
+        text-align: center!important;
+
     }
 }
 
@@ -1863,9 +1967,36 @@ footer .hr_line{
     .ingredientFood_sec .ingredientTable{
         width: 95%!important;
     }
+    .ingredientFood_sec .padding_style h4{
+        margin-bottom: 0!important;
+        padding-right: 10px!important;
+    }
+}
+
+
+@media (min-width:1023px) and (max-width:1081px) {
+
+    html[lang="ar"] .bookingNow_sec .box_checkbox_1 img{
+        margin-left: -77px!important;
+    }
+}
+
+@media (min-width:1023px) and (max-width:1081px) {
 
     .box_checkbox_2 .leftPart_box svg{
-        display: none!important;
+        margin-left: 0px!important;
+    }
+}
+
+
+@media (min-width:1241px) {
+    html[lang="ar"] .justify_center_1024{
+        justify-content: center!important;
+        gap: 20px;
+    }
+
+    html[lang="ar"] .box_checkbox_2 .leftPart_box svg{
+        margin-left: -106px!important;
     }
 }
 
@@ -1999,9 +2130,6 @@ letter-spacing: 1.4px;
 
 
 @media (min-width:610px) and (max-width:769px) {
-   #detailsFood .rootMain{
-        /* padding-right: 0px!important; */
-    }
      .onlineReview_sec .bg_img_review ,.onlineReview_sec .ar_bg_img_review{
         background-image: none;
      }
@@ -2086,7 +2214,7 @@ letter-spacing: 1.4px;
 .bookingNow_sec .calendar-day {
     position: relative;
     text-align: center;
-    padding: 5px 11px 0 11px;
+    padding: 5px 8px 0 8px;
     margin-bottom: 0;
     cursor: pointer;
     font-weight: bolder;
@@ -2101,11 +2229,19 @@ letter-spacing: 1.4px;
     margin-top: 4px;
 }
 
-.bookingNow_sec .calendar-day.booked {
+.bookingNow_sec .calendar-day.bookable {
     background-color: #EBEBEB;
     color: #263238;
     font-weight: 400;
     padding: 5px;
+    margin: 3px;
+}
+
+.bookingNow_sec .calendar-day.booked {
+    background-color: var(--basicColor);
+    color: var(--weightColor);
+    font-weight: 400;
+    cursor: not-allowed!important;
     margin: 3px;
 }
 
@@ -2153,11 +2289,6 @@ letter-spacing: 1.4px;
     border-color: var(--basicColor);
 }
 
-@media (min-width:1023px) and (max-width:1025px) {
-    .booking_hours .w_sm_100{
-        width: 80%!important;
-    }
-}
 
 @media (max-width:441px) {
     .bookingNow_sec .w_sm_100{
@@ -2203,6 +2334,10 @@ letter-spacing: 1.4px;
         width: -webkit-fill-available;
         width: 100%;
     }
+}
+
+#div_Outdoor , #div_pickUp{
+    /* display: none; */
 }
 
 .bookingNow_sec .img_calender{
@@ -2257,9 +2392,43 @@ letter-spacing: 1.4px;
 }
 
 /* <!-- start radio (Dine in - Pick up - Out door ) --> */
+
+html[lang="ar"] .radio_div{
+    display: flex;
+    flex-direction: row;
+    text-align: initial;
+}
+
+@media (max-width:321px) {
+    html[lang="ar"] .radio_div{
+        width: 100%!important;
+    }
+}
+
+html[lang="ar"] .radio_div label{
+    margin-right: 30px;
+}
+
+.booking_hours .w_sm_100{
+    margin-left: 10px;
+}
+
+html[lang="ar"] .booking_hours .w_sm_100{
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
 .radio_div_select{
    z-index: 995;
  }
+
+ html[lang="ar"] .radio_div_select{
+  display: flex;
+}
+
+html[lang="ar"] .radio_div_select label{
+  margin-right: 25px;
+}
 
 .radio_div_select label , .radio_div_select input{
     color: #100F0F;
@@ -2311,11 +2480,10 @@ letter-spacing: 1.4px;
     margin-left: -100px;
     position: absolute;
     top: -48px;
-    left: -17px!important;
+    left: -35px!important;
     height: 241px;
-    margin-left: -100px;
     z-index: 0;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 @media (max-width:415px) {
@@ -2331,12 +2499,28 @@ letter-spacing: 1.4px;
 }
 
 @media (min-width:590px) and (max-width:610px) {
-    .box_checkbox_2 .leftPart_box svg {
-        margin-left: -42px!important;
+    html[lang="ar"] .box_checkbox_2 .leftPart_box svg {
+        margin-left: -41px!important;
     }
-    .ingredientFood_sec .padding_style{
-        margin-top: 60px!important;
 
+    html[lang="ar"] .box_checkbox_2{
+        flex-direction: row-reverse!important;
+    }
+
+}
+
+
+@media (min-width:597px) and (max-width:767px) {
+
+    .ingredientFood_sec .padding_style{
+        margin-top: 115px!important;
+    }
+}
+
+
+@media (min-width:590px) {
+    html[lang="ar"] .box_checkbox_2{
+        flex-direction: row-reverse!important;
     }
 }
 
@@ -2351,17 +2535,46 @@ letter-spacing: 1.4px;
     font-family: Mongolian;
 }
 
+html[lang="ar"] .bookingNow_sec .rightPart_box .form-check{
+    display: flex;
+    flex-direction: row;
+}
+
+html[lang="ar"] .bookingNow_sec .rightPart_box .form-check label{
+    padding-right: 28px;
+}
+
+
 .bookingNow_sec .rightPart_box h5{
     font-family: Mongolian ;
     font-weight: bolder;
     padding-top: 13px;
 }
 
-.bookingNow_sec .rightPart_box .quantity-box{
+.bookingNow_sec .rightPart_box .quantity-box , .bookingNow_sec .boxPick_up .quantity-box{
   border: none;
 }
 
-.bookingNow_sec .rightPart_box .quantity-input{
+html[lang="ar"] .bookingNow_sec .rightPart_box .quantity-box ,html[lang="ar"] .bookingNow_sec .boxPick_up .quantity-box {
+    display: flex!important;
+    flex-direction: row-reverse!important;
+}
+
+.bookingNow_sec .boxPick_up .quantity-box{
+    display: block;
+}
+
+.bookingNow_sec .boxPick_up{
+   background-color: #cec6d9;
+   border-radius: 25px;
+}
+
+.boxPick_up .form-outline label{
+    color: #100F0F;
+    font-family: montserrat_en;
+}
+
+.bookingNow_sec .rightPart_box .quantity-input , .bookingNow_sec .boxPick_up .quantity-input {
      height: 70%!important;
      border: 1px solid var(--basicColor);
 }
@@ -2380,11 +2593,6 @@ letter-spacing: 1.4px;
     margin-bottom: -18px;
 }
 
-@media (min-width:1023px) and (max-width:1281px) {
-    .box_checkbox_2 .leftPart_box svg{
-       opacity: 0.6;
-    }
-}
 
 @media (min-width:359px) and (max-width:376px) {
     .p_0_375{
@@ -2412,7 +2620,7 @@ letter-spacing: 1.4px;
 }
 
 .box_checkbox_2 .leftPart_box svg{
-    opacity: 0.7;
+    opacity: 1;
     z-index: -10;
 }
 
@@ -2427,9 +2635,10 @@ letter-spacing: 1.4px;
 }
 
 .box_checkbox_2 p{
-    color: #707070;
+    color: var(--blackColor);
     font-size: small;
     line-height: 2;
+    text-align: initial!important;
 }
 
 .box_checkbox_2 .form-check-input[type=checkbox] {
@@ -2437,6 +2646,9 @@ letter-spacing: 1.4px;
     padding: 10px;
     border: 1px solid var(--basicColor);
 }
+
+
+
 
 @media (min-width:611px) and (max-width:768px) {
      .box_checkbox_2 .svg_Live_Experience{
@@ -2700,6 +2912,9 @@ letter-spacing: 1.4px;
     position: relative;
     display: inline-block;
 }
+.navbarDashboard .profile-image{
+    position: relative;
+}
 
 .navbarDashboard .profile-image , .sidebar_sec .imageInfo_User img {
     width: 40px;
@@ -2732,6 +2947,129 @@ letter-spacing: 1.4px;
     padding: 10px 0;
 }
 
+.notificationDropdown {
+    display: none;
+  }
+  
+  .notificationContent.active {
+    display: block!important;
+  }
+  
+
+.notificationProfile{
+    position: absolute;
+    top: 0px;
+    right: -15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:red;
+    color: var(--weightColor)!important;
+    border: 1px solid var(--weightColor);
+    font-size: 13px;
+    text-align: center;
+    font-family: montserrat_ar;
+    cursor: pointer;
+}
+
+
+
+.notificationDropdown {
+    position: absolute;
+    top: 19px;
+    display: inline-block;
+    right: -2px;
+    z-index: 98;
+  }
+
+  .notification-title{
+      color: var(--basicColor);
+      font-family: montserrat_ar;
+
+  }
+  
+  .notificationContent {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    top: 25px;
+    right: -15px;
+    width:340px;
+    z-index: 1;
+    border-radius: 15px;
+    background-color: var(--weightColor);
+    box-shadow: 0 2px 5px 1px gray;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  html[lang="ar"] .notificationContent{
+    right: -295px;
+ }
+
+ @media (max-width:415px) {
+     .notificationContent{
+        top: 31px;
+        right: -57px;
+        width: 251px;
+     }
+ }
+
+ @media (max-width:415px) {
+    html[lang="ar"] .notificationContent{
+       right: -130px;
+       width: 251px;
+    }
+}
+  .notificationDropdown:hover .notificationContent {
+    display: block;
+  }
+  
+  .notificationContent ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notificationContent li {
+    padding: 5px 0;
+  }
+  
+  .notificationContent a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .message_notic img{
+        border-radius: 50%;
+        padding: 3px;
+        width: 45px;
+        height: 45px;
+        position: relative;
+  }
+
+  .title_Notification h6 , .title_Notification span{
+    font-family: montserrat_ar;  
+  }
+
+  .title_Notification span{
+    font-size: 15px;
+  }
+
+  .message_notic p{
+    font-family: 'Roboto';
+    color: #100f0fc2;
+    font-size: 15px;
+    padding-top: 6px;
+  }
+
+  .overflow_y_Auto{
+     overflow-y: auto;
+     padding-left: 8px!important;
+     padding-right: 0!important;
+  }
+  
 @media (max-width:1024px) {
     .navbarDashboard .profile-dropdown{
         top: -161px!important;
@@ -2811,11 +3149,12 @@ letter-spacing: 1.4px;
 
 .rootSections_Dashboard .sidebar_sec .ul_listPage li.nav-list {
     padding: 8px 15px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-align: inherit;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s; 
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .rootSections_Dashboard .sidebar_sec .ul_listPage .nav-list.active {
@@ -2964,7 +3303,7 @@ letter-spacing: 1.4px;
 
 @media (min-width:1280px) and (max-width:1285px) {
     .rootSections_Dashboard .sidebar{
-        top: 128px!important;
+        top: 120px!important;
     }
 }
 
@@ -2980,7 +3319,7 @@ letter-spacing: 1.4px;
     @media (min-width:1023px) {
         .rootSections_Dashboard .sidebar {
             margin-left: 18px;
-            top: 85px;
+            top: 80px;
         }
         .contentPages_Dashboard{
             width: calc(100vw - 330px);
@@ -2995,36 +3334,62 @@ letter-spacing: 1.4px;
         }
     }
     
-    .contentDashboard .form-outline button.form-select{
+    .dashboardFilter_sec .form-outline button.form-select{
         background-color: var(--basicColor);
         display: flex;
         justify-content: center;
         align-items: center;
         height: 40px;
     }  
-    .contentDashboard .form-outline button.form-select:focus{
+    .dashboardFilter_sec .form-outline button.form-select:focus{
         border: 1px solid var(--basicColor);
     }
-    .contentDashboard .form-outline .dselect-items button {
+    .dashboardFilter_sec .form-outline .dselect-items button {
         text-align: initial!important;
     }   
     
-    .contentDashboard .form-outline .dropdown-toggle::after{
+    .dashboardFilter_sec .form-outline .dropdown-toggle::after{
         color: var(--weightColor)!important;
     }
     
-    .contentDashboard .form-outline button span{
+    .dashboardFilter_sec .form-outline button span{
         color: var(--weightColor);
         background-color: var(--basicColor);
         font-family: Arial, Helvetica, sans-serif!important;
         letter-spacing: 0.6px;
     }
     
-    .contentDashboard .totalOrder h5{
+    .dashboardFilter_sec .totalOrder h5{
         font-size: 17px;
         font-weight: 600;
     }
+
+    .dashboardFilter_sec .select2-container--default .select2-selection--single{
+        padding-bottom: 43px!important;
+        background-color: var(--basicColor);
+    }
     
+    .dashboardFilter_sec .select2-container--default .select2-selection--single .select2-selection__rendered{
+        color: var(--weightColor)!important;
+        line-height: 23px;
+    }
+
+    .dashboardFilter_sec .select2-container--default .select2-selection--single .select2-selection__arrow b{
+        border-color: var(--weightColor) transparent transparent transparent!important;
+
+    }
+
+    .select2-container--open .select2-dropdown--below , .select2-container--default .select2-results__option--highlighted[aria-selected] , .select2-container--default .select2-search--dropdown .select2-search__field{
+      border-bottom-left-radius: 10px!important;
+      border-bottom-right-radius: 10px!important;
+      outline: none!important;
+      /* width: 182.207px; */
+      border: 0;
+      background: #fff;
+      box-shadow: 0 1px 4px 0px gray;
+      /* margin-left: 4px; */
+  }
+
     .tableView_dateFilter thead tr th{
      font-weight: 300;
     }
@@ -3076,6 +3441,87 @@ letter-spacing: 1.4px;
         background-color: #f4f4f4!important; 
     }
     
+
+ /* Start Code Modal Review */
+.comment-box {
+   padding: 5px
+}
+
+.comment-area textarea {
+   resize: none;
+   border: 1px solid var(--basicColor);
+}
+
+.form-control:focus {
+   color: #495057;
+   background-color: #fff;
+   border-color: #ffffff;
+   outline: 0;
+   box-shadow: 0 0 0 1px var(--basicColor) !important
+}
+
+.send {
+   color: #fff;
+   background-color: var(--basicColor);
+   border-color: var(--basicColor)
+}
+
+.send:hover {
+   color: #fff;
+   background-color: var(--basicColor);
+   border-color: var(--basicColor)
+}
+
+.rating {
+  display: inline-flex;
+   margin-top: -10px;
+   flex-direction: row-reverse;   
+}
+
+.rating>input {
+   display: none
+}
+
+.rating>label {
+   position: relative;
+   width: 28px;
+   font-size: 35px;
+   color: #ffbe00;
+   cursor: pointer;
+}
+
+.rating>label::before {
+   content: "\2605";
+   position: absolute;
+   opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+   opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+   opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+   opacity: 0.4
+}
+
+ .modal-dialog .ri-close-line:before{
+  content: ""!important;
+}
+
+#ReviewModalTable , .modal-open{
+    padding-right: 0!important;
+}
+
+
+
+ /* End Code Modal Review */
+
+
 /* <!-- End Content List ==> (Dashboard) --> */
 
 
@@ -3110,17 +3556,80 @@ letter-spacing: 1.4px;
 
 /* End section Index Dashboard  */
 
-
-
-
-
-
-
-
-
-
 /* ==================================== */
-/* =======  Dashboard Page ============ */ 
+/* =======  Manage Profile Page ============ */ 
+ /* start section Manage Profile  */ 
+
+ .manageProfile .title_manageProfile h3 ,  .manageProfile form label{
+   font-family: montserrat_ar;
+    
+ }
+
+ .manageProfile form label{
+    color: #100F0F;
+   font-weight: bold;
+   text-align: initial;
+   padding: 10px 0;
+   font-size: large;
+ }
+
+
+ .manageProfile form input ,.manageProfile .select2-container--default .select2-selection--single .select2-selection__rendered{
+     padding: 12px 16px;
+     transition: all 0.4 ease-in-out;
+     color: #808080!important;
+    border-radius: 3px;
+ }
+
+ .manageProfile form input:focus{
+    border: 1px solid var(--basicColor);
+}
+
+.manageProfile form .btn_updateProfile{
+    background-color: var(--basicColor);
+    color: var(--weightColor);
+    transition: all 0.4s ease-in-out;
+}
+
+.manageProfile form .btn_updateProfile:hover{
+    background-color: var(--weightColor);
+    color: var(--basicColor);
+    border: 1px solid var(--basicColor);
+}
+
+.select2-container{
+    width: 100%!important;
+}
+
+.select2-container--default .select2-selection--single{
+    border: 1px solid rgba(128, 128, 128, 0.352)!important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top: 12px!important;
+    right: 12px!important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    padding: 10px 0!important;
+    color: #6c757d!important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
+}
+
+.manageProfile .select2-container--default .select2-selection--single{
+    padding-bottom: 48px!important;
+}
+
+html[lang="ar"] .select2-selection__rendered {
+    text-align: end;
+}
+
+html[lang="ar"] .select2-selection__arrow{
+    left: 12px!important;
+}
+
+/* <!-- End section Manage Profile  --> */
+
+
 
 /* ==================================== */
 /* =======  Dashboard Page ============ */ 

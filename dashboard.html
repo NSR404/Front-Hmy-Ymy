@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- file style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- file Library Select css -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
 </head>
-<body id="dashboardPage">
+<body>
 
    <!-- start btn direction -->
       <div class="btn_direction b_pos"><i class="ri-arrow-up-s-line"></i></div>
@@ -67,16 +69,62 @@
                            </li>
                            <li class="nav-item">
                                  <div class="profile-wrapper" id="profileWrapper">
-                                       <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage">
+                                       <div class="">
+                                              <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage" title="Your Profile">                                              
+                                        </div>
                                        <div class="profile-dropdown text-center" id="profileDropdown">
                                           <ul>
-                                             <li><a href="#">Profile</a></li>
+                                             <li><a href="manageProfile.html">Profile</a></li>
+                                             <li><a href="#"  class="openNotifications">Notifications</a></li>
                                              <li><a href="#">Settings</a></li>
                                              <li><a href="#">Help</a></li>
                                              <hr class="bg_basic">
                                              <li><a href="#"> Sign Out</a></li>
                                           </ul>
                                        </div>
+                                       <div class="notificationDropdown" >
+                                          <a href="#" class="notificationProfile" title="Notifications">4</a>
+                                          <div class="notificationContent " id="notificationDropdown">
+                                                <div class="row">
+                                                        <div class="col-12">
+                                                              <div class="title_Notification d-flex justify-content-between align-items-start">
+                                                                    <h6>New notification</h6>
+                                                                    <span class="clr_basic">4 Notice</span>
+                                                              </div>
+                                                        </div>
+                                                        <hr class="w-75 m-auto mt-2">
+                                                        <div class="row col-12 overflow_y_Auto my-3">
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                        </div>
+                                                        <!-- <div class="col-12 text-center my-3">
+                                                            <h6 class="fw-bold">No Any Notifications</h6>
+                                                      </div> -->
+                                                </div>
+                                          </div>
+                                       </div> 
                               </div>
                            </li>
                      </ul>  
@@ -95,12 +143,13 @@
                <h5 class="text-center mt-2 mb-md-3 mb-3 nameUser">Ahmed Mohammed</h5>
                <hr class="text-center bg_basic">
                <ul class="ul_listPage">
-                  <li class="nav-list active"><a href="#"><i class="ri-home-3-fill h4 px-1"></i> Dashboard</a></li>
-                  <li class="nav-list"><a href="#"><i class="ri-user-3-fill h4 px-1"></i> Manage Profile</a></li>
+                  <li class="nav-list active"><a href="indexDashboard.html"><i class="ri-home-3-fill h4 px-1"></i> Dashboard</a></li>
+                  <li class="nav-list"><a href="#" class="openNotifications" title="Notifications"><i class="ri-notification-3-fill h4 px-1"></i> Notifications</a></li>
+                  <li class="nav-list"><a href="manageProfile.html"><i class="ri-user-3-fill h4 px-1"></i> Manage Profile</a></li>
                   <li class="nav-list"><a href="#"><i class="ri-bank-card-fill h4 px-1"></i> Payment Method</a></li>
                   <li class="nav-list"><a href="#"><i class="ri-heart-fill h4 px-1"></i> Favorite meals</a></li>
                   <li class="nav-list"><a href="#"><i class="ri-lock-password-fill h4 px-1"></i> Change Password</a></li>
-                  <li class="text-center mt-4 mb-2 li_btnSignOut"><a href="#" class="btn bg_basic px-4 btn_signOut">Sign Out</a></li>
+                  <li class="text-center mt-4 mt-xl-3 mb-4 li_btnSignOut"><a href="#" class="btn bg_basic px-4 btn_signOut">Sign Out</a></li>
                </ul>
                <!-- <div class="close-btn" id="closeBtn">
                   <i class="ri-close-fill clr_basic fw-bolder h1"></i>
@@ -112,6 +161,8 @@
         <div class="contentPages_Dashboard">
             <!-- Start Content List ==> (Dashboard) -->
             <div class="contentDashboard mt-2">
+                  <!-- Start Section Dashboard -->
+                 <section class="dashboardFilter_sec">
                   <div class="container">
                         <form action="" method="get">
                               <!--Div Select Filter -->
@@ -119,59 +170,35 @@
                               <!-- Select Status -->
                                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                                           <div class="form-outline mb-3 dropdown dselect-wrapper ">
-                                                <button class="form-select dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span class="dselect-placeholder form-control border-0 p-0">Status</span>
-                                                </button>
-                                                <div class="dropdown-menu w-100 py-0" >
-                                                <div class="d-flex flex-column">
-                                                      <input  type="text" class="form-control searchCountry" placeholder="Search">
-                                                      <div class="dselect-items" style="max-height:360px;overflow:auto">
-                                                      <button class="dropdown-item" data-dselect-value="Status_1" type="button" >Status 1</button>
-                                                      <button class="dropdown-item" data-dselect-value="Status_2" type="button">Status 2</button>
-                                                      <button class="dropdown-item" data-dselect-value="Status_3" type="button">Status 3</button>
-                                                      </div>
-                                                      <!-- <div class="dselect-no-results ">No results found</div> -->
-                                                </div>
-                                                </div>
+                                                    <select name="City" id="select_Status" class="form-control">
+                                                      <option value="" selected disabled>Status</option>
+                                                      <option value="Status_1">Status 1</option>
+                                                      <option value="Status_2">Status 2</option>
+                                                      <option value="Status_3">Status 3</option>
+                                                      </select>
                                           </div>
                                  </div>
                               <!-- Select Cultures -->
                                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                    <div class="form-outline mb-3 dropdown dselect-wrapper ">
-                                          <button class="form-select dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                              <span class="dselect-placeholder form-control border-0 p-0">Cultures</span>
-                                          </button>
-                                          <div class="dropdown-menu w-100 py-0" >
-                                            <div class="d-flex flex-column">
-                                                  <input  type="text" class="form-control searchCountry" placeholder="Search">
-                                                  <div class="dselect-items" style="max-height:360px;overflow:auto">
-                                                    <button class="dropdown-item" data-dselect-value="Cultures_1" type="button" >Cultures 1</button>
-                                                    <button class="dropdown-item" data-dselect-value="Cultures_2" type="button">Cultures 2</button>
-                                                    <button class="dropdown-item" data-dselect-value="Cultures_3" type="button">Cultures 3</button>
-                                                  </div>
-                                                  <!-- <div class="dselect-no-results ">No results found</div> -->
-                                            </div>
+                                          <div class="form-outline mb-3 dropdown dselect-wrapper ">
+                                                <select name="City" id="select_Cultures" class="form-control">
+                                                <option value="" selected disabled>Cultures</option>
+                                                <option value="Cultures_1">Cultures 1</option>
+                                                <option value="Cultures_2">Cultures 2</option>
+                                                <option value="Cultures_3">Cultures 3</option>
+                                                </select>
                                           </div>
-                                    </div>
                                  </div>
                               <!-- Select Recent -->
                                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                       <div class="form-outline mb-3 dropdown dselect-wrapper ">
-                                             <button class="form-select dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                 <span class="dselect-placeholder form-control border-0 p-0">Recent</span>
-                                             </button>
-                                             <div class="dropdown-menu w-100 py-0" >
-                                               <div class="d-flex flex-column">
-                                                     <input  type="text" class="form-control searchCountry" placeholder="Search">
-                                                     <div class="dselect-items" style="max-height:360px;overflow:auto">
-                                                       <button class="dropdown-item" data-dselect-value="Recent_1" type="button" >Recent 1</button>
-                                                       <button class="dropdown-item" data-dselect-value="Recent_2" type="button">Recent 2</button>
-                                                       <button class="dropdown-item" data-dselect-value="Recent_3" type="button">Recent 3</button>
-                                                     </div>
-                                                     <!-- <div class="dselect-no-results ">No results found</div> -->
-                                               </div>
-                                             </div>
-                                       </div>
+                                          <div class="form-outline mb-3 dropdown dselect-wrapper ">
+                                                <select name="City" id="select_Recent" class="form-control">
+                                                <option value="" selected disabled>Recent</option>
+                                                <option value="Recent_1">Recent 1</option>
+                                                <option value="Recent_2">Recent 2</option>
+                                                <option value="Recent_3">Recent 3</option>
+                                                </select>
+                                          </div>
                                  </div>
                                  <!-- Title Total Order -->
                                  <div class="col-12 my-3">
@@ -200,64 +227,111 @@
                                                             <td>$439.99</td>
                                                             <td>Complite</td>
                                                             <td>Saudi</td>
-                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a></td>
+                                                            <td>
+                                                                  <a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a>
+                                                                  <a class="clr_basic h4 mx-2" href="" data-bs-toggle="modal" data-bs-target="#ReviewModalTable"><i class="ri-message-2-line"></i></a>
+                                                            </td>
                                                  </tr>
                                                  <tr>
                                                             <td>Colibriprint <br> <span>Tools</span></td>
                                                             <td>$439.99</td>
                                                             <td>Complite</td>
                                                             <td>Saudi</td>
-                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a></td>
+                                                            <td>
+                                                                  <a class="clr_basic h4 mx-1" href=""><i class="ri-road-map-line"></i></a>
+                                                                  <a class="clr_basic h4 mx-2" href="" data-bs-toggle="modal" data-bs-target="#ReviewModalTable"><i class="ri-message-2-line"></i></a>
+                                                            </td>
                                                  </tr>
                                                  <tr>
                                                             <td>Colibriprint <br> <span>Hand Tools</span></td>
                                                             <td>$439.99</td>
                                                             <td>Complite</td>
                                                             <td>Saudi</td>
-                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a></td>
+                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a>
+                                                            <a class="clr_basic h4 mx-2" href="" data-bs-toggle="modal" data-bs-target="#ReviewModalTable"><i class="ri-message-2-line"></i></a></td>
                                                  </tr>
                                                  <tr>
                                                             <td>Colibriprint <br> <span>Impact</span></td>
                                                             <td>$439.99</td>
                                                             <td>Complite</td>
                                                             <td>Saudi</td>
-                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a></td>
+                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a>
+                                                            <a class="clr_basic h4 mx-2" href="" data-bs-toggle="modal" data-bs-target="#ReviewModalTable"><i class="ri-message-2-line"></i></a></td>
                                                  </tr>
                                                  <tr>
                                                       <td>Colibriprint <br> <span>Wrench</span></td>
                                                       <td>$439.99</td>
                                                       <td>Complite</td>
                                                       <td>Saudi</td>
-                                                      <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a></td>
+                                                      <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a>
+                                                      <a class="clr_basic h4 mx-2" href="" data-bs-toggle="modal" data-bs-target="#ReviewModalTable"><i class="ri-message-2-line"></i></a></td>
                                                 </tr>
                                                 <tr>
                                                             <td>Colibriprint <br> <span>Tools</span></td>
                                                             <td>$439.99</td>
                                                             <td>Complite</td>
                                                             <td>Saudi</td>
-                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a></td>
+                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a>
+                                                            <a class="clr_basic h4 mx-2" href="" data-bs-toggle="modal" data-bs-target="#ReviewModalTable"><i class="ri-message-2-line"></i></a></td>
                                                 </tr>
                                                 <tr>
                                                             <td>Colibriprint <br> <span>Hand Tools</span></td>
                                                             <td>$439.99</td>
                                                             <td>Complite</td>
                                                             <td>Saudi</td>
-                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a></td>
+                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a>
+                                                            <a class="clr_basic h4 mx-2" href="" data-bs-toggle="modal" data-bs-target="#ReviewModalTable"><i class="ri-message-2-line"></i></a></td>
                                                 </tr>
                                                 <tr>
                                                             <td>Colibriprint <br> <span>Impact</span></td>
                                                             <td>$439.99</td>
                                                             <td>Complite</td>
                                                             <td>Saudi</td>
-                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a></td>
+                                                            <td><a class="clr_basic h4" href=""><i class="ri-road-map-line"></i></a>
+                                                            <a class="clr_basic h4 mx-2" href="" data-bs-toggle="modal" data-bs-target="#ReviewModalTable"><i class="ri-message-2-line"></i></a></td>
                                                 </tr>
                                                       
                                           </tbody>
                                     </table>
+                               <!--Start Modal Review in Table in ==> Action ==>  -->                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="ReviewModalTable" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                      <div class="modal-header">
+                                                            <h5 class="modal-title" id="reviewModalLabel"><img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px"></h5>
+                                                            <button type="button" class="btn-close ri-close-line" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                      </div>
+                                                      <div class="modal-body pt-2">
+                                                            <div class="card-body text-center">
+                                                                  <div class="comment-box text-center">
+                                                                  <h4 class="clr_basic fw-bold">Add a comment</h4>
+                                                                  <div class="rating my-2">
+                                                                        <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> 
+                                                                        <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                                                                        <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                                                                        <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> 
+                                                                        <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+                                                                  <div class="comment-area"> 
+                                                                        <textarea class="form-control" placeholder="what is your view?" rows="4"></textarea> 
+                                                                  </div>
+                                                                  <div class="text-center mt-4">
+                                                                         <button class="btn  send px-5">Send message</button>
+                                                                  </div>
+                                                                  </div>
+                                                      </div>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                               <!--End Modal Review in Table in ==> Action ==>  -->
+
                                 </div>
                            </div>
                         </form>
                   </div>
+                 </section>
+                  <!-- End Section Dashboard -->
             </div>
             <!-- End Content List ==> (Dashboard) -->
         </div>
@@ -269,6 +343,16 @@
     <script src="assets/js/jquery.js"></script>
     <!-- file bootstrap js -->
     <script src="assets/js/bootstrap.min.js"></script>
+      <!-- file Select Library -->
+      <script src="assets/js/Selectjquery.min.js"></script>
+      <script src="assets/js/select2.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            $('#select_Status').select2();
+            $('#select_Cultures').select2();
+            $('#select_Recent').select2();
+        });
+      </script>
    <!-- javascript -->
    <script src="assets/js/main.js" defer></script>
    <script src="assets/js/mainDashboard.js"></script>

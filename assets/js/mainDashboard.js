@@ -3,16 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
    const navListDashboard = document.querySelectorAll('.ul_listPage .nav-list');
 
    navListDashboard.forEach(item => {
-       item.addEventListener('click', function(event) {
-           event.preventDefault();
+    
+    //    item.addEventListener('click', function(event) {
+    //     //    event.preventDefault();
 
-           const active_navListDashboard = document.querySelector('.ul_listPage .nav-list.active');
-           if (active_navListDashboard) {
-               active_navListDashboard.classList.remove('active');
-           }
+    //        const active_navListDashboard = document.querySelector('.ul_listPage .nav-list.active');
+    //        if (active_navListDashboard) {
+    //            active_navListDashboard.classList.remove('active');
+    //        }
 
-           this.classList.add('active');
-       });
+    //        this.classList.add('active');
+    //    });
    });
 });
 //End  Code Dashboard Page ===> toggle active class in sidebar 
@@ -56,22 +57,40 @@ document.addEventListener('DOMContentLoaded', function() {
 // <!--End Code Toggle Sidebar active and non active -->
 
 
-
-
-// function updateLanguage(selectedLanguage) {
-//    if (selectedLanguage === "arabic") {
-//            // Convert li in sidebar when language ==> Arabic + english
-//             document.addEventListener('DOMContentLoaded', function() {
-//                const dashboard_navList_a = document.querySelectorAll('.ul_listPage .nav-list a');
-//                const isArabic = document.documentElement.lang === 'ar';
-//                console.log(dashboard_navList_a);
-//                dashboard_navList_a.forEach(item => {
-//                   item.style.display = isArabic ? 'flex' : 'block';
-//                    console.log(item);
-//                });
-//             });
-//    }else{
-//              console.log("Erorrrrrrrrrrrrrrrrrrrrrrrr");
+// Display Div Notification
+// document.getElementById("notificationTrigger").addEventListener("click", function(e) {
+//    e.preventDefault(); 
+//    var notificationDropdown = document.getElementById("notificationDropdown");
+   
+//    notificationDropdown.classList.toggle("active");
+//    console.log(notificationDropdown.style);
+//  });
+// //  اخفاء الاشعارات لما اضغط ع اي مكان في الشاشة
+//  document.addEventListener("click", function(event) {
+//    var notificationDropdown = document.getElementById("notificationDropdown");
+   
+//    if (!event.target.matches("#notificationTrigger") && !notificationDropdown.contains(event.target)) {
+//      notificationDropdown.classList.remove("active");
 //    }
-// }
+//  });
 
+document.querySelectorAll(".openNotifications").forEach(function(button) {
+   button.addEventListener("click", function(e) {
+     e.preventDefault();
+ 
+     var notificationDropdown = document.querySelector(".notificationContent");
+     notificationDropdown.classList.toggle("active");
+   });
+ });
+ 
+ // حدث النقر على الوثيقة (Document) لإخفاء القائمة
+ document.addEventListener("click", function(event) {
+   var notificationDropdowns = document.querySelectorAll(".notificationContent");
+ 
+   notificationDropdowns.forEach(function(dropdown) {
+     if (!event.target.matches(".openNotifications") && !dropdown.contains(event.target)) {
+       dropdown.classList.remove("active");
+     }
+   });
+ });
+ 
