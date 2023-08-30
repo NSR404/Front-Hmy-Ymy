@@ -1,19 +1,19 @@
 //Start  Code Dashboard Page ===> toggle active class in sidebar 
 document.addEventListener('DOMContentLoaded', function() {
-   const navListDashboard = document.querySelectorAll('.ul_listPage .nav-list');
+   const navListDashboard = document.querySelectorAll('.ul_listPage .nav-list a');
 
    navListDashboard.forEach(item => {
     
-    //    item.addEventListener('click', function(event) {
-    //     //    event.preventDefault();
+       item.addEventListener('click', function(event) {
+        //    event.preventDefault();
 
-    //        const active_navListDashboard = document.querySelector('.ul_listPage .nav-list.active');
-    //        if (active_navListDashboard) {
-    //            active_navListDashboard.classList.remove('active');
-    //        }
+           const active_navListDashboard = document.querySelector('.ul_listPage .nav-list a.active');
+           if (active_navListDashboard) {
+               active_navListDashboard.classList.remove('active');
+           }
 
-    //        this.classList.add('active');
-    //    });
+           this.classList.add('active');
+       });
    });
 });
 //End  Code Dashboard Page ===> toggle active class in sidebar 
@@ -58,22 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Display Div Notification
-// document.getElementById("notificationTrigger").addEventListener("click", function(e) {
-//    e.preventDefault(); 
-//    var notificationDropdown = document.getElementById("notificationDropdown");
-   
-//    notificationDropdown.classList.toggle("active");
-//    console.log(notificationDropdown.style);
-//  });
-// //  اخفاء الاشعارات لما اضغط ع اي مكان في الشاشة
-//  document.addEventListener("click", function(event) {
-//    var notificationDropdown = document.getElementById("notificationDropdown");
-   
-//    if (!event.target.matches("#notificationTrigger") && !notificationDropdown.contains(event.target)) {
-//      notificationDropdown.classList.remove("active");
-//    }
-//  });
-
 document.querySelectorAll(".openNotifications").forEach(function(button) {
    button.addEventListener("click", function(e) {
      e.preventDefault();
@@ -83,7 +67,6 @@ document.querySelectorAll(".openNotifications").forEach(function(button) {
    });
  });
  
- // حدث النقر على الوثيقة (Document) لإخفاء القائمة
  document.addEventListener("click", function(event) {
    var notificationDropdowns = document.querySelectorAll(".notificationContent");
  
@@ -94,3 +77,31 @@ document.querySelectorAll(".openNotifications").forEach(function(button) {
    });
  });
  
+
+
+//  منع نزول القائمة تعت البروفايل الشخصي لما اضغط على اي مكان جوا الاشعارات
+ document.addEventListener("DOMContentLoaded", function() {
+  var notificationDropdown = document.querySelector(".notificationDropdown");
+
+  notificationDropdown.addEventListener("click", function(event) {
+      event.stopPropagation();
+  });
+
+  var profileDropdown = document.querySelector(".profile-dropdown");
+  var profileWrapper = document.querySelector(".profile-wrapper");
+
+  profileDropdown.addEventListener("click", function(event) {
+    profileWrapper.classList.remove("active");
+      event.stopPropagation();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var profileWrapper = document.querySelector(".profile-wrapper");
+  document.addEventListener("click", function(event) {
+    if (!profileWrapper.contains(event.target)) {
+      profileWrapper.classList.remove("active");
+      }
+  });
+});
+

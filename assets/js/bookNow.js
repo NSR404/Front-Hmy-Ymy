@@ -141,18 +141,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookingTimeTemplate = document.getElementById("bookingTimeTemplate");
   
     bookingHoursContainer.style.display = "block";
-    bookingTimeOptionsContainer.innerHTML = ""; // Clear previous options
+    if (bookingTimeOptionsContainer !== null) {
+      bookingTimeOptionsContainer.innerHTML = "";
+  }
   
-    availableHours.forEach((time) => {
-      const clonedTemplate = bookingTimeTemplate.content.cloneNode(true);
-      const label = clonedTemplate.querySelector(".form-check-label");
-      const input = clonedTemplate.querySelector(".form-check-input");
-  
-      label.textContent = time;
-      input.value = time;
-  
-      bookingTimeOptionsContainer.appendChild(clonedTemplate);
-    });
+    if (availableHours !== undefined) {
+      availableHours.forEach((time) => {
+        const clonedTemplate = bookingTimeTemplate.content.cloneNode(true);
+        const label = clonedTemplate.querySelector(".form-check-label");
+        const input = clonedTemplate.querySelector(".form-check-input");
+    
+        label.textContent = time;
+        input.value = time;
+    
+        bookingTimeOptionsContainer.appendChild(clonedTemplate);
+      });
+  }
   }
   
   function showBookingHours(selectedDay) {
@@ -165,16 +169,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedMonth = monthSelect.value; 
   
     const availableHours = bookableTimeSlots[months[selectedMonth]][selectedDay];
-    availableHours.forEach((time) => {
-      const clonedTemplate = bookingTimeTemplate.content.cloneNode(true);
-      const label = clonedTemplate.querySelector(".form-check-label");
-      const input = clonedTemplate.querySelector(".form-check-input");
-      
-      label.textContent = time;
-      input.value = time;
-      
-      bookingTimeOptionsContainer.appendChild(clonedTemplate);
-    });
+
+    if (availableHours !== undefined) {
+      availableHours.forEach((time) => {
+        const clonedTemplate = bookingTimeTemplate.content.cloneNode(true);
+        const label = clonedTemplate.querySelector(".form-check-label");
+        const input = clonedTemplate.querySelector(".form-check-input");
+        
+        label.textContent = time;
+        input.value = time;
+        
+        bookingTimeOptionsContainer.appendChild(clonedTemplate);
+      });
+}
+
   }
   
   function hideBookingHours() {

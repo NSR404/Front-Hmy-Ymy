@@ -24,90 +24,137 @@
    <!-- end btn direction -->
       
    <!-- start navbar section -->
-      <nav class="navbar navbar-expand-lg navbar-light pt-md-0 pt-2 navbarDashboard">
-            <div class="container">
-                  <a class="navbar-brand w-50" href="#">
-                        <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px" class="ml_11">
-                        <div class="main-content d-block d-lg-none">
-                              <button id="sidebarToggle"  type="button">
-                                    <i class="ri-arrow-right-double-line"></i>
-                              </button>
-                        </div>
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                     <div class="d-flex  justify-content-end w-100 " >
-                           <ul class="navbar-nav mb-2 mb-lg-0 mt-2 mt-md-1 mt-lg-0">
-                           <li class="nav-item">
-                           <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                           </li>
-                           <li class="nav-item">
-                           <a class="nav-link active" aria-current="page" href="aboutUs.html">About Us</a>
-                           </li>
-                           <li class="nav-item">
-                           <div class="custom-dropdown nav-link">
-                                 <div class="selected-option">
-                                 <span>En</span>
-                                 <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
-                                 </div>
-                                 <ul class="options">
-                                 <li data-value="english">
-                                       En
-                                       <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
-                                 </li>
-                                 <li data-value="arabic">
-                                       Ar
-                                       <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2" loading="lazy" width="100%">
-                                 </li>
-                                 </ul>
-                           </div>
-                           </li>
-                           <li class="nav-item">
-                           <a class="nav-link" aria-current="page" href="faq.html" >FAQ</a>
-                           </li>
-                           <li class="nav-item">
-                                 <div class="profile-wrapper" id="profileWrapper">
-                                       <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage">
-                                       <div class="profile-dropdown text-center" id="profileDropdown">
-                                          <ul>
-                                             <li><a href="#">Profile</a></li>
-                                             <li><a href="#">Settings</a></li>
-                                             <li><a href="#">Help</a></li>
-                                             <hr class="bg_basic">
-                                             <li><a href="#"> Sign Out</a></li>
-                                          </ul>
-                                       </div>
-                              </div>
-                           </li>
-                     </ul>  
-                     </div>
+   <nav class="navbar navbar-expand-lg navbar-light pt-md-0 pt-2 navbarDashboard">
+      <div class="container">
+            <a class="navbar-brand w-50" href="#">
+                  <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px" class="ml_11">
+                  <div class="main-content d-block d-lg-none">
+                        <button id="sidebarToggle"  type="button">
+                              <i class="ri-arrow-right-double-line"></i>
+                        </button>
                   </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="d-flex  justify-content-end w-100 " >
+                  <ul class="navbar-nav mb-2 mb-lg-0 mt-2 mt-md-1 mt-lg-0">
+                  <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="aboutUs.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                  <div class="custom-dropdown nav-link">
+                        <div class="selected-option">
+                        <span>En</span>
+                        <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                        </div>
+                        <ul class="options">
+                        <li data-value="english">
+                              En
+                              <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                        </li>
+                        <li data-value="arabic">
+                              Ar
+                              <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2" loading="lazy" width="100%">
+                        </li>
+                        </ul>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="faq.html" >FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                        <div class="profile-wrapper" id="profileWrapper">
+                              <div class="">
+                                    <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage" title="Your Profile">                                              
+                              </div>
+                              <div class="profile-dropdown text-center" id="profileDropdown">
+                                    <ul>
+                                    <li><a href="manageProfile.html">Profile</a></li>
+                                    <li><a href="#"  class="openNotifications">Notifications</a></li>
+                                    <li><a href="#">Settings</a></li>
+                                    <li><a href="#">Help</a></li>
+                                    <hr class="bg_basic">
+                                    <li><a href="#"> Sign Out</a></li>
+                                    </ul>
+                              </div>
+                              <div class="notificationDropdown" >
+                                    <a href="#" class="notificationProfile" title="Notifications">4</a>
+                                    <div class="notificationContent " id="notificationDropdown">
+                                          <div class="row">
+                                                <div class="col-12">
+                                                      <div class="title_Notification d-flex justify-content-between align-items-start">
+                                                            <h6>New notification</h6>
+                                                            <span class="clr_basic">4 Notice</span>
+                                                      </div>
+                                                </div>
+                                                <hr class="w-75 m-auto mt-2">
+                                                <div class="row col-12 overflow_y_Auto my-3">
+                                                            <div class="col-12">
+                                                                  <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                        <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                        <p class="notification-text">
+                                                                        Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                        </p>
+                                                                  </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                  <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                        <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                        <p class="notification-text">
+                                                                        Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                        </p>
+                                                                  </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                  <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                        <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                        <p class="notification-text">
+                                                                        Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                        </p>
+                                                                  </div>
+                                                            </div>
+                                                </div>
+                                                <!-- <div class="col-12 text-center my-3">
+                                                      <h6 class="fw-bold">No Any Notifications</h6>
+                                                </div> -->
+                                          </div>
+                                    </div>
+                              </div> 
+                        </div>
+                  </li>
+            </ul>  
             </div>
-      </nav>
-   <!-- end navbar section -->  
+            </div>
+      </div>
+</nav>
+<!-- end navbar section -->
 
    <div class="rootSections_Dashboard">
-      <!-- Start Sidebar Section -->
-         <div class="sidebar sidebar_sec pt-3 px-4 mt-0 mt-md-1" id="sidebar">
-                <div class="imageInfo_User text-center">
-                     <img src="assets/images/profile/profile.png" class="profile-image" alt="image User" loading="lazy">
-                </div>
-               <h5 class="text-center mt-2 mb-md-3 mb-3 nameUser">Ahmed Mohammed</h5>
-               <hr class="text-center bg_basic">
-               <ul class="ul_listPage">
-                  <li class="nav-list "><a href="indexDashboard.html"><i class="ri-home-3-fill h4 px-1"></i> Dashboard</a></li>
-                  <li class="nav-list active"><a href="manageProfile.html"><i class="ri-user-3-fill h4 px-1"></i> Manage Profile</a></li>
-                  <li class="nav-list"><a href="#"><i class="ri-bank-card-fill h4 px-1"></i> Payment Method</a></li>
-                  <li class="nav-list"><a href="#"><i class="ri-heart-fill h4 px-1"></i> Favorite meals</a></li>
-                  <li class="nav-list"><a href="#"><i class="ri-lock-password-fill h4 px-1"></i> Change Password</a></li>
-                  <li class="text-center mt-4 mb-2 li_btnSignOut"><a href="#" class="btn bg_basic px-4 btn_signOut">Sign Out</a></li>
-               </ul>
-               <!-- <div class="close-btn" id="closeBtn">
-                  <i class="ri-close-fill clr_basic fw-bolder h1"></i>
-               </div> -->
-         </div>
+     <!-- Start Sidebar Section -->
+        <div class="sidebar sidebar_sec pt-3 px-4 mt-0 mt-md-1" id="sidebar">
+      <div class="imageInfo_User text-center">
+           <img src="assets/images/profile/profile.png" class="profile-image" alt="image User" loading="lazy">
+      </div>
+     <h5 class="text-center mt-2 mb-md-3 mb-3 nameUser">Ahmed Mohammed</h5>
+     <hr class="text-center bg_basic">
+     <ul class="ul_listPage">
+        <li class="nav-list"><a href="indexDashboard.html"><i class="ri-home-3-fill h4 px-1"></i> Dashboard</a></li>
+        <li class="nav-list"><a href="#" class="openNotifications" title="Notifications"><i class="ri-notification-3-fill h4 px-1"></i> Notifications</a></li>
+        <li class="nav-list"><a class="active"  href="manageProfile.html"><i class="ri-user-3-fill h4 px-1"></i> Manage Profile</a></li>
+        <li class="nav-list"><a href="#"><i class="ri-bank-card-fill h4 px-1"></i> Payment Method</a></li>
+        <li class="nav-list"><a href="favoriteMeals.html"><i class="ri-heart-fill h4 px-1"></i> Favorite meals</a></li>
+        <li class="nav-list"><a href="changePassword.html"><i class="ri-lock-password-fill h4 px-1"></i> Change Password</a></li>
+        <li class="text-center mt-4 mt-xl-3 mb-3 li_btnSignOut"><a href="#" class="btn bg_basic px-4 btn_signOut">Sign Out</a></li>
+     </ul>
+     <!-- <div class="close-btn" id="closeBtn">
+        <i class="ri-close-fill clr_basic fw-bolder h1"></i>
+     </div> -->
+        </div>
       <!-- End Sidebar Section -->
 
       <!-- Start Content Pages for Dashboard -->
@@ -125,7 +172,7 @@
                                  </div>
                              </div>
                              <form action="" method="get">
-                                <div class="row mt-5">
+                                <div class="row mt-md-5 mt-2">
                                    <div class="col-12 mb-2 mb-md-4">
                                        <div class="form-outline form-group mb-3">
                                              <!-- <span class="error"></span> -->
@@ -162,9 +209,9 @@
                                           <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
                                                <select name="City" id="mySelect" class="form-control">
                                                    <option value="" selected>sudia</option>
-                                                   <option value="city_1">City 1</option>
-                                                   <option value="city_2">City 2</option>
-                                                   <option value="city_3">City 3</option>
+                                                   <option value="city_1">city 1</option>
+                                                   <option value="city_2">city 2</option>
+                                                   <option value="city_3">city 3</option>
                                                 </select>
                                          </div>
                                        </div>
@@ -172,7 +219,7 @@
                                </div>
                                <div class="col-12 mt-3">
                                  <div class="form-outline text-center">
-                                    <button type="submit" class="btn btn_updateProfile">Update profile</button>
+                                    <button type="submit" class="btn btn_updateProfile py-2 px-4">Update profile</button>
                                </div>
                                </div>
                                 </div>

@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="assets/css/swiper.css" />
-
+    <!-- Swiper JS -->
+    <script src="assets/js/swiper.min.js"></script>
 
 
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -124,7 +125,6 @@
                                                                <div class="modal-header">
                                                                   <h5 class="modal-title" id="exampleModalLabel"><img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px"></h5>
                                                                   <button type="button" class="btn-close ri-close-line" data-bs-dismiss="modal" aria-label="Close">
-                                                                        X
                                                                   </button>
                                                                </div>
                                                                <div class="modal-body p-0">
@@ -206,10 +206,10 @@
                      <!-- Start Experience section =>(Home) -->  
                      <section class="experience_sec  my-5 mb-0 py-2">
                         <div class="row d-flex flex-column-reverse flex-md-row justify-content-between ">
-                                 <div class="ccol-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 mt-md-5 mb-2 mt-md-2 pt-md-5 w_600">
+                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 mt-md-5 mb-2 mt-md-2 pt-md-5 w_600">
                                        <p class="title_experience mb-2 my-md-5">Create your unique experience <br class="d-sm-block d-none" /> by tasting freshhomemade food, <br class="d-sm-block d-none" />  from the home chef's kitchen
                                        </p>
-                                       <div class=" mt-md-5 pt-md-4 d-flex flex-row justify-content-center justify-content-md-between align-items-center flex-wrap pickChef">
+                                       <div class="mt-md-5 pt-md-4 d-flex flex-row justify-content-center justify-content-md-between align-items-center flex-wrap pickChef">
                                              <div class="circle_steps mt-2">
                                                 <h5> Pick chef</h5>
                                              </div>
@@ -237,7 +237,7 @@
                      <!-- Start Experience_of_day section =>(Home) -->  
                      <section class="Experience_of_day my-md-5 py-2">
                               <div class="row d-flex flex-column flex-md-row justify-content-center justify-content-md-between">
-                                       <div class="ccol-lg-4 col-md-4 col-sm-12 col-xs-12 col-12 mt-md-5 mb-2 ">
+                                       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-12 mt-md-5 mb-2 ">
                                              <div class="box d-flex justify-content-center align-items-center m-auto m-md-0">
                                                    <h5>Experience OfThe Day</h5>
                                              </div>
@@ -245,8 +245,8 @@
                                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-12 mb-2 mt-4">
                                              <div class="swiper p-2">
                                                 <div class="swiper-wrapper">
-                                                <div class="swiper-slide px-4">
-                                                      <div class="d-block justify-content-center d-md-flex justify-content-md-between align-content-center">
+                                                <div class="swiper-slide px-md-4">
+                                                      <div class="d-flex justify-content-center gap-3 flex_column_max600 justify-content-md-between align-content-center mb-2">
                                                          <a href="detailsFood.html" class="inner_box_swiper">
                                                                <figure class="position-relative">
                                                                   <div class="star_box_food_1 position-absolute  ">
@@ -289,8 +289,8 @@
                                                           </a>
                                                       </div>
                                                 </div>
-                                                <div class="swiper-slide px-4">
-                                                   <div class=" d-block justify-content-center d-md-flex justify-content-md-between align-content-center">
+                                                <div class="swiper-slide px-md-4">
+                                                   <div class="d-flex justify-content-between gap-3 flex_column_max600 justify-content-md-between align-content-center mb-2">
                                                       <a href="detailsFood.html" class="inner_box_swiper">
                                                             <figure class="position-relative">
                                                                <div class="star_box_food_1 position-absolute  ">
@@ -347,7 +347,7 @@
 
 
                      <!-- Start Cultures section =>(Home) -->  
-                     <section class="cultures_sec my-5 py-2">
+                     <section class="cultures_sec my-md-5 py-2">
                         <div class="row">
                                  <div class="title_cultures col-12 d-flex justify-content-center align-items-center mb-3">
                                     <h5>Cultures</h5>
@@ -413,9 +413,10 @@
                               <div class="title_mealType col-12 d-flex justify-content-center align-items-center mb-4">
                                     <h5>Meal Type</h5>
                               </div>
-                              <div class="col-md-10 col-12 px-md-4 d-flex justify-content-center align-items-center width_full_768">
+                              <div class="col-md-11 col-12 px-md-4 d-flex justify-content-center align-items-center width_full_768">
                                  <div class="container d-flex flex-wrap justify-content-center justify-content-md-between align-items-center text-center px-md-5 my-3 media_600_bt">
-                                    <div class="col-md-2 mb-2">
+                                    <div class="col-md-3 
+                                    mb-2">
                                           <div class="justify-content-center mb-2 ">
                                                 <div class="card d-flex justify-content-center align-items-center py-2-2 px-3">
                                                    <i class="icon_mealType ri-sun-foggy-line"></i>  
@@ -423,7 +424,8 @@
                                                 </div>
                                              </div>
                                     </div>
-                                    <div class="col-md-2 mb-2">
+                                    <div class="col-md-3 
+                                    mb-2">
                                           <div class="justify-content-center mb-2">
                                                 <div class="card d-flex justify-content-center align-items-center py-2-2 px-3">
                                                    <i class="icon_mealType ri-moon-fill"></i>   
@@ -431,7 +433,8 @@
                                                 </div>
                                              </div>
                                     </div>
-                                    <div class="col-md-2 mb-2">
+                                    <div class="col-md-3 
+                                    mb-2">
                                           <div class="justify-content-center mb-2">
                                                 <div class="card d-flex justify-content-center align-items-center py-2-2 px-3">
                                                    <i class="icon_mealType ri-sun-fill"></i>
@@ -439,7 +442,8 @@
                                                 </div>
                                              </div>
                                     </div>
-                                    <div class="col-md-2 mb-2">
+                                    <div class="col-md-3 
+                                    mb-2">
                                           <div class="justify-content-center mb-2">
                                                 <div class="card d-flex justify-content-center align-items-center py-2-2 px-3">
                                                    <i class="icon_mealType ri-cup-fill"></i>
@@ -459,12 +463,12 @@
       <!-- Start Food Box section =>(Home) -->  
          <section class="foodBox_sec my-4 py-5 ">
                <div class="row justify-content-center">
-                        <div class="col-12 col-md-10 px-md-4">
+                        <div class="col-12 col-md-12 col-lg-11 px-md-4">
                                     <div id="customTwoRowCarousel" class="carousel slide" data-bs-ride="carousel">
                                        <div class="carousel-inner">
                                              <div class="carousel-item mb-3 active">
                                                 <div class="row px-3">
-                                                   <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                   <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                          <div class="card mb-4">
                                                                <div class="card-body p-2">
                                                                      <a href="detailsFood.html" class="inner_box_swiper">
@@ -487,7 +491,7 @@
                                                                </div>
                                                          </div>
                                                    </div>
-                                                   <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                   <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                          <div class="card mb-4">
                                                                <div class="card-body p-2">
                                                                   <a href="detailsFood.html" class="inner_box_swiper">
@@ -510,7 +514,7 @@
                                                             </div>
                                                          </div>
                                                    </div>
-                                                   <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                   <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                          <div class="card mb-4">
                                                                <div class="card-body p-2">
                                                                   <a href="detailsFood.html" class="inner_box_swiper">
@@ -533,7 +537,7 @@
                                                                </div>
                                                          </div>
                                                    </div>
-                                                   <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                   <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                          <div class="card mb-4">
                                                                <div class="card-body p-2">
                                                                      <a href="detailsFood.html" class="inner_box_swiper">
@@ -560,7 +564,7 @@
                                              </div>
                                              <div class="carousel-item mb-3">
                                                 <div class="row px-3">
-                                                   <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                   <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                          <div class="card mb-4">
                                                                <div class="card-body p-2">
                                                                      <a href="detailsFood.html" class="inner_box_swiper">
@@ -583,7 +587,7 @@
                                                                </div>
                                                          </div>
                                                    </div>
-                                                   <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                   <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                    <div class="card mb-4">
                                                          <div class="card-body p-2">
                                                             <a href="detailsFood.html" class="inner_box_swiper">
@@ -606,7 +610,7 @@
                                                       </div>
                                                    </div>
                                                    </div>
-                                                   <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                   <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                          <div class="card mb-4">
                                                                <div class="card-body p-2">
                                                                   <a href="detailsFood.html" class="inner_box_swiper">
@@ -629,7 +633,7 @@
                                                                </div>
                                                          </div>
                                                    </div>
-                                                   <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                   <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                       <div class="card mb-4">
                                                             <div class="card-body p-2">
                                                                   <a href="detailsFood.html" class="inner_box_swiper">
@@ -654,7 +658,7 @@
                                                    </div>
                                                 </div>
                                                    <div class="row px-3">
-                                                      <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                      <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                       <div class="card mb-4">
                                                             <div class="card-body p-2">
                                                                   <a href="detailsFood.html" class="inner_box_swiper">
@@ -677,7 +681,7 @@
                                                             </div>
                                                       </div>
                                                       </div>
-                                                      <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                      <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                       <div class="card mb-4">
                                                             <div class="card-body p-2">
                                                                <a href="detailsFood.html" class="inner_box_swiper">
@@ -700,7 +704,7 @@
                                                          </div>
                                                       </div>
                                                       </div>
-                                                      <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                      <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                             <div class="card mb-4">
                                                                   <div class="card-body p-2">
                                                                      <a href="detailsFood.html" class="inner_box_swiper">
@@ -723,7 +727,7 @@
                                                                   </div>
                                                             </div>
                                                       </div>
-                                                      <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+                                                      <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 col-12">
                                                          <div class="card mb-4">
                                                                <div class="card-body p-2">
                                                                      <a href="detailsFood.html" class="inner_box_swiper">
@@ -965,8 +969,112 @@
 
 
 
-   <!-- Swiper JS -->
-   <script src="assets/js/swiper.min.js"></script>
+
+<script>
+ // =============================================================
+//   <!-- Include plugin after Swiper -->
+function myPlugin({ swiper, extendParams, on }) {
+  extendParams({
+    debugger: false,
+  });
+
+  on("init", () => {
+    if (!swiper.params.debugger) return;
+  });
+  on("click", (swiper, e) => {
+    if (!swiper.params.debugger) return;
+  });
+  on("tap", (swiper, e) => {
+    if (!swiper.params.debugger) return;
+  });
+  on("doubleTap", (swiper, e) => {
+    if (!swiper.params.debugger) return;
+  });
+  on("sliderMove", (swiper, e) => {
+    if (!swiper.params.debugger) return;
+  });
+  on("slideChange", () => {
+    if (!swiper.params.debugger) return;
+  });
+  on("slideChangeTransitionStart", () => {
+    if (!swiper.params.debugger) return;
+  });
+  on("slideChangeTransitionEnd", () => {
+    if (!swiper.params.debugger) return;
+  });
+  on("transitionStart", () => {
+    if (!swiper.params.debugger) return;
+  });
+  on("transitionEnd", () => {
+    if (!swiper.params.debugger) return;
+  });
+  on("fromEdge", () => {
+    if (!swiper.params.debugger) return;
+  });
+  on("reachBeginning", () => {
+    if (!swiper.params.debugger) return;
+  });
+  on("reachEnd", () => {
+    if (!swiper.params.debugger) return;
+  });
+}
+
+// =============================================================
+// <!-- Swiper Code js -->
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".swiper", {
+    // Install Plugin To Swiper
+    modules: [myPlugin],
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // Enable debugger
+    debugger: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+  });
+});
+
+// =============================================================
+
+// <!-- Start Slider Cultures -->
+let items = document.querySelectorAll(".carousel .carousel-item");
+items.forEach((el) => {
+  const minPerSlide = 4;
+  let next = el.nextElementSibling;
+  for (var i = 1; i < minPerSlide; i++) {
+    if (!next) {
+      // wrap carousel by using first child
+      next = items[0];
+    }
+    let cloneChild = next.cloneNode(true);
+    el.appendChild(cloneChild.children[0]);
+    next = next.nextElementSibling;
+  }
+});
+// <!-- End Slider Cultures -->
+
+// =============================================================
+//  <!-- Code Carousal For Section Food Box -->
+document.addEventListener("DOMContentLoaded", function () {
+  var carousel = new bootstrap.Carousel(
+    document.querySelector("#customTwoRowCarousel"),
+    {
+      interval: 2000, // Adjust as needed
+      wrap: true, // Enable infinite loop
+    }
+  );
+});
+
+
+</script>
+ 
    <!-- file bootstrap js -->
    <script src="assets/js/bootstrap.min.js"></script>
     <!-- jQuery -->
