@@ -9,12 +9,19 @@ window.addEventListener("load", function () {
 
 // =============================================================
 // Close the options list if user clicks outside
+
 document.addEventListener("click", (event) => {
-  const optionsList = dropdown.querySelector(".options");
-  if (!dropdown.contains(event.target)) {
-    optionsList.style.display = "none";
+  const dropdown = document.querySelector(".custom-dropdown");
+  
+  if (dropdown) {
+    const optionsList = dropdown.querySelector(".options");
+    
+    if (!dropdown.contains(event.target)) {
+      optionsList.style.display = "none";
+    }
   }
 });
+
 
 // =============================================================
 // Convert language
@@ -262,15 +269,18 @@ sidebarToggleLinks.forEach(sidebarToggleLink => {
   });
 });
          
-const closeBtn = document.getElementById('closeBtn');
 
+const closeBtn = document.getElementById('closeBtn');
 const sidebar_guest = document.querySelector('.sidebar_guest');
 
-closeBtn.addEventListener('click', () => {
-    if (sidebar_guest.classList.contains('active')) {
-      sidebar_guest.classList.remove('active');
-    }
-});
+if (closeBtn && sidebar_guest) {
+    closeBtn.addEventListener('click', () => {
+        if (sidebar_guest.classList.contains('active')) {
+            sidebar_guest.classList.remove('active');
+        }
+    });
+}
+
 
 // <!--End Code Toggle Sidebar Guest active and non active -->
 
