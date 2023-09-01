@@ -105,3 +105,23 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+
+// Add color red for icon meal favorite 
+document.addEventListener('DOMContentLoaded', function () {
+  var starBoxes = document.querySelectorAll('.star_box_food_2');
+  
+  starBoxes.forEach(function(starBox) {
+      var favoriteIcon = starBox.querySelector('.clr_favorite');
+      var isBlack = false; 
+      
+      starBox.addEventListener('click', function () {
+          if (isBlack) {
+              favoriteIcon.style.setProperty("color", "red", "important");
+          } else {
+              favoriteIcon.style.setProperty("color", "black", "important");
+          }
+          isBlack = !isBlack;
+      });
+  });
+});

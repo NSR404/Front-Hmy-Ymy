@@ -63,14 +63,13 @@ window.onload = function () {
         if (buttonAction_768) {
           buttonAction_768.addEventListener("click", function() {
               if (sidebar_768.classList.contains("active")) {
-                sidebar_768.style.setProperty("right", "6px" , "important");
-                // sidebar_768.style.setProperty("left", "auto" , "important");
+                sidebar_768.style.setProperty("right", "6px" , "");
                 mainContent_768.style.setProperty("margin-right", "3px" , "important");
-                mainContent_768.style.setProperty("margin-left", "auto" , "important");
+                mainContent_768.style.setProperty("margin-left", "auto" , "");
               } else {
                 sidebar_768.style.setProperty("right", "-299px" , "important");
                 mainContent_768.style.setProperty("margin-right", "0" , "important");
-                mainContent_768.style.setProperty("margin-left", "auto" , "important");
+                mainContent_768.style.setProperty("margin-left", "auto" , "");
               }
             });
         }
@@ -121,11 +120,11 @@ window.onload = function () {
                 if (sidebar_768.classList.contains("active")) {
                   sidebar_768.style.setProperty("left", "0" , "important");
                   mainContent_768.style.setProperty("margin-left", "3px" , "important");
-                  mainContent_768.style.setProperty("margin-right", "auto" , "important");
+                  mainContent_768.style.setProperty("margin-right", "auto" , "");
                 } else {
                   sidebar_768.style.setProperty("left", "-299px" , "important");
                   mainContent_768.style.setProperty("margin-left", "0" , "important");
-                  mainContent_768.style.setProperty("margin-right", "auto" , "important");
+                  mainContent_768.style.setProperty("margin-right", "auto" , "");
                 }
               });
           }
@@ -207,9 +206,11 @@ $(".btn_direction").on("click", function () {
 // <!-- Add Image With Tag Option (Language) --> in navbar
 const dropdown = document.querySelector(".custom-dropdown");
 
-if (dropdown !== null) {
-    const selectedOption = dropdown.querySelector(".selected-option");
-    const optionsList = dropdown.querySelector(".options");
+const selectedOptions = document.querySelectorAll(".selected-option");
+const optionsLists = document.querySelectorAll(".options");
+
+selectedOptions.forEach((selectedOption, index) => {
+    const optionsList = optionsLists[index];
     const options = optionsList.querySelectorAll("li");
 
     selectedOption.addEventListener("click", () => {
@@ -230,5 +231,46 @@ if (dropdown !== null) {
             optionsList.style.display = "none";
         });
     });
-}
+});
+
+
+// ================================
+// ================================
+
+// <!--Start Code Toggle Sidebar Guest active and non active -->
+const sidebarToggleLinks = document.querySelectorAll('.sidebarToggle');
+
+sidebarToggleLinks.forEach(sidebarToggleLink => {
+  sidebarToggleLink.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const sidebar = document.querySelector('.sidebar');
+
+    sidebarToggleLink.classList.toggle('active');
+    sidebar.classList.toggle('active');
+
+    const isSidebarActive = sidebar.classList.contains('active');
+    const mainContentButtonsSidebar = document.querySelectorAll('.navbarDashboard .main-content button'); 
+
+    mainContentButtonsSidebar.forEach(button => {
+        if (isSidebarActive) {
+            button.style.transform = 'rotate(180deg)';
+        } else {
+            button.style.transform = 'none';
+        }
+    });
+  });
+});
+         
+const closeBtn = document.getElementById('closeBtn');
+
+const sidebar_guest = document.querySelector('.sidebar_guest');
+
+closeBtn.addEventListener('click', () => {
+    if (sidebar_guest.classList.contains('active')) {
+      sidebar_guest.classList.remove('active');
+    }
+});
+
+// <!--End Code Toggle Sidebar Guest active and non active -->
 

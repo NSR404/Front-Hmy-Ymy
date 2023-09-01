@@ -175,6 +175,10 @@ a , a:focus , a:hover{
     cursor: pointer;
 }
 
+.selected-option > span{
+    color: #100F0F!important;
+}
+
 .language-icon {
     width: 20px;
     height: 20px;
@@ -1285,10 +1289,11 @@ html[lang="ar"] .px_800_812_0{
     color: var(--basicColor);
 }
 
-.mealType__sec h6{
-  
+@media (max-width:769px) {
+    .mealType__sec {
+        display: none!important;
+    }
 }
-
 
 
 
@@ -1725,7 +1730,7 @@ html[lang="ar"] .en_img_whoAre_we{
     }
 }
 
-@media (max-width:415px) {
+@media (max-width:429px) {
     .aboutUs_sec img.img_aboutUs {
         width: inherit!important;
         height: 280px;
@@ -3117,78 +3122,8 @@ html[lang="ar"] .bookingNow_sec .rightPart_box .quantity-box ,html[lang="ar"] .b
 /* ================              =================== */
 /* ================  Forget Password Page  ============ */
 /* ================              =================== */
- 
-/* <!-- Start section Forget Password --> */
-.forgetPass_sec{
-    max-height: 100vh;
-}
 
-.forgetPass_sec .boxForget{
-    box-shadow: 0 2px 3px 1px gray;
-    width: 60%;
-    height: 90%;
-}
-
-@media (max-width:769px) {
-    .forgetPass_sec .boxForget{
-        width: 90%;
-    }
-}
-
-@media (min-width:799px) and (max-width:813px) {
-    .forgetPass_sec .boxForget{
-        width: 95%;
-    }
-}
-
-@media (max-width:376px) {
-    .forgetPass_sec .boxForget{
-        width: 97%;
-    }
-}
-
-.forgetPass_sec .desc_box{
- text-align: initial;
- font-family: montserrat_ar;
-}
-
-.forgetPass_sec .title_forgetPass{
- color: #333232;
- font-weight: bolder;
- font-family: montserrat_ar;
- letter-spacing: 1px;
-}
-
-.forgetPass_sec .btn_resetPass , .resetPass_sec .btnResetPass , .resetByEmail_sec .btnResetByEmail{
-    padding: 13px 10px;
-    color: var(--weightColor);
-    transition: all 0.4s ease-in-out;
-}
-
-.forgetPass_sec .btn_resetPass:hover , .resetPass_sec .btnResetPass:hover , .resetByEmail_sec .btnResetByEmail:hover{
-    border: 1px solid var(--basicColor);
-    color: var(--basicColor);
-}
-
-html[lang="ar"] .resetByEmail_sec .en_img_resetByEmail{
-  display: none!important;
-}
-
-html[lang="ar"] .resetByEmail_sec .ar_img_resetByEmail{
-    display: block!important;
-}
-
-.resetByEmail_sec .en_img_resetByEmail{
-    display: block!important;
-  }
-  
-.resetByEmail_sec .ar_img_resetByEmail{
-      display: none!important;
-}
-
-/* <!-- End section Forget Password --> */
-
-
+ /* ========>>>> The code is written on the same page in head */
 
 /* ================              =================== */
 /* ================ Reset Password Page  ============ */
@@ -3352,7 +3287,7 @@ html[lang="ar"] .resetPass_sec .ar_img_resetPass{
 
  /* ==================================== */
  /* =======  Dashboard Page ============ */ 
-/* End Navbar Dashboard Section */
+/* Start Navbar Dashboard Section */
 
 .navbarDashboard .nav-item{
     margin: 0 13px!important;
@@ -3367,7 +3302,7 @@ html[lang="ar"] .resetPass_sec .ar_img_resetPass{
     position: relative;
 }
 
-.navbarDashboard .profile-image , .sidebar_sec .imageInfo_User img {
+.navbarDashboard .profile-image ,  .sidebar_sec .imageInfo_User img{
     width: 45px;
     height: 45px;
     border: 2px solid var(--basicColor);
@@ -3375,6 +3310,28 @@ html[lang="ar"] .resetPass_sec .ar_img_resetPass{
     cursor: pointer;
     transition: transform 0.2s;
 }
+
+.sidebar_guest .imageInfo_User {
+    text-align: initial!important;
+}
+
+.sidebar_guest .imageInfo_User img {
+    width: 60px!important;
+    border: none!important;
+ }
+
+ html[lang="ar"] .sidebar_guest .imageInfo_User{
+    text-align: left!important;
+ }
+ 
+ .sidebar_guest hr {
+    margin: 11px!important;
+    background-color: gray!important;
+ }
+
+ .sidebar_guest .custom-dropdown{
+    padding: 5px 15px;
+ }
 
 @media (min-width:913px) {
     .sidebar.sidebar_sec{
@@ -3384,9 +3341,6 @@ html[lang="ar"] .resetPass_sec .ar_img_resetPass{
     }
     .navbarDashboard .main-content{
         margin-left: 280px!important;
-    }
-    .sidebar_sec .close-btn{
-        display: none!important;
     }
     .contentPages_Dashboard{
         width: calc(100vw - 330px);
@@ -3450,17 +3404,6 @@ html[lang="ar"] .resetPass_sec .ar_img_resetPass{
         right: -55px !important;
     }
 }
-
-
-
-/* 
-if (window.innerWidth < 1025) {
-    var profileDropdown = document.querySelector(".navbarDashboard .profile-dropdown");
-    
-    profileDropdown.style.setProperty("right", "76px", "important");
-  }
-
-   */
   
 @media (min-width:769px) and (max-width:1023px) {
     .navbarDashboard .profile-dropdown{
@@ -3475,31 +3418,39 @@ if (window.innerWidth < 1025) {
   .notificationContent.active {
     display: block!important;
   }
+
+  .openNotifications{
+    cursor: pointer!important;
+  }
   
 
 .notificationProfile{
     position: absolute;
-    top: 0px;
-    right: -15px;
-    width: 25px;
-    height: 25px;
+    top: -18px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color:red;
     color: var(--weightColor)!important;
-    border: 1px solid var(--weightColor);
-    font-size: 13px;
+    font-size: 15px!important;
     text-align: center;
     font-family: montserrat_ar;
     cursor: pointer;
 }
 
+html[lang="ar"] .notificationProfile{
+    left: -15px!important;
+}
 
+.p_relative{
+    position: relative;
+}
 
 .notificationDropdown {
     position: absolute;
     top: 19px;
     display: inline-block;
-    right: -2px;
     z-index: 98;
   }
 
@@ -3515,37 +3466,60 @@ if (window.innerWidth < 1025) {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    top: 25px;
-    right: -15px;
+    top: 36px;
+    right: -160px;
     width:340px;
     z-index: 1;
     border-radius: 15px;
     background-color: var(--weightColor);
-    box-shadow: 0 2px 5px 1px gray;
+    box-shadow: 0 2px 6px -2px gray;
     transition: all 0.5s ease-in-out;
   }
-  
-  html[lang="ar"] .notificationContent{
-    right: -295px;
- }
 
- @media (max-width:415px) {
+  html[lang="ar"] .notificationContent {
+    right: -180px;
+  }
+
+
+ @media (max-width:376px) {
      .notificationContent{
-        top: 31px;
-        right: -57px;
+        top: 16px;
+        right: -115px;
+        width: 251px;
+     }
+     html[lang="ar"] .notificationContent{
+        right: -130px;
         width: 251px;
      }
  }
 
- @media (max-width:415px) {
+ @media (min-width:376px) and (max-width:567px) {
+    .notificationContent{
+        top: -200px;
+        right: 12px;
+       width: 251px;
+    }
     html[lang="ar"] .notificationContent{
-       right: -130px;
+        top: -200px;
+        right: -266px;
        width: 251px;
     }
 }
-  .notificationDropdown:hover .notificationContent {
-    display: block;
-  }
+
+@media (min-width:568px) and (max-width:912px) {
+    .notificationContent{
+        top: -200px;
+        right: 40px;
+        width: 320px;
+    }
+    html[lang="ar"] .notificationContent{
+        top: -200px;
+        right: -358px;
+        width: 320px;
+    }
+}
+
+
   
   .notificationContent ul {
     list-style: none;
@@ -3629,11 +3603,23 @@ if (window.innerWidth < 1025) {
         left:-299!important;
         right:auto!important;
     }
+    
+    
+    html[lang="en"] .navbarDashboard_guest .main-content{
+        margin-left: 0!important;
+        margin-right: 0!important;
+
+    }
+
     html[lang="en"] .navbarDashboard .main-content{
         margin-left: 0!important;
     }
     html[lang="ar"] .sidebar.sidebar_sec.active {
        right: 0!important;
+    }
+
+    html[lang="ar"] .sidebar.sidebar_guest.active {
+    right: 6px!important;
     }
     html[lang="en"] .sidebar.sidebar_sec.active {
         left: 0!important;
@@ -3668,8 +3654,109 @@ if (window.innerWidth < 1025) {
 
 /* End Navbar Dashboard Section */
 
+
+/* =============================== */
+/* =============================== */
+/* <!-- Start Navbar Footer in Last Page --> */
+@media (max-width:767px) {
+body{
+    position: relative;
+}
+.navbarFooter {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: var(--weightColor);
+   z-index: 9999!important;
+   text-align: center;
+   border-top-left-radius: 14px;
+   border-top-right-radius: 14px;
+   padding-bottom: 4px;
+   box-shadow: 0 1px 1px 2px rgb(169, 169, 169);
+}
+
+.navbarFooter .navbar-nav{
+    position: relative;
+}
+
+.navbarFooter .navbar-nav .nav-item a i{
+  color: var(--basicColor);
+  font-weight: bold;
+  display: block;
+  font-size: 19px!important;
+}
+
+.navbarFooter .navbar-nav .nav-item a{
+    font-weight: bolder!important;
+        color: #000!important;
+  }
+
+.navbarFooter .navbar-nav .nav-item .nav-link{
+   padding: 0 2px!important;
+   font-size: 15px!important;
+}
+
+
+.navbarFooter .infoImageNavbarFooter{
+    position: absolute;
+    top: -17px;
+    background-color: white;
+    padding: 9px 8px;
+    border-radius: 50%;
+    margin: 0;
+    border: 1px solid blueviolet;
+    box-shadow: 0px 2px 1px 1px var(--basicColor)!important;
+}
+
+
+.navbarFooter .infoImageNavbarFooter img{
+  padding: 1px;
+  border-radius: 50%;
+  margin: 0;
+  width: 40px!important;
+  height: 37px!important;
+}
+
+.navbarFooter .nav-item{
+    margin: 10px 0px!important;
+}
+}
+
+@media (max-width:361px) {
+    .navbarFooter .infoImageNavbarFooter img{
+        width: 33px!important;
+        height: 30px!important;
+      }
+}
+
+@media (max-width:885px) {
+    .navbar_collapse_guest{
+        display: none!important;
+    }
+    html[lang="ar"] .navbarDashboard_guest .main-content{
+        margin-left: 0!important;
+    }
+    html[lang="ar"] .navbarDashboard_guest .navbar-brand{
+        margin-right: 0!important;
+    }
+}
+
+@media (min-width:992px) {
+    .sidebar_guest{
+        display: none !important;
+    }
+    .sidebar_sec .close-btn{
+        display: none!important;
+    }
+}
+
+/* <!-- End Navbar Footer in Last Page --> */
+
+
+
+
 /* Start Sidebar Section */
-.rootSections_Dashboard .sidebar {
+.rootSections_Dashboard .sidebar,.sidebar_guest {
     margin-left: 3px;
     width: 280px;
     position: fixed;
@@ -3679,14 +3766,24 @@ if (window.innerWidth < 1025) {
     transition: left 0.3s;
     box-shadow: 0 1px 2px 1px gray;
     border-radius: 15px;
-    z-index: 1000;
+    z-index: 99990;
 }
 
-.rootSections_Dashboard .sidebar.active {
+.sidebar_guest{
+    height: 96%!important;
+}
+
+ .sidebar_guest {
+    width: 240px!important;
+    top: 12px!important;
+    padding-top: 7px!important;
+}
+
+.rootSections_Dashboard .sidebar.active , .sidebar_guest.active {
     left: 0;
 }
 
-.sidebar.active .navbarDashboard .main-content button {
+.sidebar.active .navbarDashboard .main-content button , .sidebar_guest.active .navbarDashboard .main-content button {
     transform: rotate(180deg)!important;
 }
 
@@ -3706,24 +3803,28 @@ if (window.innerWidth < 1025) {
     width: fit-content;
 }
 
-.rootSections_Dashboard .sidebar_sec .nameUser {
+.rootSections_Dashboard .sidebar_sec .nameUser , .sidebar_guest .nameUser {
     font-family: montserrat_ar;
 }
 
-.rootSections_Dashboard .sidebar_sec .ul_listPage li.nav-list {
+.rootSections_Dashboard .sidebar_sec .ul_listPage li.nav-list , .sidebar_guest .ul_listPage li.nav-list {
     /* padding: 5px 15px; */
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     text-align: inherit;
     transition: background-color 0.3s, color 0.3s; 
     cursor: pointer;
     text-transform: capitalize;
 }
 
-html[lang="ar"] .rootSections_Dashboard .sidebar_sec .ul_listPage li.nav-list{
+.sidebar_guest .ul_listPage li.nav-list{
+ margin-bottom: 8px!important;
+}
+
+html[lang="ar"] .rootSections_Dashboard .sidebar_sec .ul_listPage li.nav-list ,html[lang="ar"] .sidebar_guest .ul_listPage li.nav-list {
     margin-bottom: 4px!important;
 }
 
-.rootSections_Dashboard .sidebar_sec .ul_listPage .nav-list a.active {
+.rootSections_Dashboard .sidebar_sec .ul_listPage .nav-list a.active , .sidebar_guest .ul_listPage .nav-list a.active {
     background-color: #dfc9fc; 
 }
 
@@ -3743,12 +3844,11 @@ html[lang="ar"] .sidebar_sec .ul_listPage li a{
     padding-bottom: 0!important;
 }
 
+
 html[lang="ar"] .sidebar_sec .ul_listPage li{
     padding-bottom: initial!important;
     /* padding-top: 10px!important; */
 }
-
-
 
 .sidebar_sec .btn_signOut{
     color: var(--weightColor)!important;
@@ -3766,6 +3866,10 @@ html[lang="ar"] .sidebar_sec .ul_listPage li{
     opacity: 1;
 }
 
+.sidebar_sec hr{
+    margin: 5px;
+}
+
 .navbarDashboard  .profile-wrapper hr{
     margin: 4px;
 }
@@ -3773,6 +3877,10 @@ html[lang="ar"] .sidebar_sec .ul_listPage li{
 .navbarDashboard  .profile-wrapper ul li a{
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+.navbarDashboard .navbar-brand .d_block_sm{
+    display: block!important;
 }
 
 .navbarDashboard .navbar-brand img{
@@ -3817,16 +3925,15 @@ html[lang="ar"] .sidebar_sec .ul_listPage li{
 
 .sidebar_sec .close-btn {
     position: absolute;
-    top: 10px;
+    top: 14px;
     right: 10px;
     color: white;
     cursor: pointer;
-    display: none;
 }
 
 @media (max-width: 768px) {
     .sidebar_sec .close-btn {
-        display: block;
+        display: block!important;
     }
 
     .sidebar.sidebar_sec {
@@ -3842,6 +3949,13 @@ html[lang="ar"] .sidebar_sec .ul_listPage li{
     }
 }
 
+@media (max-width:992px) {
+    .sidebar_guest.active {
+        left: 0!important;
+    }
+}
+
+
 html[lang="ar"] #sidebar {
     max-height: calc(100vh - 20px); 
     overflow-y: auto; 
@@ -3853,9 +3967,34 @@ html[lang="ar"] #sidebar {
     overflow-y: auto;
 }
 
+.sidebar_guest{
+    overflow-y: auto!important;
+}
+
+.sidebar_guest  .selected-option > span{
+    margin-right: 3px;
+}
+
+.sidebar_guest .ul_listPage{
+    overflow-y: unset!important;
+}
+
+.sidebar_guest .ul_listPage{
+    padding: 0!important;
+}
+
+
+.sidebar_guest .selected-option img.language-icon{
+    margin-left: 0px!important;
+}
+
+html[lang="ar"] .sidebar_guest  .selected-option img.language-icon{
+    margin-right: 0!important;
+    margin-left: 6px!important;
+}
 
 #sidebar .ul_listPage::-webkit-scrollbar{
- width: 9px !important ;
+ width: 5px !important ;
   background:#f4f4f4!important;
   border-top-right-radius: 100px!important;
   border-top-left-radius: 100px!important;
@@ -3875,14 +4014,19 @@ html[lang="ar"] #sidebar {
     .sidebar.sidebar_sec {
         left: 0;
     }
+    
+    .sidebar.sidebar_guest{
+        left: -255px!important;
+    }
+    .sidebar.sidebar_guest.active{
+        left: 0!important;
+    }
 
     .navbarDashboard .main-content {
         margin-left: 280px;
     }
 
-    .sidebar_sec .close-btn {
-        display: none;
-    }
+   
 }
 
 @media (min-width:767px) and (max-width:913px) {
@@ -3892,7 +4036,7 @@ html[lang="ar"] #sidebar {
 }
 
 @media (min-width:1280px) and (max-width:1285px) {
-    .rootSections_Dashboard .sidebar{
+    .rootSections_Dashboard .sidebar , .sidebar_guest{
         top: 120px!important;
     }
 }
@@ -3907,7 +4051,7 @@ html[lang="ar"] #sidebar {
     }
     
     @media (min-width:1023px) {
-        .rootSections_Dashboard .sidebar {
+        .rootSections_Dashboard .sidebar , .sidebar_guest {
             margin-left: 18px;
             top: 80px;
         }
@@ -4369,43 +4513,121 @@ font-family: unset!important;
 
  /* End section Favorite Meals  */ 
 
+/* ==================================== */
+/* =======  Dashboard Service Provider Page ============ */ 
+/* <!-- Start Section Add a meal in Dashboard Service Provider    --> */
+.margin_r_5px{
+    margin-right: 5px;
+    margin-bottom: 5px!important;
+}
+.addMeal_sec{
+
+}
+
+
+.infoUploadImage.uploader {
+    display: block;
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    background-color: #F5F5F5;
+    padding: 25px 0 0 0;
+    border-radius: 12px;
+  
+     label {
+        float: left;
+        clear: both;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        background: #fff;
+        border-radius: 7px;
+        border: 3px solid #eee;
+        transition: all .2s ease;
+        user-select: none;
+      &:hover {
+        border-color: #454cad;
+      }
+      &.hover {
+        border: 3px solid #454cad;
+        box-shadow: inset 0 0 0 6px #eee;
+        
+        #start {
+          i.fa {
+            transform: scale(0.8);
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  
+    .infoUploadImage #start {
+      float: left;
+      clear: both;
+      width: 100%;
+      &.hidden {
+        display: none;
+      }
+    }
+ 
+  
+    .infoUploadImage #file-image {
+      display: inline;
+      margin: 0 auto .5rem auto;
+      width: auto;
+      height: auto;
+      max-width: 180px;
+      &.hidden {
+        display: none;
+      }
+    }
+    
+    .infoUploadImage .btn {
+      display: inline-block;
+      margin: .5rem .5rem 1rem .5rem;
+      clear: both;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: initial;
+      border: none;
+      border-radius: .2rem;
+      outline: none;
+      padding: 0 1rem;
+      height: 36px;
+      line-height: 36px;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  }
+  .infoUploadImage .btn:hover{
+    border: 1px solid var(--basicColor);
+    color: var(--basicColor);
+  }
+
+  #file-drag img{
+    border-radius: 25px;
+    border: 1px solid var(--weightColor);
+  }
+  
+/* <!-- End Section Add a meal in Dashboard Service Provider    --> */
+
+
+ 
 
 
 /* ==================================== */
 /* =======  Dashboard Page ============ */ 
 
 
+ /* ==================================== */
+/* =======  Dashboard Page ============ */ 
 
 
-  /*  Extra small devices (portrait phones, less than 576px) */
-  @media (max-width: 575.98px) { 
-  
-  }
  
- /*  Small devices (landscape phones, 576px and up) */
- @media (min-width: 576px) and (max-width: 767.98px) { 
-   
-  }
- 
- /*  Medium devices (tablets, 768px and up) */
- @media (min-width: 768px) and (max-width: 991.98px) { 
-   
-  }
- 
- /*  Large devices (desktops, 992px and up) */
- @media (min-width: 992px) and (max-width: 1199.98px) { 
-   
-  }
- 
- /*  Extra large devices (large desktops, 1200px and up) */
- @media (min-width: 1200px) { 
-   
-  }  
- 
- 
-
-
-
 
 
 

@@ -67,22 +67,9 @@
                            <li class="nav-item">
                            <a class="nav-link" aria-current="page" href="faq.html" >FAQ</a>
                            </li>
-                           <li class="nav-item">
-                                 <div class="profile-wrapper" id="profileWrapper">
-                                       <div class="">
-                                              <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage" title="Your Profile">                                              
-                                        </div>
-                                       <div class="profile-dropdown text-center" id="profileDropdown">
-                                          <ul>
-                                             <li><a href="manageProfile.html">Profile</a></li>
-                                             <li><a href="#"  class="openNotifications">Notifications</a></li>
-                                             <li><a href="#">Settings</a></li>
-                                             <li><a href="#">Help</a></li>
-                                             <hr class="bg_basic">
-                                             <li><a href="#"> Sign Out</a></li>
-                                          </ul>
-                                       </div>
-                                       <div class="notificationDropdown" >
+                           <li class="nav-item p_relative">
+                              <a class="nav-link" aria-current="page" ><i class="ri-notification-3-fill h4 px-1 openNotifications"></i>
+                                    <div class="notificationDropdown openNotifications" >
                                           <a href="#" class="notificationProfile" title="Notifications">4</a>
                                           <div class="notificationContent " id="notificationDropdown">
                                                 <div class="row">
@@ -125,6 +112,23 @@
                                                 </div>
                                           </div>
                                        </div> 
+                              </a>
+                                     
+                           </li>
+                           <li class="nav-item">
+                                 <div class="profile-wrapper" id="profileWrapper">
+                                       <div class="">
+                                              <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage" title="Your Profile">                                              
+                                        </div>
+                                       <div class="profile-dropdown text-center" id="profileDropdown">
+                                          <ul>
+                                                <li><a href="indexDashboard.html">Dashboard</a></li>
+                                                <li><a href="manageProfile.html">Profile</a></li>
+                                                <hr class="bg_basic">
+                                                <li><a href="#"> Sign Out</a></li>
+                                          </ul>
+                                       </div>
+                                      
                               </div>
                            </li>
                      </ul>  
@@ -136,15 +140,19 @@
 
    <div class="rootSections_Dashboard">
       <!-- Start Sidebar Section -->
-         <div class="sidebar sidebar_sec pt-3 px-4 mt-0 mt-md-1" id="sidebar">
+         <div class="sidebar sidebar_sec pt-2 px-4 mt-0 mt-md-1" id="sidebar">
                 <div class="imageInfo_User text-center">
                      <img src="assets/images/profile/profile.png" class="profile-image" alt="image User" loading="lazy">
                 </div>
                <h5 class="text-center mt-2 mb-md-3 mb-3 nameUser">Ahmed Mohammed</h5>
                <hr class="text-center bg_basic">
                <ul class="ul_listPage">
-                  <li class="nav-list"><a class="active" href="indexDashboard.html"><i class="ri-home-3-fill h4 px-1"></i> Dashboard</a></li>
-                  <li class="nav-list"><a href="#" class="openNotifications" title="Notifications"><i class="ri-notification-3-fill h4 px-1"></i> Notifications</a></li>
+                  <li class="nav-list"><a href="indexDashboard.html"><i class="ri-home-3-fill h4 px-1"></i> Dashboard</a></li>
+                  <li class="nav-list"><a href="search.html"><svg class="h4 px-1 margin_r_5px" xmlns="http://www.w3.org/2000/svg" width="27" height="30" viewBox="0 0 36 28" fill="none">
+                        <path d="M35.998 23.4229H0.998047V27.9999H35.998V23.4229Z" fill="black"/>
+                        <path d="M30.8674 10.7539C28.2516 8.12398 24.8625 6.40054 21.1964 5.83593C21.5425 5.34139 21.7464 4.76137 21.7858 4.159C21.8252 3.55663 21.6987 2.95499 21.4199 2.41956C21.1411 1.88413 20.7208 1.43542 20.2047 1.12228C19.6886 0.809138 19.0965 0.643555 18.4929 0.643555C17.8892 0.643555 17.2971 0.809138 16.781 1.12228C16.2649 1.43542 15.8446 1.88413 15.5659 2.41956C15.2871 2.95499 15.1605 3.55663 15.1999 4.159C15.2393 4.76137 15.4432 5.34139 15.7894 5.83593C12.0053 6.42992 8.52045 8.24841 5.8689 11.0127C3.21735 13.7769 1.54542 17.3344 1.10938 21.1399H35.8854C35.4448 17.2073 33.6745 13.5431 30.8674 10.7539Z" fill="black"/>
+                        </svg> All Meal</a></li>
+                  <li class="nav-list"><a class="active" href="dashboard.html"><i class="ri-stack-fill  h4 px-1"></i> My Order</a></li>
                   <li class="nav-list"><a href="manageProfile.html"><i class="ri-user-3-fill h4 px-1"></i> Manage Profile</a></li>
                   <li class="nav-list"><a href="#"><i class="ri-bank-card-fill h4 px-1"></i> Payment Method</a></li>
                   <li class="nav-list"><a href="favoriteMeals.html"><i class="ri-heart-fill h4 px-1"></i> Favorite meals</a></li>
@@ -337,6 +345,32 @@
         </div>
       <!-- End Content Pages for Dashboard -->
    </div>
+
+<!-- Start Navbar in Last Page -->
+      <section class="navbarFooter d-block d-md-none">
+            <div class="w-100 d-flex justify-content-center">
+            <div class="infoImageNavbarFooter">
+                  <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="40px" class="ml_11">
+            </div>  
+            </div> 
+            <ul class="navbar-nav d-flex flex-row justify-content-around">
+            <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="home.html"><i class="ri-home-4-line "></i> Home</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="faq.html" ><i class="ri-questionnaire-line "></i>&nbsp; &nbsp; FAQ</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link clr_basic" aria-current="page" href="login.html" > <i class="ri-user-add-line "></i> Login</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link clr_basic" aria-current="page" href="#" > <i class="ri-list-ordered "></i> Sidebar</a>
+            </li>
+            </ul>
+      </section>
+<!-- End Navbar in Last Page -->
 
 
     <!-- jQuery -->
