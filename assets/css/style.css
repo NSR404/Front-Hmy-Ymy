@@ -105,7 +105,7 @@ a , a:focus , a:hover{
         font-size: 30px;
         position: absolute;
         right: 30px;
-        bottom: 100px;
+        bottom: 82px;
         position: fixed;
         cursor: pointer;
         z-index: 9999;
@@ -1458,6 +1458,7 @@ footer{
     background-color: #000;
     margin-top: 200px;
     padding-top: 400px;
+    padding-bottom: 85px!important;
 }
 
 .add_email_Sec{
@@ -2255,6 +2256,12 @@ html[lang="ar"] .onlineReview_sec .swiper-wrapper{
 
 .ingredientFood_sec .parentCircle .circle_load_blue{
     padding: 0 58px;
+}
+
+@media (max-width:610px) {
+    .ingredientFood_sec  > .row{
+        width: 96%!important;
+    }
 }
 
 @media (min-width:765px) and (max-width:769px) {
@@ -4048,6 +4055,7 @@ html[lang="ar"] .sidebar_guest  .selected-option img.language-icon{
         width: 100%;
         margin-left: 0px;
         padding: 20px 0px;
+        margin-bottom: 65px!important;
     }
     
     @media (min-width:1023px) {
@@ -4379,6 +4387,8 @@ html[lang="ar"] .sidebar_guest  .selected-option img.language-icon{
     background-color: var(--basicColor);
     color: var(--weightColor);
     transition: all 0.4s ease-in-out;
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
 }
 
 .manageProfile form .btn_updateProfile:hover{
