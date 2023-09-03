@@ -1040,11 +1040,12 @@ html[lang="ar"] .Experience_of_day .swiper-wrapper{
 
  @media (max-width:601px) {
     .detailsFood_sec .row .pr_22_small{
-        padding-right: 22px!important;
+        /* padding-right: 22px!important; */
      }
     
      html[lang="ar"] .detailsFood_sec .row .pr_22_small{
         padding-right: initial!important;
+        padding-left: 0!important;
      }
      html[lang="ar"] .Experience_of_day .swiper-slide{
         margin-right: 0!important;
@@ -2260,7 +2261,7 @@ html[lang="ar"] .onlineReview_sec .swiper-wrapper{
 
 @media (max-width:610px) {
     .ingredientFood_sec  > .row{
-        width: 96%!important;
+        /* width: 96%!important; */
     }
 }
 
