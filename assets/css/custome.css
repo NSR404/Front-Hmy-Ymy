@@ -728,7 +728,12 @@ html[lang="ar"] .ordersProvider .search-icon{
    height: 45px;
    width: 93%;
    font-size: 16px;
-   padding: 5px 15px;
+   padding: 5px 15px!important;
+ }
+
+ .contactUs_sec .iti--allow-dropdown #phone{
+   height:45px;
+   width: 93%!important;
  }
  
  .contactUs_sec .contact_us_green .textinput {
@@ -859,8 +864,8 @@ html[lang="ar"] .ordersProvider .search-icon{
  
  @media (max-width: 768px) {
  
-   .contactUs_sec .contact_us_green .input {
-     width: 100%;
+   .contactUs_sec .contact_us_green .input ,  .contactUs_sec .iti--allow-dropdown #phone {
+     width: 100%!important;
    }
  
    .contactUs_sec .contact_us_green .textinput {
@@ -891,9 +896,7 @@ html[lang="ar"] .ordersProvider .search-icon{
      line-height: 23px;
    }
  
-   .contactUs_sec .contact_us_green .input {
-     height: 45px;
-   }
+
  
    .contactUs_sec .contact_us_green .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
      margin: 0 0 25px 0;
@@ -1053,6 +1056,25 @@ html[lang="ar"] .ordersProvider .search-icon{
     width: 100%;
   }
 }
+
+ .contactUs_sec select option:checked{
+   background-color: var(--weightColor)!important;
+   color: black!important;
+}
+
+.contactUs_sec select option:focus{
+   background-color: var(--weightColor)!important;
+   color: black!important;
+}
+
+.contactUs_sec select.form-select {
+   background-image: url("data:image/svg+xml,%3csvg fill='rgb(125, 37, 245)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath  stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e")!important;
+}
+
+html[lang="ar"] .contactUs_sec select.form-select{
+   background-position: left 0.75rem center!important;
+}
+
 /* <!-- End Contact Us section -->   */
 
 

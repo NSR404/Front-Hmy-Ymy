@@ -15,7 +15,10 @@
     <!-- file style css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custome.css">
-      
+   <!-- Start Code css input phone with key country  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   <!-- End Code css input phone with key country  -->
 </head>
 <body>
 
@@ -145,31 +148,36 @@
                       <div class="responsive-container-block">
                         <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt-6">
                           <p class="text-blk input-title">
-                            First Name
+                             Name
                           </p>
-                          <input class="input form-control" id="ijowk-6" name="FirstName">
-                        </div>
-                        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                          <p class="text-blk input-title">
-                            Last Name
-                          </p>
-                          <input class="input form-control" id="indfi-4" name="Last Name">
+                          <input type="text" class="input form-control" id="ijowk-6" name="name" placeholder="Your Name">
                         </div>
                         <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                           <p class="text-blk input-title">
                             Email
                           </p>
-                          <input class="input form-control" id="ipmgh-6" name="Email">
+                          <input type="email" class="input form-control" id="indfi-4" name="email" placeholder="ahmed@gmail.com">
+                        </div>
+                        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                          <p class="text-blk input-title">
+                           Subject
+                          </p>
+                          <select class="input form-control form-select" aria-label=".form-select-lg example" name="subject" id="ipmgh-6">
+                             <option value="01">Collaboration & Partnerships </option>
+                             <option value="02">Technical Support  </option>
+                             <option value="03" selected>Contact Us </option>
+                          </select>
                         </div>
                         <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                           <p class="text-blk input-title">
                              Phone Number
                           </p>
-                          <input class="input form-control" id="imgis-5" name="PhoneNumber">
+                          <input id="phone" type="tel" name="PhoneNumber"  class="phoneNumber form-control" pattern="[0-9]*" required />
+
                         </div>
                         <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
                           <p class="text-blk input-title">
-                            What Do You have In mind
+                           The Message
                           </p>
                           <textarea class="textinput form-control" id="i5vyy-6" placeholder="Please enter query..."></textarea>
                         </div>
@@ -375,6 +383,25 @@
 <!-- End Navbar in Last Page -->
 
 
+ <!-- Start Code Js input phone with key country  -->
+ <script>
+   const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+   window.intlTelInput(phoneInputField , {
+      initialCountry: "auto",
+      geoIpLookup: callback => {
+         fetch("https://ipapi.co/json")
+            .then(res => res.json())
+            .then(data => callback(data.country_code))
+            .catch(() => callback("us"));
+      },
+      utilsScript: "/intl-tel-input/js/utils.js?1690975972744" 
+      });
+ </script>
+<!-- End Code Js input phone with key country  -->
 
     <!-- jQuery -->
     <script src="assets/js/jquery.js"></script>
