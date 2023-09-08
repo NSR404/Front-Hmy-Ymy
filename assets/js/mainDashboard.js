@@ -83,9 +83,12 @@ document.querySelectorAll(".openNotifications").forEach(function(button) {
  document.addEventListener("DOMContentLoaded", function() {
   var notificationDropdown = document.querySelector(".notificationDropdown");
 
-  notificationDropdown.addEventListener("click", function(event) {
-      event.stopPropagation();
-  });
+
+  if (notificationDropdown) {
+    notificationDropdown.addEventListener("click", function(event) {
+        event.stopPropagation();
+    });
+}
 
   var profileDropdown = document.querySelector(".profile-dropdown");
   var profileWrapper = document.querySelector(".profile-wrapper");

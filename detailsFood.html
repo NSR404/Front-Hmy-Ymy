@@ -196,6 +196,12 @@
                                     <div class="col-xl-11 text_start">
                                        <h3 class="title_food my-3">Creamy Funghi Risotto </h3>
                                        <span class="price_food p-2 clr_basic my-2 bg_header_gray rounded-1 fw-bolder h6">$20</span>
+                                   <!-- new Code for share==================================== -->
+                                          <div id="shareLink" class="share-icon d-inline">
+                                             <!-- &nbsp; &nbsp; <span class="text-black h5 fw-bold">Share</span>&nbsp; -->
+                                             <i class="ri-share-forward-fill" title="Share Meal"></i>
+                                          </div>
+                                   <!-- new Code for share==================================== -->
                                        <h4 class="number_request my-3 mb-3">The number of requests <span class="bg_header_gray py-1 px-3 rounded-1">50</span></h4>
                                        <div class="row div_Message  my-1 py-3 rounded-1">
                                        <span class="col-3">
@@ -859,6 +865,24 @@ function myPlugin({ swiper, extendParams, on }) {
       });
 
 </script> 
+
+   <!-- new Code for share==================================== -->
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const shareLink = document.getElementById('shareLink');
+
+            shareLink.addEventListener('click', function() {
+               const url = window.location.href; 
+               navigator.clipboard.writeText(url).then(function() {
+                  alert('Link copied successfully 😍\n' + '==> ' + url);
+               }).catch(function() {
+                     alert('Error. The browser was unable to copy the link.');
+               });
+            });
+         });
+    </script>
+   <!-- new Code for share==================================== -->
+
 
     <!-- jQuery -->
     <script src="assets/js/jquery.js"></script>

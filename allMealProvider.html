@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Meal </title>
+    <!-- FAVICON -->
+    <link rel="stylesheet icon" href="assets/images/x-icon/logo.png" type="image/logo">
+    <!-- file Icons -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <!-- file bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- file Library Select2 css -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- file style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+   <!-- start btn direction -->
+      <div class="btn_direction b_pos"><i class="ri-arrow-up-s-line"></i></div>
+   <!-- end btn direction -->
+      
+   <!-- start navbar section -->
+      <nav class="navbar navbar-expand-lg navbar-light pt-md-0 pt-2 navbarDashboard">
+         <div class="container">
+               <a class="navbar-brand w-50" href="#">
+                     <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px" class="ml_11">
+                     <div class="main-content d-block d-lg-none">
+                           <button id="sidebarToggle"  type="button">
+                                 <i class="ri-arrow-right-double-line"></i>
+                           </button>
+                     </div>
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <div class="d-flex  justify-content-end w-100 " >
+                        <ul class="navbar-nav mb-2 mb-lg-0 mt-2 mt-md-1 mt-lg-2">
+                           <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                           </li>
+                           <li class="nav-item">
+                           <div class="custom-dropdown nav-link">
+                                 <div class="selected-option">
+                                 <span>En</span>
+                                 <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </div>
+                                 <ul class="options">
+                                 <li data-value="english">
+                                       En
+                                       <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </li>
+                                 <li data-value="arabic">
+                                       Ar
+                                       <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2" loading="lazy" width="100%">
+                                 </li>
+                                 </ul>
+                           </div>
+                           </li>
+                           <li class="nav-item p_relative">
+                              <a class="nav-link" aria-current="page" ><i class="ri-notification-3-fill h4 px-1 openNotifications"></i>
+                                    <div class="notificationDropdown openNotifications" >
+                                          <a href="#" class="notificationProfile" title="Notifications">4</a>
+                                          <div class="notificationContent " id="notificationDropdown">
+                                                <div class="row">
+                                                      <div class="col-12">
+                                                            <div class="title_Notification d-flex justify-content-between align-items-start">
+                                                                  <h6>New notification</h6>
+                                                                  <span class="clr_basic">4 Notice</span>
+                                                            </div>
+                                                      </div>
+                                                      <hr class="w-75 m-auto mt-2">
+                                                      <div class="row col-12 overflow_y_Auto my-3">
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                      </div>
+                                                      <!-- <div class="col-12 text-center my-3">
+                                                            <h6 class="fw-bold">No Any Notifications</h6>
+                                                      </div> -->
+                                                </div>
+                                          </div>
+                                       </div> 
+                              </a>
+                                    
+                           </li>
+                           <li class="nav-item">
+                                 <div class="profile-wrapper" id="profileWrapper">
+                                       <div class="">
+                                             <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage" title="Your Profile">                                              
+                                       </div>
+                                       <div class="profile-dropdown text-center" id="profileDropdown">
+                                          <ul>
+                                             <li><a href="indexDashboardProvider.html">Dashboard</a></li>
+                                             <li><a href="manageProfile.html">Profile</a></li>
+                                             <hr class="bg_basic">
+                                             <li><a href="#"> Sign Out</a></li>
+                                          </ul>
+                                       </div>
+                              </div>
+                           </li>
+                        </ul>  
+                  </div>
+               </div>
+         </div>
+      </nav>
+   <!-- end navbar section -->  
+
+   <div class="rootSections_Dashboard">
+      <!-- Start Sidebar Section -->
+         <div class="sidebar sidebar_sec sidbarProvider pt-3 px-4 mt-0 mt-md-1" id="sidebar">
+                <div class="imageInfo_User text-center">
+                     <img src="assets/images/profile/profile.png" class="profile-image" alt="image User" loading="lazy">
+                </div>
+               <h5 class="text-center mt-2 mb-md-3 mb-3 nameUser">Mohammed Ahmed</h5>
+               <hr class="text-center bg_basic">
+               <ul class="ul_listPage">
+                  <li class="nav-list mb-2"><a href="indexDashboardProvider.html"><i class="ri-home-3-fill h4 px-1"></i>  Dashboard </a></li>
+                  <li class="nav-list mb-2"><a href="manageProfileProvider.html"><i class="ri-user-3-fill h4 px-1"></i>  Manage Profile </a></li>
+                  <li class="nav-list mb-2">
+                     <a href="addMeal.html">
+                        <svg class="h4 px-1 margin_r_5px" xmlns="http://www.w3.org/2000/svg" width="27" height="30" viewBox="0 0 27 36" fill="none">
+                        <path d="M10.099 2.59175V9.91275C10.0992 10.0239 10.0774 10.1341 10.0349 10.2368C9.99246 10.3396 9.93016 10.4329 9.85159 10.5116C9.77301 10.5903 9.67971 10.6527 9.577 10.6953C9.4743 10.7378 9.3642 10.7597 9.25302 10.7597H9.02702C8.80239 10.7597 8.58694 10.6705 8.4281 10.5117C8.26926 10.3528 8.18002 10.1374 8.18002 9.91275V2.55875C8.18002 2.13706 8.01251 1.73263 7.71432 1.43445C7.41614 1.13627 7.01172 0.96875 6.59002 0.96875C6.16833 0.96875 5.7639 1.13627 5.46572 1.43445C5.16754 1.73263 5.00002 2.13706 5.00002 2.55875V9.91275C5.00002 10.1374 4.91079 10.3528 4.75194 10.5117C4.5931 10.6705 4.37766 10.7597 4.15302 10.7597H3.92702C3.81584 10.7597 3.70575 10.7378 3.60304 10.6953C3.50033 10.6527 3.40703 10.5903 3.32846 10.5116C3.24989 10.4329 3.18759 10.3396 3.14513 10.2368C3.10268 10.1341 3.08089 10.0239 3.08102 9.91275V2.59175C3.08843 2.38388 3.05369 2.17666 2.97887 1.98258C2.90406 1.7885 2.79073 1.61158 2.64571 1.46247C2.5007 1.31336 2.327 1.19514 2.13507 1.11496C1.94315 1.03477 1.73698 0.994269 1.52899 0.99589C1.32099 0.997512 1.11548 1.04122 0.924831 1.12439C0.734182 1.20756 0.562344 1.32846 0.41967 1.47982C0.276995 1.63117 0.166439 1.80984 0.0946615 2.00507C0.0228837 2.20029 -0.00862896 2.40802 0.00202162 2.61575V9.60675C-0.0129784 13.4877 0.915022 14.4967 2.44602 15.7067C3.68102 16.6807 4.73502 17.2388 4.73502 19.6578V35.2207H8.44502V19.6578C8.44502 17.2388 9.50002 16.6797 10.734 15.7067C12.266 14.4967 13.193 13.4887 13.178 9.60675V2.61575C13.1887 2.40802 13.1572 2.20029 13.0854 2.00507C13.0136 1.80984 12.903 1.63117 12.7604 1.47982C12.6177 1.32846 12.4459 1.20756 12.2552 1.12439C12.0646 1.04122 11.859 0.997512 11.6511 0.99589C11.4431 0.994269 11.2369 1.03477 11.045 1.11496C10.853 1.19514 10.6793 1.31336 10.5343 1.46247C10.3893 1.61158 10.276 1.7885 10.2012 1.98258C10.1264 2.17666 10.0916 2.38388 10.099 2.59175Z" fill="black"/>
+                        <path d="M22.0383 3.32157C21.2503 5.53057 18.9833 10.7056 18.8383 15.2756C18.6163 22.3706 22.9633 21.3206 23.0383 25.9686V35.2686H26.7303L26.7483 35.3146V3.32157C26.7523 0.627573 23.2643 -0.116426 22.0383 3.32157Z" fill="black"/>
+                         </svg> Add meal
+                        </a>
+                  </li>
+                  <li class="nav-list mb-2"><a class="active" href="allMealProvider.html">
+                     <svg class="h4 px-1 margin_r_5px" xmlns="http://www.w3.org/2000/svg" width="27" height="30" viewBox="0 0 36 28" fill="none">
+                     <path d="M35.998 23.4229H0.998047V27.9999H35.998V23.4229Z" fill="black"/>
+                     <path d="M30.8674 10.7539C28.2516 8.12398 24.8625 6.40054 21.1964 5.83593C21.5425 5.34139 21.7464 4.76137 21.7858 4.159C21.8252 3.55663 21.6987 2.95499 21.4199 2.41956C21.1411 1.88413 20.7208 1.43542 20.2047 1.12228C19.6886 0.809138 19.0965 0.643555 18.4929 0.643555C17.8892 0.643555 17.2971 0.809138 16.781 1.12228C16.2649 1.43542 15.8446 1.88413 15.5659 2.41956C15.2871 2.95499 15.1605 3.55663 15.1999 4.159C15.2393 4.76137 15.4432 5.34139 15.7894 5.83593C12.0053 6.42992 8.52045 8.24841 5.8689 11.0127C3.21735 13.7769 1.54542 17.3344 1.10938 21.1399H35.8854C35.4448 17.2073 33.6745 13.5431 30.8674 10.7539Z" fill="black"/>
+                     </svg> All meal</a></li>
+                  <li class="nav-list mb-2"><a href="ordersProvider.html"><i class="ri-stack-fill  h4 px-1"></i> Orders</a></li>
+                  <li class="nav-list mb-2"><a href="changePasswordProvider.html"><i class="ri-lock-password-fill h4 px-1"></i> Change Password</a></li>
+                  <li class="text-center mt-4 mt-xl-3 mb-3 li_btnSignOut"><a href="#" class="btn bg_basic px-4 btn_signOut">Sign Out</a></li>
+               </ul>
+         </div>
+      <!-- End Sidebar Section -->
+
+      <!-- Start Content Pages for Dashboard Service Provider  -->
+        <div class="contentPages_Dashboard">
+            <!-- Start Content List ==> (Dashboard Service Provider ) -->
+            <div class="contentDashboard mt-2">
+                <!-- Start All Meal Provider Section -->
+                   <section class="allMealProvider_sec ordersProvider dashboardFilter_sec mb-4">
+                     <div class="container px-0">
+                           <form action="" method="get">
+                                 <!--Div Select Filter -->
+                              <div class="row flex-column-reverse flex-md-row  justify-content-md-between justify-content-center gap-md-0 gap-3 mx-md-0 mx-2 mb-4 align-items-md-center">
+                              <!-- Title Total Order -->
+                                   <div class="col-lg-3 col-md-3 col-sm-12 mt-3 mb-1">
+                                       <div class="totalOrder">
+                                             <h5 class="d-inline "> Total Order:  </h5>
+                                             <h5 class="d-inline clr_basic d-md-block d-xl-inline mt-md-1 mt-lg-0"> &nbsp; 3 Meals &nbsp; </h5>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-12 row selectFilter gap-md-0 gap-3 pr_sm_0">
+                                          <!-- Select Most Recent -->
+                                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pr_sm_0">
+                                                <div class="form-outline dropdown dselect-wrapper ">
+                                                         <select name="mostRecent" id="select_mostRecent" class="form-control">
+                                                            <option value="" selected disabled>Most Recent</option>
+                                                            </select>
+                                                </div>
+                                             </div>
+                                          <!-- Select Suspended -->
+                                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pr_sm_0">
+                                                      <div class="form-outline dropdown dselect-wrapper ">
+                                                            <select name="Suspended" id="select_suspended" class="form-control">
+                                                            <option value="" selected disabled>Suspended</option>
+                                                            </select>
+                                                      </div>
+                                             </div>
+                                             <!-- Select Number Of Requests -->
+                                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pr_sm_0">
+                                                <div class="form-outline dropdown dselect-wrapper ">
+                                                      <select name="select_numberOfRequests" id="select_numberOfRequests" class="form-control">
+                                                      <option value="" selected disabled>Number of requests</option>
+                                                      </select>
+                                                </div>
+                                       </div>
+                                    </div>
+                              </div>
+                              <!--Div Table  -->
+                              <div class="tableView_dateFilter my-1 px-1">
+                                 <div class="table-responsive">
+                                       <table class="table text-center">
+                                             <thead class="bg_basic">
+                                                   <tr>
+                                                         <th colspan="2">Meal Type</th>
+                                                         <th>Meal Type</th>
+                                                         <th>Date</th>
+                                                         <th>Status</th>
+                                                         <th>Status</th>
+                                                         <th>Action</th>
+                                                   </tr>
+                                             </thead>
+                                             <tbody>
+                                                   <tr>
+                                                         <td>
+                                                            <img src="assets/images/Food_Box/food_1.jpg" class="imgOrderMeal" alt="image Meal" loading="lazy" width="80px">
+                                                         </td>
+                                                         <td> <h6>Colibriprint</h6><span>Wrench</span></td>
+                                                         <td>breakfast</td>
+                                                         <td>12/5/2022</td>
+                                                         <td>acceptable</td>
+                                                         <td>
+                                                            <label class="switch"> 
+                                                               <input type="checkbox" name="refundable" id="refundable" checked>
+                                                               <span class="slider"></span>
+                                                            </label>
+                                                         </td>
+                                                         <td class="tdAction">
+                                                            <a class="h5 a_action mx-1 px-2" href="editeMeal.html">
+                                                               <i class="ri-edit-2-fill"></i>
+                                                            </a>
+                                                            <a class="h5 a_action mx-1 px-2" href="">
+                                                               <i class="ri-delete-bin-line"></i>
+                                                            </a>
+                                                         </td>
+                                                   </tr> 
+                                                   <tr>
+                                                      <td>
+                                                         <img src="assets/images/Food_Box/food_5.jpg" class="imgOrderMeal" alt="image Meal" loading="lazy" width="80px">
+                                                      </td>
+                                                      <td> <h6>Colibriprint</h6><span>Wrench</span></td>
+                                                      <td>breakfast</td>
+                                                      <td>12/5/2022</td>
+                                                      <td>acceptable</td>
+                                                      <td>
+                                                         <label class="switch"> 
+                                                            <input type="checkbox" name="refundable" id="refundable" >
+                                                            <span class="slider"></span>
+                                                         </label>
+                                                      </td>
+                                                      <td class="tdAction">
+                                                         <a class="h5 a_action mx-1 px-2" href="editeMeal.html">
+                                                            <i class="ri-edit-2-fill"></i>
+                                                         </a>
+                                                         <a class="h5 a_action mx-1 px-2" href="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                         </a>
+                                                      </td>
+                                                   </tr>   
+                                                   <tr>
+                                                      <td>
+                                                         <img src="assets/images/Food_Box/food_2.jpg" class="imgOrderMeal" alt="image Meal" loading="lazy" width="80px">
+                                                      </td>
+                                                      <td> <h6>Colibriprint</h6><span>Wrench</span></td>
+                                                      <td>breakfast</td>
+                                                      <td>12/5/2022</td>
+                                                      <td>acceptable</td>
+                                                      <td>
+                                                         <label class="switch"> 
+                                                            <input type="checkbox" name="refundable" id="refundable" checked>
+                                                            <span class="slider"></span>
+                                                         </label>
+                                                      </td>
+                                                      <td class="tdAction">
+                                                         <a class="h5 a_action mx-1 px-2" href="editeMeal.html">
+                                                            <i class="ri-edit-2-fill"></i>
+                                                         </a>
+                                                         <a class="h5 a_action mx-1 px-2" href="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                         </a>
+                                                      </td>
+                                                   </tr> 
+                                                   <tr>
+                                                      <td>
+                                                         <img src="assets/images/Food_Box/food_3.jpg" class="imgOrderMeal" alt="image Meal" loading="lazy" width="80px">
+                                                      </td>
+                                                      <td> <h6>Colibriprint</h6><span>Wrench</span></td>
+                                                      <td>breakfast</td>
+                                                      <td>12/5/2022</td>
+                                                      <td>acceptable</td>
+                                                      <td>
+                                                         <label class="switch"> 
+                                                            <input type="checkbox" name="refundable" id="refundable" >
+                                                            <span class="slider"></span>
+                                                         </label>
+                                                      </td>
+                                                      <td class="tdAction">
+                                                         <a class="h5 a_action mx-1 px-2" href="editeMeal.html">
+                                                            <i class="ri-edit-2-fill"></i>
+                                                         </a>
+                                                         <a class="h5 a_action mx-1 px-2" href="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                         </a>
+                                                      </td>
+                                                   </tr> 
+                                                   <tr>
+                                                      <td>
+                                                         <img src="assets/images/Food_Box/food_1.jpg" class="imgOrderMeal" alt="image Meal" loading="lazy" width="80px">
+                                                      </td>
+                                                      <td> <h6>Colibriprint</h6><span>Wrench</span></td>
+                                                      <td>breakfast</td>
+                                                      <td>12/5/2022</td>
+                                                      <td>acceptable</td>
+                                                      <td>
+                                                         <label class="switch"> 
+                                                            <input type="checkbox" name="refundable" id="refundable" checked>
+                                                            <span class="slider"></span>
+                                                         </label>
+                                                      </td>
+                                                      <td class="tdAction">
+                                                         <a class="h5 a_action mx-1 px-2" href="editeMeal.html">
+                                                            <i class="ri-edit-2-fill"></i>
+                                                         </a>
+                                                         <a class="h5 a_action mx-1 px-2" href="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                         </a>
+                                                      </td>
+                                                   </tr> 
+                                                   <tr>
+                                                      <td>
+                                                         <img src="assets/images/Food_Box/food_4.jpg" class="imgOrderMeal" alt="image Meal" loading="lazy" width="80px">
+                                                      </td>
+                                                      <td> <h6>Colibriprint</h6><span>Wrench</span></td>
+                                                      <td>breakfast</td>
+                                                      <td>12/5/2022</td>
+                                                      <td>acceptable</td>
+                                                      <td>
+                                                         <label class="switch"> 
+                                                            <input type="checkbox" name="refundable" id="refundable" checked>
+                                                            <span class="slider"></span>
+                                                         </label>
+                                                      </td>
+                                                      <td class="tdAction">
+                                                         <a class="h5 a_action mx-1 px-2" href="editeMeal.html">
+                                                            <i class="ri-edit-2-fill"></i>
+                                                         </a>
+                                                         <a class="h5 a_action mx-1 px-2" href="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                         </a>
+                                                      </td>
+                                                   </tr> 
+                                             </tbody>
+                                       </table>
+                                 <!--Start Modal Review in Table in ==> Action ==>  -->                                    
+                                       <!-- Modal -->
+                                       <div class="modal fade" id="ReviewModalTable" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+                                             <div class="modal-dialog">
+                                                   <div class="modal-content">
+                                                         <div class="modal-header">
+                                                               <h5 class="modal-title" id="reviewModalLabel"><img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px"></h5>
+                                                               <button type="button" class="btn-close ri-close-line" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                         </div>
+                                                         <div class="modal-body pt-2">
+                                                               <div class="card-body text-center">
+                                                                     <div class="comment-box text-center">
+                                                                     <h4 class="clr_basic fw-bold">Add a comment</h4>
+                                                                     <div class="rating my-2">
+                                                                           <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> 
+                                                                           <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                                                                           <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                                                                           <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> 
+                                                                           <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+                                                                     <div class="comment-area"> 
+                                                                           <textarea class="form-control" placeholder="what is your view?" rows="4"></textarea> 
+                                                                     </div>
+                                                                     <div class="text-center mt-4">
+                                                                           <button class="btn  send px-5">Send message</button>
+                                                                     </div>
+                                                                     </div>
+                                                         </div>
+                                                         </div>
+                                                   </div>
+                                             </div>
+                                       </div>
+                                 <!--End Modal Review in Table in ==> Action ==>  -->
+
+                                 </div>
+                              </div>
+                           </form>
+                     </div>
+                   </section>
+                <!-- End All Meal Provider Section -->
+            </div>
+            <!-- End Content List ==> (Dashboard Service Provider ) -->
+        </div>
+      <!-- End Content Pages for Dashboard Service Provider  -->
+   </div>
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- file bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>   
+      <!-- file Select Library -->
+      <script src="assets/js/Selectjquery.min.js"></script>
+      <script src="assets/js/select2.min.js"></script>
+  
+        <script>
+          $(document).ready(function() {
+              $('#select_mostRecent').select2();
+              $('#select_suspended').select2();
+              $('#select_numberOfRequests').select2();
+          });
+        </script>     
+   <!-- javascript -->
+   <script src="assets/js/main.js" defer></script>
+   <script src="assets/js/mainDashboard.js"></script>
+</body>
+</html>

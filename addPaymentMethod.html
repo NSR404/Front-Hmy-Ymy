@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Payment Method </title>
+    <!-- FAVICON -->
+    <link rel="stylesheet icon" href="assets/images/x-icon/logo.png" type="image/logo">
+
+    <!-- file Icons -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <!-- file bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- file style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- start btn direction -->
+      <div class="btn_direction b_pos"><i class="ri-arrow-up-s-line"></i></div>
+<!-- end btn direction -->
+      
+<!-- start navbar section -->
+      <nav class="navbar navbar-expand-lg navbar-light pt-md-0 pt-2 navbarDashboard_guest navbarDashboard">
+            <div class="container">
+                  <a class="navbar-brand w-50" href="#">
+                        <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="80px" class="ml_11">
+                        <div class="main-content d-block d-lg-none">
+                              <button id="sidebarToggle"  type="button">
+                                    <i class="ri-arrow-right-double-line"></i>
+                              </button>
+                        </div>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <div class="d-flex  justify-content-end w-100 " >
+                        <ul class="navbar-nav mb-2 mb-lg-0 mt-2 mt-md-1 mt-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aboutUs.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                        <div class="custom-dropdown nav-link">
+                              <div class="selected-option">
+                              <span>En</span>
+                              <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                              </div>
+                              <ul class="options">
+                              <li data-value="english">
+                                    En
+                                    <img src="assets/images/language/en.png" alt="English" class="language-icon mx-2" loading="lazy" width="100%">
+                              </li>
+                              <li data-value="arabic">
+                                    Ar
+                                    <img src="assets/images/language/ar.png" alt="Arabic" class="language-icon mx-2" loading="lazy" width="100%">
+                              </li>
+                              </ul>
+                        </div>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="faq.html" >FAQ</a>
+                        </li>
+                        <li class="nav-item p_relative">
+                              <a class="nav-link" aria-current="page" ><i class="ri-notification-3-fill h4 px-1 openNotifications"></i>
+                                    <div class="notificationDropdown openNotifications" >
+                                          <a href="#" class="notificationProfile" title="Notifications">4</a>
+                                          <div class="notificationContent " id="notificationDropdown">
+                                                <div class="row">
+                                                      <div class="col-12">
+                                                            <div class="title_Notification d-flex justify-content-between align-items-start">
+                                                                  <h6>New notification</h6>
+                                                                  <span class="clr_basic">4 Notice</span>
+                                                            </div>
+                                                      </div>
+                                                      <hr class="w-75 m-auto mt-2">
+                                                      <div class="row col-12 overflow_y_Auto my-3">
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-12">
+                                                                        <div class="message_notic d-flex justify-content-between align-items-start gap-2">
+                                                                              <img src="assets/images/profile/notification.png" alt="Hmy Ymy" width="40px">
+                                                                              <p class="notification-text">
+                                                                              Lorem ipsum, dolor sit ametco ctetur adipi sicing eli eveniet commodi.
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+                                                      </div>
+                                                      <!-- <div class="col-12 text-center my-3">
+                                                            <h6 class="fw-bold">No Any Notifications</h6>
+                                                      </div> -->
+                                                </div>
+                                          </div>
+                                    </div> 
+                              </a>
+                                    
+                        </li>
+                        <li class="nav-item">
+                              <div class="profile-wrapper" id="profileWrapper">
+                                    <div class="">
+                                          <img src="assets/images/profile/profile.png" alt="Profile Image" loading="lazy" class="profile-image" id="profileImage" title="Your Profile">                                              
+                                    </div>
+                                    <div class="profile-dropdown text-center" id="profileDropdown">
+                                          <ul>
+                                                <li><a href="indexDashboard.html">Dashboard</a></li>
+                                                <li><a href="manageProfile.html">Profile</a></li>
+                                                <hr class="bg_basic">
+                                                <li><a href="#"> Sign Out</a></li>
+                                          </ul>
+                                    </div>
+                                    
+                              </div>
+                        </li>
+                  </ul>  
+                  </div>
+                  </div>
+            </div>
+      </nav>   
+<!-- end navbar section -->
+
+    <!-- /* start section Add Payment Method Dashboard  */ -->
+    <section class="addPaymentMethod_sec mt-0 px-lg-4 px-1 mx-md-5">
+      <div class="container px-sm-1">
+         <div class="row flex-md-row flex-column-reverse gap-md-0 gap-3">
+               <div class="col-lg-6 col-md-6 col-sm-12 px-0 px-md-3 pt-md-3 pt-md-3">
+                  <div class="titlePayment mb-4 text-center">
+                       <h4 class="clr_basic fw-bold">Payment Method</h4>
+                  </div>
+                  <form action="" method="">
+                          <div class="form-check radiosPayment d-flex justify-content-around gap-md-5 gap-4 align-items-center px-md-5">
+                              <div class="radio_div_select">
+                                 <input class="form-check-input" type="radio" name="reservation_type" id="visaCardPayment" onclick="showFormPayment('visaCardPayment')" checked />
+                                 <label class="form-check-label h5 label_focus" for="visaCardPayment"><i class="ri-visa-fill h3 clr_basic"></i></label>
+                              </div>
+                              <div class="radio_div_select">
+                                 <input class="form-check-input" type="radio" name="reservation_type" id="paypalPayment" onclick="showFormPayment('paypalPayment')" />
+                                 <label class="form-check-label h5 label_focus" for="paypalPayment"><i class="ri-paypal-fill h3 clr_basic"></i></label>
+                              </div>
+                              <div class="radio_div_select">
+                                 <input class="form-check-input" type="radio" name="reservation_type" id="applePayment" onclick="showFormPayment('applePayment')" />
+                                 <label class="form-check-label h5 label_focus" for="applePayment">
+                                    <img src="assets/images/payment/applePayment.png" alt="apple Payment" loading="lazy" width="35px" height="25px">
+                                 </label>
+                              </div>
+                              <div class="radio_div_select">
+                                 <input class="form-check-input" type="radio" name="reservation_type" id="directPayment" onclick="showFormPayment('directPayment')" />
+                                 <label class="form-check-label h5 label_focus" for="directPayment"><i class="ri-wallet-3-fill h3 clr_basic"></i></label>
+                              </div>
+                          </div>
+
+                          <!-- Start Div Payment Py Visa Card -->
+                          <div id="visaCardPay" >
+                                    <h3 class="my-3 text-center fw-bolder clr_basic">Visa Card</h3>
+                                    <div class="row form-outline mb-4 px-lg-4 mx-0 mb-3 mt-2">
+                                          <div class="col-12 px-1">
+                                                 <!-- <span class="error"> </span> -->
+                                                <label for="CARDHOLDER_NAME">CARDHOLDER NAME</label>
+                                                <input type="text" name="CARDHOLDER_NAME" id="CARDHOLDER_NAME" class="form-control p-2" pattern="[a-zA-Z][0-9]"
+                                                placeholder="mohammed ahmed" required />
+                                          </div>
+                                    </div>
+                                    <div class="row form-outline mb-4 px-lg-4 mx-0">
+                                        <label for="CARD_NUMBER_1">CARD NUMBER</label>
+                                          <div class="col-3 px-1 px-lg-2">
+                                                <input type="number" name="CARD_NUMBER_1" id="CARD_NUMBER" class="form-control text-center" placeholder="0000" required />
+                                          </div>
+                                          <div class="col-3 px-1 px-lg-2">
+                                                <input type="number" name="CARD_NUMBER_2" id="CARD_NUMBER" class="form-control text-center" placeholder="0000" required />
+                                          </div>
+                                          <div class="col-3 px-1 px-lg-2">
+                                                <input type="number" name="CARD_NUMBER_3" id="CARD_NUMBER" class="form-control text-center" placeholder="0000" required />
+                                          </div>
+                                          <div class="col-3 px-1 px-lg-2">
+                                                <input type="number" name="CARD_NUMBER_4" id="CARD_NUMBER" class="form-control text-center" placeholder="0000" required />
+                                          </div>
+                                    </div>
+                                    <div class="row form-outline mb-4 px-lg-4 mx-0">
+                                          <div class="form-outline d-flex justify-content-between">
+                                                <label for="">EXPIRATION DATE</label>
+                                                <label for="cvvNumber" class="cvvPay">CVV <i class="ri-question-fill h5"></i></label>
+                                          </div>
+                                          <div class="col-6">
+                                                <select class="form-control" name="month" id="month" aria-label="multiple select example" required>
+                                                      <option disabled selected>Month</option>
+                                                      <option value="01">January</option>
+                                                      <option value="02">February</option>
+                                                      <option value="03">March</option>
+                                                      <option value="04">April</option>
+                                                      <option value="05">May</option>
+                                                      <option value="06">June</option>
+                                                      <option value="07">July</option>
+                                                      <option value="08">August</option>
+                                                      <option value="09">September</option>
+                                                      <option value="10">October</option>
+                                                      <option value="11">November</option>
+                                                      <option value="12">December</option>
+                                                </select>
+                                          </div>
+                                          <div class="col-3 px-1 px-lg-2">
+                                                <select class="form-control" name="year" id="year" aria-label="multiple select example" required>
+                                                      <option disabled selected>Year</option>
+                                                      <option value="01">2023</option>
+                                                      <option value="02">2024</option>
+                                                      <option value="03">2025</option>
+                                                      <option value="04">2025</option>
+                                                </select>
+                                          </div>
+                                          <div class="col-3 px-1 px-lg-2">
+                                                <input type="number" name="cvvNumber" id="cvvNumber" class="form-control text-center" minlength="4" maxlength="4"  placeholder="" required/>
+                                          </div>
+                                    </div>
+                                    <div class="row form-outline d-flex justify-content-between div_checked gap-2 mb-2 mb-3 px-lg-4 mx-0">
+                                          <div class="col-12 form-check form_check_checkBox">
+                                                <input class="form-check-input" type="checkbox" name="checkboxPay" value="" id="checkboxPay" required>
+                                                <label class="form-check-label clr_basic clr_basicPay" for="checkboxPay"  >
+                                                      Securely store payment details for next purchase.
+                                                </label>
+                                          </div>
+                                    </div>
+                                    <div class="row form-outline mb-4 px-lg-4 mx-0">
+                                         <div class="col-12">
+                                                <input type="radio" id="radioPay" name="radioPay">
+                                                <label for="radioPay" class="fw-bold">PAYMENT UPON ARRIVAL</label>
+                                         </div>
+                                    </div>
+                                    <div class="row">
+                                          <div class="col-12 d-flex justify-content-center align-items-center">
+                                                <button type="submit" class="btn submit_signUp bg_basic w-auto mb-3">COMPLETE PURCHASE</button>
+                                          </div>
+                                    </div>
+                          </div>
+                          <!-- End Div Payment Py Visa Card -->
+                          <!-- Start Div Payment Py  Paypal -->
+                          <div id="paypalPay" class="flex-column justify-content-center align-items-center" style="display: none;">
+                              <i class="ri-paypal-fill h3 clr_basic mt-5 mt-md-5 pt-md-5 iconPaypal"></i>
+                              <!-- <h3 class="clr_basic fw-bold">Paypal</h3> -->
+                              <a href="" class="btn submit_signUp bg_basic w-50 my-4 mb-3">Pay by PayPal</a>
+                          </div>
+                          <!-- End Div Payment Py  Paypal -->
+                          <!-- Start Div Payment Py Apple Pay -->
+                          <div id="applePay" style="display: none;">
+                              <h3 class="my-3 text-center fw-bolder clr_basic">Visa Card</h3>
+                              <div class="row form-outline mb-4 px-md-4 mx-0 mb-3 mt-2">
+                                    <div class="col-12 px-1">
+                                           <!-- <span class="error"> </span> -->
+                                          <label for="CARDHOLDER_NAME">CARDHOLDER NAME</label>
+                                          <input type="text" name="CARDHOLDER_NAME" id="CARDHOLDER_NAME" class="form-control p-2" pattern="[a-zA-Z][0-9]"
+                                          placeholder="mohammed ahmed" required />
+                                    </div>
+                              </div>
+                              <div class="row form-outline mb-4 px-md-4 mx-0">
+                                  <label for="CARD_NUMBER_1">CARD NUMBER</label>
+                                    <div class="col-3 px-1 px-md-2">
+                                          <input type="number" name="CARD_NUMBER_1" id="CARD_NUMBER" class="form-control text-center" placeholder="0000" required />
+                                    </div>
+                                    <div class="col-3 px-1 px-md-2">
+                                          <input type="number" name="CARD_NUMBER_2" id="CARD_NUMBER" class="form-control text-center" placeholder="0000" required />
+                                    </div>
+                                    <div class="col-3 px-1 px-md-2">
+                                          <input type="number" name="CARD_NUMBER_3" id="CARD_NUMBER" class="form-control text-center" placeholder="0000" required />
+                                    </div>
+                                    <div class="col-3 px-1 px-md-2">
+                                          <input type="number" name="CARD_NUMBER_4" id="CARD_NUMBER" class="form-control text-center" placeholder="0000" required />
+                                    </div>
+                              </div>
+                              <div class="row form-outline mb-4 px-md-4 mx-0">
+                                    <div class="form-outline d-flex justify-content-between">
+                                          <label for="">EXPIRATION DATE</label>
+                                          <label for="cvvNumber" class="cvvPay">CVV <i class="ri-question-fill h5"></i></label>
+                                    </div>
+                                    <div class="col-6">
+                                          <select class="form-control" name="month" id="month" aria-label="multiple select example" required>
+                                                <option disabled selected>Month</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-3 px-1 px-md-2">
+                                          <select class="form-control" name="year" id="year" aria-label="multiple select example" required>
+                                                <option disabled selected>Year</option>
+                                                <option value="01">2023</option>
+                                                <option value="02">2024</option>
+                                                <option value="03">2025</option>
+                                                <option value="04">2025</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-3 px-1 px-md-2">
+                                          <input type="number" name="cvvNumber" id="cvvNumber" class="form-control text-center" minlength="4" maxlength="4"  placeholder="" required/>
+                                    </div>
+                              </div>
+                              <div class="row form-outline d-flex justify-content-between div_checked gap-2 mb-2 mb-3 px-md-4 mx-0">
+                                    <div class="col-12 form-check form_check_checkBox">
+                                          <input class="form-check-input" type="checkbox" name="checkboxApplePay" value="" id="checkboxApplePay" required>
+                                          <label class="form-check-label clr_basic clr_basicPay" for="checkboxApplePay" >
+                                                Securely store payment details for next purchase.
+                                          </label>
+                                    </div>
+                              </div>
+                              <div class="row form-outline mb-4 px-md-4 mx-0">
+                                   <div class="col-12">
+                                          <input type="radio" id="radioApplePay" name="radioApplePay">
+                                          <label for="radioApplePay" class="fw-bold">PAYMENT UPON ARRIVAL</label>
+                                   </div>
+                              </div>
+                              <div class="row">
+                                    <div class="col-12 d-flex justify-content-center align-items-center">
+                                          <button type="submit" class="btn submit_signUp bg_basic w-auto mb-3">COMPLETE PURCHASE</button>
+                                    </div>
+                              </div>
+                          </div>
+                          <!-- End Div Payment Py Apple Pay -->
+                          <!-- Start Div Payment Py Direct Pay -->
+                          <div id="directPay" style="display: none;">
+                              <h4 class="mt-4 text-center">Direct Pay</h4>
+                          </div>
+                          <!-- End Div Payment Py Direct Pay -->
+                  </form>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12">
+                   <div class="infoImageAddPayment text-center mt-2">
+                        <img src="assets/images/payment/payments.svg" alt="image Payment" loading="lazy" width="96%">
+                   </div>
+               </div>
+         </div>
+      </div>
+    </section>
+<!-- /* End section Add Payment Method Dashboard  */ -->
+
+
+<!-- Start Section Footer -->
+      <footer class="position-relative pt-0">
+      <section class="add_email_Sec">
+               <div class="position-absolute w_90">
+                  <div class="div_Add_email container text-center d-flex flex-column justify-content-center align-items-center py-4">
+                           <h3 class="my-4">Do you have any questions?</h3>
+                           <p class="my-2 opacity-75">put your email address and get connected</p>
+                           <div class="form-outline my-4">
+                                    <div class="search">
+                                       <i class="ri-mail-open-line clr_basic"></i>
+                                       <input type="search" class="form-control" placeholder="Enter your email address here">
+                                       <a href="">
+                                          <button class="btn bg_basic">Continue</button>
+                                       </a>
+                                    </div>
+                           </div>
+                  </div>
+               </div>
+      </section>
+      <section class="content_footer w-100">
+            <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center align-items-center mb-md-0 mb-3 px-0">
+                        <img src="assets/images/x-icon/logo.png" alt="logo" loading="lazy" width="140px">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mx-md-0 ">
+                        <h4 class="clr_basic my-2">Shopping Online</h4>
+                        <ul class="p-0">
+                              <a href="" class="my-2">
+                                    <li class="text-uppercase clr_li_footer">Shipping & Return</li>
+                              </a>
+                              <a href="" class="my-2">
+                                    <li class="text-uppercase clr_li_footer">Team and Conditions  </li>
+                              </a>
+                              <a href="" class="my-2">
+                                    <li class="text-uppercase clr_li_footer">F.A.Q</li>
+                              </a>
+                              <a href="" class="my-2">
+                                    <li class="text-uppercase clr_li_footer">Contact Us</li>
+                              </a>
+                              <a href="" class="my-2">
+                                    <li class="text-uppercase clr_li_footer">Shipping & Return</li>
+                              </a>
+                        </ul>
+                     
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mx-md-0">
+                     <h4 class="clr_basic my-2">Information</h4>
+                  <ul class="p-0">
+                        <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer">Shipping </li>
+                        </a>
+                        <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer">Team an  </li>
+                        </a>
+                        <a href="" class="my-2">
+                           <li class="text-uppercase clr_li_footer">F.A.Q</li>
+                        </a>
+                        <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer">Contact Us</li>
+                        </a>
+                        <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer"> Return</li>
+                        </a>
+                  </ul>
+                  
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mx-md-0">
+                     <h4 class="clr_basic my-2">Shop</h4>
+                  <ul class="p-0">
+                        <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer">  Return</li>
+                        </a>
+                        <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer"> Conditions  </li>
+                        </a>
+                        <a href="" class="my-2">
+                           <li class="text-uppercase clr_li_footer">F.A.Q</li>
+                        </a>
+                        <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer">Contact Us</li>
+                        </a>
+                        <a href="" class="my-2">
+                              <li class="text-uppercase clr_li_footer">Shipping </li>
+                        </a>
+                  </ul>
+                  
+                  </div>
+                  <div class="container">
+                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                        <ul class="d-flex justify-content-start align-items-center px-0 mb-0  mx-md-0">
+                              <a href="" class="margin_r h5 clr_basic">
+                                    <li class="text-uppercase"><i class="ri-facebook-fill"></i></li>
+                              </a>
+                              <a href="" class="margin_r h5 clr_basic">
+                                    <li class="text-uppercase"><i class="ri-twitter-fill"></i></li>
+                              </a>
+                              <a href="" class="margin_r h5 clr_basic">
+                                 <li class="text-uppercase"><i class="ri-linkedin-fill"></i></li>
+                              </a>
+                              <a href="" class="margin_r h5 clr_basic">
+                                    <li class="text-uppercase"><i class="ri-instagram-fill"></i></li>
+                              </a>
+                              <a href="" class="margin_r h5 clr_basic">
+                                    <li class="text-uppercase"><i class="ri-youtube-fill"></i></li>
+                              </a>
+                        </ul>
+                  </div>
+                     <hr class="hr_line">
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center text-center">
+                     <p class="text-uppercase text-white-50">Admin8925Hmy.com- 2021.ALL Rights Reserved</p>
+                  </div>
+            
+            </div>
+      </section>
+      </footer>
+<!-- End Section Footer -->
+
+
+   <!-- Start Navbar in Last Page -->
+      <section class="navbarFooter d-block d-md-none">
+            <div class="w-100 d-flex justify-content-center">
+            <div class="infoImageNavbarFooter">
+                  <img src="assets/images/x-icon/logo.png" alt="image logo" loading="lazy" width="40px" class="ml_11">
+            </div>  
+            </div> 
+            <ul class="navbar-nav d-flex flex-row justify-content-around">
+            <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="home.html"><i class="ri-home-4-line "></i> Home</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="faq.html" ><i class="ri-questionnaire-line "></i>&nbsp; &nbsp; FAQ</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link clr_basic" aria-current="page" href="#" ><i class="ri-list-ordered "></i> Login</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link clr_basic nav_a_profile_dashboard" aria-current="page" href="#" >
+                  <img src="assets/images/profile/profile.png" alt="Profile" loading="lazy" width="29px" class="rounded-circle img_profile_dashboard">
+                  Profile</a>
+            </li>
+            </ul>
+      </section>
+<!-- End Navbar in Last Page -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- file bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+   <!-- javascript -->
+   <script src="assets/js/addPaymentMethod.js" defer></script>
+   <script src="assets/js/main.js" defer></script>
+   <script src="assets/js/mainDashboard.js"></script>
+</body>
+</html>

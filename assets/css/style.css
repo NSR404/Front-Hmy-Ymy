@@ -312,7 +312,7 @@ html[lang="ar"] .icon_hidden_pass{
 }
 
 .form_SignUp .form-outline > input:focus ,.signUp_sec #show_hide_password input:focus , .signUp_sec .form-outline > button:focus ,  .dashboardFilter_sec .form-outline select:focus , .signUp_sec #show_hide_confirm_password input:focus{
-    border-color: var(--blackColor)!important;
+    border-color: var(--basicColor)!important;
     box-shadow: none!important;
 }
 
@@ -875,11 +875,10 @@ html[lang="ar"] .modal-header{
     transition: all 0.5s ease-in-out;
 }
 
-.header_sec .modal-footer button:hover , .add_comment_div button:hover {
+.header_sec .modal-footer button:hover , .add_comment_div button:hover , .btn_add_payment:hover{
     border: 1px solid var(--basicColor);
     color: var(--basicColor);
     background-color: var(--weightColor);
-
 }
 
 .header_sec #meal_type_select, .header_sec #Culture_select{
@@ -1459,7 +1458,12 @@ footer{
     background-color: #000;
     margin-top: 200px;
     padding-top: 400px;
-    padding-bottom: 85px!important;
+}
+
+@media (max-width:767px) {
+    footer{
+        padding-bottom: 85px!important;
+    }    
 }
 
 .add_email_Sec{
@@ -1628,7 +1632,7 @@ footer .hr_line{
 }
 
 #aboutUs .rootMain {
-    width: 96%!important;
+    /* width: 96%!important; */
 }
 
 
@@ -1821,7 +1825,7 @@ html[lang="ar"] .search_sec .search input{
 
 @media (max-width:660px) {
     #detailsFood .rootMain{
-        width: 98vw!important;
+        /* width: 98vw!important; */
         padding: 11px!important;
         padding-right: 0!important;
      }
@@ -3492,23 +3496,23 @@ html[lang="ar"] .notificationProfile{
  @media (max-width:376px) {
      .notificationContent{
         top: 16px;
-        right: -115px;
+        right: -93px;
         width: 251px;
      }
      html[lang="ar"] .notificationContent{
-        right: -130px;
+        right: -166px;
         width: 251px;
      }
  }
 
  @media (min-width:376px) and (max-width:567px) {
     .notificationContent{
-        top: -200px;
+        top: -110px;
         right: 12px;
        width: 251px;
     }
     html[lang="ar"] .notificationContent{
-        top: -200px;
+        top: -110px;
         right: -266px;
        width: 251px;
     }
@@ -3516,12 +3520,12 @@ html[lang="ar"] .notificationProfile{
 
 @media (min-width:568px) and (max-width:912px) {
     .notificationContent{
-        top: -200px;
+        top: -135px;
         right: 40px;
         width: 320px;
     }
     html[lang="ar"] .notificationContent{
-        top: -200px;
+        top: -135px;
         right: -358px;
         width: 320px;
     }
@@ -3848,10 +3852,13 @@ html[lang="ar"] .sidebar_sec .ul_listPage li a{
     display: flex!important;
     flex-direction: row!important;
     align-items: start;
-    padding-top: 11px!important;
+    /* padding-top: 11px!important; */
     padding-bottom: 0!important;
 }
 
+html[lang="ar"] .sidebar_sec .ul_listPage .li_btnSignOut a{
+    padding-bottom: 4px!important;
+}
 
 html[lang="ar"] .sidebar_sec .ul_listPage li{
     padding-bottom: initial!important;
@@ -4350,10 +4357,13 @@ html[lang="ar"] .sidebar_guest  .selected-option img.language-icon{
 
  .manageProfile form label{
     color: #100F0F;
-   font-weight: bold;
    text-align: initial;
    padding: 10px 0;
    font-size: large;
+   text-transform: capitalize;
+   font-family: montserrat_en!important;
+   font-weight: 600;
+   letter-spacing: 0.5px;
  }
 
 
@@ -4361,7 +4371,7 @@ html[lang="ar"] .sidebar_guest  .selected-option img.language-icon{
      padding: 12px 16px;
      transition: all 0.4 ease-in-out;
      color: #808080!important;
-    border-radius: 3px;
+     border-radius: 3px;
  }
 
  .manageProfile .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -4370,12 +4380,12 @@ html[lang="ar"] .sidebar_guest  .selected-option img.language-icon{
 
  .manageProfile form input{
     color: #100F0F!important;
-    font-size: 19px;
-    padding: 9px 13px!important;
+    font-size: 16px;
+    /* padding: 9px 13px!important; */
  }
 
  .manageProfile form input:focus{
-    border: 1px solid var(--basicColor);
+    border: 0px solid var(--basicColor);
 }
 
 .manageProfile form input::placeholder{
@@ -4439,7 +4449,8 @@ html[lang="ar"] .select2-selection__rendered {
 }
 
 html[lang="ar"] .select2-selection__arrow{
-    left: 12px!important;
+    left: 4px!important;
+    right: auto!important;
 }
 
 /* Start section Change Password  */
@@ -4526,7 +4537,15 @@ font-family: unset!important;
 
 /* ==================================== */
 /* =======  Dashboard Service Provider Page ============ */ 
-/* <!-- Start Section Add a meal in Dashboard Service Provider    --> */
+/* <!-- Start Section Add Meal in Dashboard Service Provider    --> */
+html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li.nav-list {
+    margin-bottom: 0.5rem!important;
+}
+
+html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
+    padding-top: 5px!important;
+}
+
 .margin_r_5px{
     margin-right: 5px;
     margin-bottom: 5px!important;
@@ -4534,7 +4553,6 @@ font-family: unset!important;
 .addMeal_sec{
 
 }
-
 
 .infoUploadImage.uploader {
     display: block;
@@ -4637,18 +4655,662 @@ font-family: unset!important;
     border: 1px solid var(--basicColor);
     padding: 1px;
   }
-/* <!-- End Section Add a meal in Dashboard Service Provider    --> */
+  
+/* <!-- End Section Add Meal in Dashboard Service Provider    --> */
+
+/* Add Code Phone input tel */
+.iti--allow-dropdown{
+    width: 100%!important;
+}
+
+.iti--allow-dropdown #phone{
+    height: 50px!important;
+    color: #2d2d2d;
+    font-size: 20px;
+    transition:all 0.4s ease-in-out;
+    border-radius: 4px!important;
+    width: 100%!important;
+}
 
 
+
+@media (min-width:501px) {
+    .iti__country{
+        width: 294px!important;
+    }  
+}
+
+html[lang="ar"] .iti__country {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
  
+.iti__country-list{
+     /* width: 454px; */
+     overflow-x: hidden;
+     white-space: calc(normal * 2);
+     text-align: initial!important;
+}
+
+@media (max-width:813px) {
+    .iti__country-list{
+        width: 277px!important;
+    }
+}
+
+html[lang="ar"] .iti--allow-dropdown .iti__flag-container{
+ right: 0!important;
+ left: auto!important;
+}
+
+html[lang="ar"] .iti--allow-dropdown input , html[lang="ar"] .iti--allow-dropdown input[type=tel]{
+    padding-right: 52px!important;
+    padding-left: 6px!important;
+}
+
+html[lang="ar"] .iti__selected-flag{
+     flex-direction: row-reverse!important;
+}
+
+
+/* <!-- new Code for share==================================== --> */
+/* <!-- new Code for share==================================== --> */
+/* <!-- new Code for share==================================== --> */
+
+.clr_favorite{
+    color: red !important; 
+}
+
+
+.share-icon {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    padding: 7px;
+    border-radius: 3px;
+    background-color: #f6efff;
+    font-family: montserrat_ar;
+    padding: 8px 9px;
+}
+
+.share-icon i{
+    font-size: 26px;
+    color: #7D25F5;
+}
+
+.share-icon:hover {
+    color: #6A1BCF;
+}
+
+
+.circle_grayAboutUs{
+    position: absolute;
+    background-color: #faf6ff;
+    border-radius: 50%;
+    width: 480px;
+    height: 480px;
+     top: 0;
+     z-index: -90;
+     right: -260px;
+}
+
+html[lang="ar"] .circle_grayAboutUs{
+     right: auto;
+     left: -260px;
+}
+
+/* <!-- Start Our Team Section --> */
+.Ourteam_sec{
+    background-color: #faf7fd;
+}
+
+@media (max-width:595px) {
+    .Ourteam_sec{
+        background-color: var(--weightColor)!important;
+    }
+}
+
+.Partners_sec h2 , .Ourteam_sec h2{
+    font-family: montserrat_ar;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+    padding: 20px;
+    box-shadow: 0 1px 4px -1px #7D25F5;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam.employeeTeam{
+    border-radius: 10px!important;
+}
+
+@media (min-width:815px) {
+    .Ourteam_sec .manageTeam .box_manageTeam.scale{
+        transform: scale(1.1);
+    }
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam .imageInfo{
+    border-radius: 50%;
+    border: 7px solid var(--basicColor);
+    padding: 8px;
+    width: 150px;
+    height: 150px;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam .imageInfo img{
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    z-index: -10;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam .imageInfo img:hover{
+    transform: scale(1.1);
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam .nameManage{
+    border-radius: 30px;
+    background-color: var(--weightColor);
+    padding: 8px 30px 6px 30px;
+    text-align: center;
+    box-shadow: 0 1px 0.1px 1px #80808082;
+    margin-top: -20px;
+    z-index: 10;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam .nameJop span{
+    color: #000000b5;
+    font-family: 'montserrat_ar';
+    text-transform: capitalize;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam .nameManage h5{
+    color: var(--basicColor);
+    font-family: montserrat_ar;
+    text-transform: capitalize;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam  .socialmedia a i{
+    font-size: 23px;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam  .socialmedia a{
+    transition: all 0.3s ease-in-out;
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam  .socialmedia a:hover{
+    transform: scale(1.2);
+}
+
+.Ourteam_sec .manageTeam .box_manageTeam  .socialmedia a .icon_facebook{
+    color: #4267B2;
+}
+.Ourteam_sec .manageTeam .box_manageTeam  .socialmedia a .icon_instagram{
+    color: #E1306C;
+}
+.Ourteam_sec .manageTeam .box_manageTeam  .socialmedia a .icon_twitter{
+    color: #1DA1F2;
+}
+.Ourteam_sec .manageTeam .box_manageTeam  .socialmedia a .icon_linkedin{
+    color: #007ab6;
+}
+/* <!-- End Our Team Section --> */
+
+
+/* <!-- Start Success Partners Section --> */
+.Partners_sec .boxsPartners img:nth-child(3){
+    width: 200px;
+}
+/* <!-- End Success Partners Section --> */
 
 
 /* ==================================== */
-/* =======  Dashboard Page ============ */ 
+/* =======  Payment Method Page ============ */ 
+/* <!-- start section Payment Method Dashboard  --> */
+.paymentMethod_sec .infoImagePayment{
+    text-align: center;
+}
+.paymentMethod_sec .infoImagePayment img{
+  width: 100%;
+  height: 100%;
+}
 
+@media (min-width:769px) {
+.paymentMethod_sec .infoImagePayment img{
+    width: 100%;
+    }
+    .paymentMethod_sec .container > .row{
+        width: 80%!important;
+    }
+}
+
+.btn_add_payment{
+    transition: all 0.5s ease-in-out;
+}
+/* <!-- End section Payment Method Dashboard  --> */
+
+
+ /* ============================================ */
+/* =======  Add Payment Method Page ============ */ 
+/* <!-- start section Add Payment Method Dashboard  --> */
+.addPaymentMethod_sec .form-check-input:checked{
+    color: #000!important;
+    border: 2px solid var(--basicColor);
+    background-color: var(--basicColor);
+}
+
+.addPaymentMethod_sec .radio_div_select{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+html[lang="ar"] .addPaymentMethod_sec .radio_div_select{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.addPaymentMethod_sec .radio_div_select .form-check-input{
+    display: block!important;
+}
+
+#visaCardPay .submit_signUp , #applePay .submit_signUp{
+    font-size: 16px!important;
+}
+
+@media (max-width:769px) {
+    #visaCardPay .submit_signUp ,  #applePay .submit_signUp{
+        width: 100%!important;
+    }
+    #paypalPay .submit_signUp{
+        width: 90%!important;
+    }
+    html[lang="ar"] .addPaymentMethod_sec .radiosPayment{
+        padding-right: 8px;
+        padding-left: 5px;
+    }
+    
+}
+
+
+#visaCardPay label , #applePay label{
+    color: #2B2B2B;
+    margin-bottom: 7px;
+}
+
+#visaCardPay label.clr_basicPay{
+    color: var(--basicColor)!important;
+}
+
+#visaCardPay label.cvvPay i , #applePay label.cvvPay i{
+  color: var(--basicColor);
+}
+
+html[lang="ar"] #visaCardPay label.cvvPay , html[lang="ar"] #applePay label.cvvPay{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#visaCardPay input:not(input[type="checkbox"]) , #visaCardPay select , #visaCardPay select option
+, #applePay input:not(input[type="checkbox"]) , #applePay select , #applePay select option{
+    background-color: var(--weightColor)!important;
+    border: none!important;
+    box-shadow: 0 1px 3px 0px #a0a0a0c0 !important;
+    color: #000!important;
+}
+
+#visaCardPay select option:disabled , #applePay select option:disabled{
+    background-color: var(--basicColor)!important;
+    color: var(--weightColor)!important;
+}
+
+
+#visaCardPay #radioPay , #applePay #radioApplePay{
+  box-shadow:none!important;
+
+}
+
+#visaCardPay .div_checked > div , #applePay .div_checked > div {
+        padding: 0 0px 0px 35px;
+  }
+
+html[lang="ar"] #visaCardPay .div_checked > div , html[lang="ar"] #applePay .div_checked > div {
+    padding: 0 10px 0px 0px;
+}
+
+@media (max-width:767px) {
+        #visaCardPay .div_checked > div ,  #applePay .div_checked > div {
+            padding: 0 0 0 30px ;
+    }
+
+    html[lang="ar"] #visaCardPay .div_checked > div , html[lang="ar"] #applePay .div_checked > div {
+        padding: 0 30 0 0px ;
+    }
+
+    html[lang="ar"] .addPaymentMethod_sec .form-check-input[type="checkbox"]{
+        width: 20px!important;
+    }
+}
+
+
+html[lang="ar"] #visaCardPay .form_check_checkBox , html[lang="ar"] #applePay .form_check_checkBox{
+    display: flex;
+    flex-direction: row;
+}
+
+html[lang="ar"] #visaCardPay .form_check_checkBox label , html[lang="ar"] #applePay .form_check_checkBox label{
+    padding-right: 28px;
+}
+
+#paypalPay{
+    height: 200px;
+    width: 100%;
+}
+
+#paypalPay .iconPaypal{
+    font-size: 110px;
+    margin: 28px 0;
+}
+
+#visaCardPay input[type="number"]::-webkit-inner-spin-button,
+#visaCardPay input[type="number"]::-webkit-outer-spin-button ,
+#applePay input[type="number"]::-webkit-inner-spin-button,
+#applePay input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#paypalPay .submit_signUp{
+    font-size: 17px!important;
+}
+
+/* <!-- End section Add Payment Method Dashboard  --> */
+
+
+ /* ================================================= */
+/* =======  Manage Profile Provider Page ============ */
+/* <!-- start section Manage Profile Provider  --> */
+.manageProfile.manageProfileProvider .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #100F0F!important;
+    font-size: 17px;
+}
+
+.manageProfile .ar_en_px_sm_0{
+    padding-right: 0!important;
+}
+
+html[lang="ar"] .manageProfile .ar_en_px_sm_0{
+    padding-left: 0!important;
+    padding-right: calc(var(--bs-gutter-x) * .5)!important;
+}
+/* <!-- End section Manage Profile Provider  --> */
+
+ /* ========================================== */
+/* =======   Orders Provider Page ============ */ 
+
+/* <!-- Start Orders Provider Section --> */
+.ordersProvider{
+ padding-right: 3px;
+}
+
+html[lang="ar"] .ordersProvider{
+    padding-right: 0px;
+    padding-left: 3px;
+}
+
+.ordersProvider .tableView_dateFilter thead tr th{
+    letter-spacing: 0;
+    font-family: montserrat_en;
+}
+
+.ordersProvider .tableView_dateFilter tr td h6{
+    color: #000;
+}
+
+.ordersProvider .tableView_dateFilter td{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(77, 77, 77, 0.722)
+}
+
+.ordersProvider .imgOrderMeal{
+    box-shadow: 0 1px 4px -1px var(--basicColor);
+}
+
+@media (min-width:1023px) {
+    .navbarDashboard .navbar-brand img{
+        position: fixed;
+        margin-top: -28px;
+    }
+    .navbarDashboard_guest .navbar-brand img{
+        position: relative!important;
+        margin-top: 0px;
+    }
+
+}
+
+.ordersProvider .search-container {
+    position: relative;
+}
+  
+.ordersProvider .search-icon {
+    position: absolute;
+    top: 48%;
+    left: 24px;
+    transform: translateY(-50%);
+    color: #999; 
+    cursor: pointer;
+}
+
+html[lang="ar"] .ordersProvider .search-icon{
+    right: 24px;
+    left: auto!important;
+}
+  
+  .ordersProvider .search-input {
+    width: 100%;
+    padding: 9px 40px 8px 30px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    font-size: 16px; 
+    outline: none;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .ordersProvider .search-input{
+    padding: 9px 30px 8px 40px!important;
+  }
+
+  .ordersProvider .search-input:focus {
+    border: 1px solid var(--basicColor);
+  }
+  
+  .ordersProvider .search-input::placeholder {
+    color: transparent;
+  }
+  
+  .ordersProvider .search-input::-webkit-input-placeholder {
+    color: #999; 
+  }
+  
+  .ordersProvider .search-input::-moz-placeholder {
+    color: #999; 
+  }
+  
+  .ordersProvider .search-input:-ms-input-placeholder {
+    color: #999; 
+  }
+  
+  .ordersProvider .search-input:-moz-placeholder {
+    color: #999; 
+  }
+
+  .ordersProvider .form-outline > select{
+    height: 40px!important;
+  }
+
+  .ordersProvider .select2-container--default .select2-selection--single{
+    padding-bottom: 0!important;
+    background-color: var(--weightColor)!important;
+  }
+
+  .ordersProvider .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #100F0F!important;
+  }
+
+  .ordersProvider .select2-container--default .select2-selection--single{
+    padding: 0px 10px!important;
+    text-align: initial;
+    font-size: 18px!important;
+    font-family: Arial!important;
+    height: 42.8px!important;
+  }
+
+  .ordersProvider .select2-container--default .select2-selection--single .select2-selection__arrow b{
+    border-color: var(--basicColor) transparent transparent transparent!important;
+  }
+
+ @media (max-width:413px) {
+      html[lang="ar"] .ordersProvider{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .ordersProvider{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+ }
+
+ @media (max-width:767px) {
+    .ordersProvider .pr_sm_0{
+        padding-right: 0!important;
+      }
+      html[lang="ar"] .ordersProvider .pr_sm_0{
+        padding-right: 0.7rem!important;
+        padding-left: 0!important;
+      }
+}
+/* <!-- End Orders Provider Section --> */
+
+
+ /* =========================================== */
+/* =======  All Meal Provider Page ============ */ 
+/* <!-- Start All Meal Provider Section --> */
+.allMealProvider_sec .select2-container--default .select2-selection--single .select2-selection__arrow{
+    right: 3px!important;
+}
+
+/* Start green toggle checkbox in All Meal */
+.allMealProvider_sec .switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 26px;
+  }
+  
+.allMealProvider_sec .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+.allMealProvider_sec .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+  }
+  
+ .allMealProvider_sec .slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 4px;
+    bottom: 2.8px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+ }
+  
+ .allMealProvider_sec .switch input:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+ .allMealProvider_sec .switch input:focus + .slider {
+    box-shadow: 0 0 1px #4CAF50;
+  }
+  
+ .allMealProvider_sec .switch input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+  
+ .allMealProvider_sec .slider.round {
+    border-radius: 34px;
+  }
+  
+ .allMealProvider_sec .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .allMealProvider_sec .a_action{
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0.5px 2px #8080809c;
+    padding: 5px;
+  }
+
+  .allMealProvider_sec .tdAction{
+      display: flex;
+      justify-content: center;
+  }
+
+  .allMealProvider_sec .a_action:nth-child(1){
+    color: #4254f6;
+  }
+
+  .allMealProvider_sec .a_action:nth-child(2){
+    color: red;
+  }
+
+  .allMealProvider_sec .table>:not(caption)>*>*{
+    border-bottom-width: 0!important;
+  }
+
+  .allMealProvider_sec table tr{
+    border-bottom: 1px solid #80808053;
+  }
+/* <!-- End All Meal Provider Section --> */
 
  /* ==================================== */
-/* =======  Dashboard Page ============ */ 
+/* =======   Sign Up Provider Page ============ */ 
+/* <!-- Start Sign Up Provider section -->   */
+@media (max-width:769px) {
+    .signUpProvider_sec .submit_signUp{
+        width: 100%!important;
+    }
+}
+
+@media (min-width:769px) {
+    .signUpProvider_sec .submit_signUp{
+        width: 400px!important;
+    }
+}
+/* <!-- End Sign Up Provider section -->   */
+
 
 
  

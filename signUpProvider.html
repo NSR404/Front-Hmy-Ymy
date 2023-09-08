@@ -142,18 +142,15 @@
   </div>
 <!-- End Sidebar Section -->
 
-<!-- Start Sign Up section -->  
-    <section class="signUp_sec">
+<!-- Start Sign Up Provider section -->  
+    <section class="signUpProvider_sec signUp_sec">
         <div class="container">
-              <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center text-md-start  img_signUp">
-                          <img src="assets/images/sign/signUp.svg" alt="sign Up" width="80%"  loading="lazy">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pt-md-2 px-md-5 px_0_md">
-                      <div class="text-center d-none mb-4 ">
-                        <img src="assets/images/x-icon/logo.png" alt="Logo" width="115px"  loading="lazy">
+              <div class="row mt-2">
+                     <div class="col-12 text-center my-3">
+                          <h2 class="clr_basic fw-bolder">Sign Up</h2>
                      </div>
-                       <form action="home.html" method="post"  class="form_SignUp mt-3 mt-md-2 pt-md-1 ">
+                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-lg-5 px_0_md">
+                       <form action="home.html" method="post"  class="form_SignUp">
                             <div class=" form-outline mb-3">
                                     <!-- <span class="error"> </span> -->
                                     <input type="text" name="name" id="name" class="form-control p-2" pattern="[a-zA-Z][0-9]"
@@ -164,14 +161,13 @@
                                     <!-- <span class="error"></span> -->
                                     <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
                             </div>
-
-                            <!-- new Code for share==================================== -->
-                            
                             <div class="form-outline mb-3">
                               <!-- <span class="error"></span> -->
+                              <input type="number" name="idNumber" id="idNumber" class="form-control" placeholder="ID-Number" />
+                            </div>
+                            <div class="form-outline mb-3">
                                <input id="phone" type="tel" name="phone"  class="form-control" pattern="[0-9]*" required />
                             </div>
-
                             <div class="form-outline mb-3">
                               <select name="Country" id="mySelect_country" class="form-control">
                                   <option value="" disabled selected>Select Country</option>
@@ -180,67 +176,59 @@
                                   <option value="country_3">Country 3</option>
                               </select>
                             </div>
-                          
                             <div class="form-outline mb-3">
                                 <select name="City" id="mySelect_city" class="form-control">
                                     <option value="" disabled selected>Select City</option>
                                 </select>
                             </div>
-                            <!-- new Code for share==================================== -->
 
-                           <div class="form-outline form-group mb-3">
-                                    <!-- <span class="error"></span> -->
-                                    <div class="input-group password-toggle" id="show_hide_password">
-                                      <input type="password" id="password" class="form-control" placeholder="Password" />
-                                      <div class="input-group-addon icon_hidden_pass">
-                                        <a href=""><i class="fa ri-eye-off-line" aria-hidden="true"></i></a>
-                                      </div>
-                                    </div>
-                            </div>
-                            <div class="form-outline form-group mb-3">
-                              <!-- <span class="error"></span> -->
-                              <div class="input-group password-toggle" id="show_hide_confirm_password">
-                                <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" />
-                                <div class="input-group-addon icon_hidden_pass">
-                                  <a href=""><i class="fa ri-eye-off-line" aria-hidden="true"></i></a>
-                                </div>
-                              </div>
-                          </div>
-                           <div class="form-group d-flex justify-content-between div_checked gap-2 mb-2">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" value="" id="checkbox" required>
-                                      <label class="form-check-label mx-1 lbl_checked" for="checkbox"  >
-                                        I agree to the Google Terms of <a href="#">Service and Privacy Policy</a>
-                                      </label>
-                                    </div>
-                           </div>
-                           <div class="form-outline pt-2  mb-3">
-                                    <a href="py-2 px-4">
-                                    <button type="submit" class="btn   submit_signUp bg_basic ">Register</button>
-                                    </a> 
-                           </div>
-                           <div class="form-outline text-center mb-3">
-                                  <a href="login.html" class="clr_basic a_to_login">
-                                    Are you already a member?
-                                  </a> 
-                            </div>
+                           
                        </form>
-                   </div>
+                     </div>
+                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="mapSignUp mb-3">
+                           <iframe class="rounded-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12842.242955388214!2d34.43138732717397!3d31.511227443050238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14fd7f9f1b8eac25%3A0xcfbc4744d02d8fc9!2z2KzYp9mF2LnYqSDYp9mE2KPYstmH2LEgLSDYutiy2Kk!5e0!3m2!1sen!2s!4v1694100895929!5m2!1sen!2s" width="100%" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="form-outline form-group mb-3">
+                           <!-- <span class="error"></span> -->
+                           <div class="input-group password-toggle" id="show_hide_password">
+                             <input type="password" id="password" class="form-control" placeholder="Password" />
+                             <div class="input-group-addon icon_hidden_pass">
+                               <a href=""><i class="fa ri-eye-off-line" aria-hidden="true"></i></a>
+                             </div>
+                           </div>
+                        </div>
+                        <div class="form-outline form-group mb-3">
+                           <!-- <span class="error"></span> -->
+                           <div class="input-group password-toggle" id="show_hide_confirm_password">
+                           <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" />
+                           <div class="input-group-addon icon_hidden_pass">
+                              <a href=""><i class="fa ri-eye-off-line" aria-hidden="true"></i></a>
+                           </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 text-center mt-3 mb-5">
+                     <div class="form-outline pt-2  mb-3">
+                        <a href="py-2 px-4">
+                        <button type="submit" class="btn submit_signUp bg_basic w-auto" >Register</button>
+                        </a> 
+                     </div>
+                     </div>
               </div>
         </div> 
     </section>
-<!-- End Sign Up section -->  
+<!-- End Sign Up Provider section -->  
 
 
-      <!-- new Code for share -->
       <!-- Start Code Js input phone with key country  -->
-          <script>
-            const phoneInputField = document.querySelector("#phone");
-            const phoneInput = window.intlTelInput(phoneInputField, {
-              utilsScript:
-                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-            });
-            window.intlTelInput(phoneInputField , {
+         <script>
+               const phoneInputFieldProvider = document.querySelector("#phone");
+               const phoneInput = window.intlTelInput(phoneInputFieldProvider, {
+               utilsScript:
+                  "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+               });
+               window.intlTelInput(phoneInputFieldProvider, {
                initialCountry: "auto",
                geoIpLookup: callback => {
                   fetch("https://ipapi.co/json")
@@ -250,34 +238,33 @@
                },
                utilsScript: "/intl-tel-input/js/utils.js?1690975972744" 
                });
-          </script>
+         </script>
       <!-- End Code Js input phone with key country  -->
       
       <!-- Start Code Connecting the state to the Country And city  -->
-      <script>
-        const countrySelect = document.getElementById('mySelect_country');
-        const citySelect = document.getElementById('mySelect_city');
+         <script>
+         const countrySelect = document.getElementById('mySelect_country');
+         const citySelect = document.getElementById('mySelect_city');
 
-        const cityOptions = {
-            country_1: ["City 1A", "City 1B", "City 1C","City 1D", "City 1E", "City 1F"],
-            country_2: ["City 2A", "City 2B", "City 2C"],
-            country_3: ["City 3A", "City 3B", "City 3C"],
-        };
+         const cityOptions = {
+               country_1: ["City 1A", "City 1B", "City 1C","City 1D", "City 1E", "City 1F"],
+               country_2: ["City 2A", "City 2B", "City 2C"],
+               country_3: ["City 3A", "City 3B", "City 3C"],
+         };
 
-        countrySelect.onchange = function() {
-            const selectedCountry = countrySelect.value;
-            citySelect.innerHTML = '<option value="" disabled selected>Select City</option>';
-            if (selectedCountry in cityOptions) {
-                cityOptions[selectedCountry].forEach(city => {
-                    citySelect.innerHTML += `<option value="${city}" textContent="${city}">${city}</option>`;
-                });
-            }
-        };
-      </script>
+         countrySelect.onchange = function() {
+               const selectedCountry = countrySelect.value;
+               citySelect.innerHTML = '<option value="" disabled selected>Select City</option>';
+               if (selectedCountry in cityOptions) {
+                  cityOptions[selectedCountry].forEach(city => {
+                     citySelect.innerHTML += `<option value="${city}" textContent="${city}">${city}</option>`;
+                  });
+               }
+         };
+         </script>
       <!-- Start Code Connecting the state to the Country And city  -->
 
 
-     <!-- new Code for share -->
 
 
 
@@ -285,20 +272,16 @@
     <script src="assets/js/jquery.js"></script>
     <!-- file bootstrap js -->
     <script src="assets/js/bootstrap.min.js"></script>
-        <!-- new Code for share==================================== -->
 
     <!-- file Select Library -->
     <script src="assets/js/Selectjquery.min.js"></script>
     <script src="assets/js/select2.min.js"></script>
-
-    <!-- new Code for share==================================== -->    
       <script>
         $(document).ready(function() {
-            $('#mySelect_country').select2();
-            $('#mySelect_city').select2();
+           $('#mySelect_country').select2();
+           $('#mySelect_city').select2();
         });
       </script>
-    <!-- new Code for share==================================== -->
     
     <!-- javascript -->
     <script src="assets/js/main.js" defer></script>
