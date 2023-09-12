@@ -418,7 +418,7 @@ html[lang="ar"] .ordersProvider{
    box-shadow: 0 1px 4px -1px var(--basicColor);
 }
 
-@media (min-width:1023px) {
+/* @media (min-width:1023px) {
    .navbarDashboard .navbar-brand img{
        position: fixed;
        margin-top: -28px;
@@ -428,7 +428,7 @@ html[lang="ar"] .ordersProvider{
        margin-top: 0px;
    }
 
-}
+} */
 
 .ordersProvider .search-container {
    position: relative;
@@ -632,7 +632,7 @@ html[lang="ar"] .ordersProvider .search-icon{
 /* =======   Sign Up Provider Page ============ */ 
 /* <!-- Start Sign Up Provider section -->   */
 @media (max-width:769px) {
-   .signUpProvider_sec .submit_signUp{
+   .signUpProvider_sec .submit_signUp , .addMeal_sec .submit_signUp{
        width: 100%!important;
    }
 }
