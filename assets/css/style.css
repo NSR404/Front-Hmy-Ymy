@@ -1896,6 +1896,8 @@ html[lang="ar"] .search_sec .search input{
 
 .detailsFood_sec .price_food {
     font-family: montserrat_ar;
+    padding: 12px 0px;
+    text-align: center;
 }
 
 .detailsFood_sec .div_Message{
@@ -4667,7 +4669,7 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
  .addMeal_sec .uploadedMultiImage{
     box-shadow: 0 0px 1px gray;
     width: 100%;
-    height: 186px;
+    min-height: 186px;
     border-radius: 7px;
     margin-top: 29px;
   }
@@ -4780,26 +4782,46 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
    box-shadow: 0 1px 3px 0px gray;
  }
 
- .addMeal_sec .innerBoxBookingDays .itemBookingDays  .rowEditwhithDelet .itemTime{
+ /* .addMeal_sec  .addTimeWithCalender .rowEditwhithDelet {
+    position: absolute;
+    width: 100%;
+    top: auto;
+ }
+
+ @media (max-width:767px) {
+    .addMeal_sec  .addTimeWithCalender  .rowEditwhithDelet {
+        position: absolute;
+        width: 100%;
+        top: auto!important;
+     }
+ } */
+
+ .addMeal_sec  .addTimeWithCalender  .rowEditwhithDelet .itemTime{
     color: var(--weightColor);
     font-family: 'montserrat_en';
      cursor: pointer!important;
  }
 
- .addMeal_sec .innerBoxBookingDays .itemBookingDays  .rowEditwhithDelet .itemTime.box_1{
+ .addMeal_sec  .addTimeWithCalender  .rowEditwhithDelet .itemTime{
+    width: 100%;
+    display: block!important;
+    text-align: center;
+ }
+
+ .addMeal_sec .addTimeWithCalender  .rowEditwhithDelet .itemTime.box_1{
     background-color: #0000ff96;
  }
 
- .addMeal_sec .innerBoxBookingDays .itemBookingDays  .rowEditwhithDelet .itemTime.box_2{
+ .addMeal_sec .addTimeWithCalender  .rowEditwhithDelet .itemTime.box_2{
     background-color: var(--basicColor);
  }
 
- .addMeal_sec .innerBoxBookingDays .itemBookingDays  .rowEditwhithDelet .itemTime.box_3{
+ .addMeal_sec .addTimeWithCalender  .rowEditwhithDelet .itemTime.box_3{
     background-color: rgb(239 47 47);
  }
 
  .addMeal_sec .calenderAddTime_sec .itemTime{
-   border-radius: 10px;
+   border-radius: 10px!important;
  }
 
  .addMeal_sec .calenderAddTime_sec .itemsTimes .itemTime{
@@ -4814,6 +4836,18 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
     cursor: pointer!important;
  }
 
+@media (max-width:767px) {
+    .addMeal_sec .margin_r_l{
+        padding-right: 8px!important;
+        padding-left: 21px!important;
+     }
+     
+     html[lang="ar"] .addMeal_sec .margin_r_l{
+        padding-left: 8px!important;
+        padding-right: 21px!important;
+     }
+}
+
  html[lang="ar"] .addMeal_sec .calenderAddTime_sec .itemTime{
     display: flex;
     justify-content: center;
@@ -4821,31 +4855,95 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
     flex-direction: row;
  }
 
- .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime{
+ .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime , .addMeal_sec .itemBookingDays .itemsTimes .itemTime{
     display: inline;
     position: relative;
-    padding: 11px 12px;
+    padding: 11px 12px!important;
  }
 
- .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime .clr_basic{
-    position: absolute;
-    top: -7px;
-    right: -5px;
-    cursor: pointer!important;
+ .addMeal_sec .itemBookingDays .itemsTimes > .itemTime {
+    margin-bottom: 20px!important;
  } 
 
- .addMeal_sec .addTimeWithCalender .iconAddTime{
-    color: var(--weightColor);
-    background-color: var(--basicColor);
-    border-radius: 6px;
-    height: 37px;
-    width: 42px;
-    font-size: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+ .addMeal_sec .DivSubmitDone .rowEditwhithDelet .itemTime{
+    padding: 10px 0!important;
  }
+
+ .addMeal_sec .DivSubmitDone .rowEditwhithDelet .submit_signUp{
+    font-size: 16px!important;
+ }
+
+ .addMeal_sec .DivSubmitDone .rowEditwhithDelet .submit_signUp:hover{
+    color: var(--basicColor)!important;
+ }
+
+ .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime{
+    transition: all 0.4s ease-in-out;
+ }
+
+ .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime:hover ,  .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime:hover .editIcon {
+    background-color: #000000c7;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+ }
+
+ .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime:hover .deleteIcon {
+    display: block!important;
+ }
+
+ .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime .deleteIcon ,  .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime .editIcon{
+     position: absolute;
+     top: 7px;
+     cursor: pointer!important;
+     display: none;
+     padding: 2px 5px;
+     border-radius: 50%;
+     background-color: var(--weightColor)!important;
+     transition: all 0.4s ease-in-out;
+ }
+
+ .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime .deleteIcon {
+    right: 55%;
+    color: red!important;
+ } 
+
+ .addMeal_sec .calenderAddTime_sec .calenderTimeDays .itemTime .editIcon {
+    left: 57%;
+ } 
+
+  .addMeal_sec .itemBookingDays .itemsTimes .itemTime .deleteIcon , .addMeal_sec .itemBookingDays .itemsTimes .itemTime .editIcon{
+      display: none;
+  }
+
+ .parentItemBookingDays {
+    display: none;
+ }
+
+ .addMeal_sec #successMessage {
+    position: fixed;
+    bottom: 17px;
+    right: 30px;
+    z-index: 9999999!important;
+    opacity: 0 ;
+    box-shadow: 0px 1px 0px 1px var(--weightColor);
+    background-color: var(--basicColor);
+    padding: 10px 22px 10px 0;
+    font-weight: bolder;
+    color: var(--weightColor);
+    display: none;
+}
+
+.addMeal_sec #successMessage div strong , .addMeal_sec #successMessage div span{
+    letter-spacing: 0.9px;
+    opacity: 1!important;
+}
+
+.addMeal_sec .alert-dismissible .btn-close{
+    padding-top: 8px!important;
+    background-image: none!important;
+    opacity: 1!important;    
+}
 
  .addMeal_sec .addTimeWithCalender .itemsAddTimes strong{
     margin-top: 40px;
@@ -4855,6 +4953,7 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
 
  .addMeal_sec .modal{
     padding-right: 0!important;
+    padding-left: 0!important;
  }
 
  html[lang="ar"] .addMeal_sec .modal{
@@ -4944,12 +5043,18 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
     padding-bottom: 8px;
 }
 
+html[lang="ar"] .addMeal_sec .calendar {
+    border: 1px solid rgba(128, 128, 128, 0.461)!important;
+    border-top: 0!important;
+    border-left: 0!important;
+}
+
 @media (max-width:665px) {
     .addMeal_sec .calendar {
-       box-shadow: 7px 7px 3px -1px #80808045;
+       box-shadow: 4px 3px 3px -1px #80808045;
     }
     html[lang="ar"] .addMeal_sec .calendar {
-        box-shadow: -7px 7px 3px -1px #80808045;
+        box-shadow: -4px 3px 3px -1px #80808045;
      }
 }
 
@@ -4986,6 +5091,11 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
     font-weight: 400;
     padding: 5px;
     margin: 3px;
+}
+
+.addMeal_sec .calendar-day.bookable.active{
+    background-color: var(--basicColor)!important;
+    color: var(--weightColor)!important;
 }
 
 .addMeal_sec .calendar-day.booked {
@@ -5119,6 +5229,7 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
   .addMeal_sec .boxAvailableFor .innerboxAvailableFor .checkBoxes label{
       color: #100f0fd7!important;
      font-family: montserrat_ar;
+     cursor: pointer;
   }
   
 
@@ -5181,161 +5292,16 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 /* Start Code Calender Add Meal  */
-
-#app {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--basicColor);
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 10vh 0;
-    .container {
-      width: 300px;
-      height: auto;
-      font-size: 20px;
-      text-align: center;
-      border-radius: 4px;
-      padding: 20px;
-    }
-    input[type="text"] {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 10px;
-      background: var(--basicColor);
-      border: 2px solid #fff;
-      border-radius: 4px;
-      color: #fff;
-      font-family: 'Google Sans';
-      &:focus {
-        outline: none;
-        border: 2px solid #fff;
-      }
-      &::placeholder {
-        color: #e9e9e9;
-        font-style: italic;
-      }
-    }
-  }
-  
-  .calendar {
-    width: 100%;
+.addMeal_sec .calendar-day-name{
     position: relative;
-    .calendar-layout {
-      position: absolute;
-      z-index: 1;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      animation: appear .3s ease forwards;
-      .calendar-header {
-        width: 100%;
-        background-color: #FF4364;
-        height: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-        box-sizing: border-box;
-        padding: 0 4px;
-        .row {
-          width: 100%;
-          height: 40px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          .calendar-title {
-            font-size: 16px;
-          }
-          i {
-            font-size: 16px;
-            cursor: pointer;
-          }
-        }
-        .calendar-days {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          font-size: 14px;
-          .day {
-            max-width: calc(100% / 7);
-            padding: 4px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
-        }
-      }
-      .calendar-body {
-        display: flex;
-        flex-direction: column;
-        background-color: #fff;
-        overflow: hidden;
-        .calendar-row {
-          display: flex;
-          flex-direction: row;
-          transition: all .150s ease;
-          .calendar-day {
-            width: calc(100% / 7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #f9f9f9;
-            font-size: 14px;
-            color: #606060;
-            position: relative;
-            cursor: pointer;
-            transition: all .3s ease;
-            &.disabled {
-              background-color: #f3f3f3 !important;
-            }
-            &.selected {
-              color: #FF4364;
-              &:after {
-                width: 100%;
-              }
-            }
-            &:after {
-              content: "";
-              height: 3px;
-              width: 0px;
-              background: #FF4364;
-              position: absolute;
-              bottom: 0;
-              transition: all .3s ease;
-            }
-            &:hover {
-              color: #FF4364;
-            }
-            &:hover:after {
-              width: 100%;
-            }
-          }
-          &.swipe-left {
-            opacity: 0;
-            transform: translateX(10px);
-          }
-          &.swipe-right {
-            opacity: 0;
-            transform: translateX(-10px);
-          }
-        }
-      }
-      .calendar-footer {
-      }
-    }
-  }
-  
-  @keyframes appear {
-    from {
-      transform: translateY(-10px);
-      opacity: 0;
-    } to {
-      transform: translateY(5px);
-      opacity: 1;
-    }
-  }
-  
+    text-align: center;
+    padding: 5px 8px 0 8px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 3px;
+    color: var(--basicColor);
+}
   /* End Code Calender Add Meal  */
   
   
