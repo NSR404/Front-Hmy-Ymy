@@ -1895,9 +1895,16 @@ html[lang="ar"] .search_sec .search input{
 }
 
 .detailsFood_sec .price_food {
-    font-family: montserrat_ar;
     padding: 12px 0px;
+}
+
+.detailsFood_sec .price_food , .detailsFood_sec .time_food {
+    font-family: montserrat_ar;
     text-align: center;
+}
+
+.detailsFood_sec .time_food{
+    padding: 9px 0;
 }
 
 .detailsFood_sec .div_Message{
@@ -4934,6 +4941,22 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
     display: none;
 }
 
+html[lang="ar"] .addMeal_sec #successMessage {
+    left: 30px!important;
+    right: auto!important;
+}
+
+@media (max-width:610px) {
+    .addMeal_sec #successMessage {
+        right: 10px!important;
+        left: 10px!important;
+    }
+
+    .addMeal_sec #successMessage div strong, .addMeal_sec #successMessage div span{
+        font-size: 20px;
+    }
+}
+
 .addMeal_sec #successMessage div strong , .addMeal_sec #successMessage div span{
     letter-spacing: 0.9px;
     opacity: 1!important;
@@ -5028,8 +5051,45 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
     border-radius: 10px;
  }
 
+ .addMeal_sec .ingredient .innerBoxTime{
+    padding: 45px 20px!important;
+    width: 80%; 
+}
+
+@media (max-width:599px) {
+    .addMeal_sec .ingredient .innerBoxTime{
+        width: 100%!important; 
+    }
+}
+
+.addMeal_sec  .divIconAdd{
+   text-align: initial;   
+}
+
+@media (max-width:767px) {
+    .addMeal_sec .divIconAdd{
+        text-align: center!important;   
+     }
+
+     .innerBoxBookingDays > .row{
+         justify-content: center!important;
+     }
+     
+     .lableAddIngredient{
+        display: none!important;
+     }
+}
+
  .addMeal_sec .text_right{
     text-align: right!important;
+ }
+
+ .addMeal_sec .addIngredient , .addMeal_sec .deleteIngredient{
+    cursor: pointer;
+ }
+ 
+ .addMeal_sec .ingredient .form-outline .form-control{
+    height: 50px!important;
  }
  
  
@@ -5144,7 +5204,11 @@ html[lang="ar"] .addMeal_sec .calendar {
     font-weight: bold;
     color: #000!important;
 }
- 
+
+.addMeal_sec #monthSelect option,.addMeal_sec #yearSelect option , .titleAllTime{
+    display : none;
+}
+
  /* Input number increment */
  .addMeal_sec .quantity {
     position: relative!important;
@@ -5166,13 +5230,13 @@ html[lang="ar"] .addMeal_sec .calendar {
     display: block;
   }
   
- .addMeal_sec .quantity-nav {
+ .addMeal_sec .parentInputsAddPrice .quantity-nav {
     position: absolute;
     right: 0px;
     top: 28px;
   }
 
-  html[lang="ar"] .addMeal_sec .quantity-nav {
+  html[lang="ar"] .addMeal_sec .parentInputsAddPrice .quantity-nav {
         position: absolute;
         left: 40px;
         right: auto!important;
@@ -5180,9 +5244,24 @@ html[lang="ar"] .addMeal_sec .calendar {
   }
 
  .addMeal_sec .quantityTimePreparingMeal .quantity-nav{
-       display: none;
-  }
-  
+       /* display: none; */
+       position: absolute;
+       bottom: 0;
+       right: 0px;
+       left: auto;
+ }
+
+html[lang="ar"] .addMeal_sec .quantityTimePreparingMeal .quantity-nav{
+    /* display: none; */
+    position: absolute;
+    left: 33px!important;
+    right: auto!important;
+}
+
+.addMeal_sec .fromToBody .quantity-nav{
+    display: none!important;
+}
+
  .addMeal_sec .quantity-button {
     position: absolute;
     right: 7px;

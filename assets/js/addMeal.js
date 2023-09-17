@@ -50,11 +50,9 @@
 
         img.src = event.target.result;
         img.alt = 'Uploaded Image';
-
         img.style.maxWidth = '100%';
         img.style.height = '100%';
         img.style.borderRadius = '3px';
-
         img.classList.remove('d-none');
 
         deleteIcon.innerHTML = '<i class="ri-delete-bin-line h4"></i>';
@@ -136,94 +134,72 @@
         };
     
         let reservations = [
-            {
-                date: '1',
-                day: 'Friday',
-                month: 'September',
-                year: '2023',
-                times: [
-                    '04:15 pm - 05:15 pm',
-                    '06:15 pm - 07:15 pm',
-                    '08:15 pm - 09:15 pm'
-                ],
-            },
-            {
-                date: '2',
-                day: 'Saturday',
-                month: 'September',
-                year: '2023',
-                times: [
-                  '02:15 pm - 04:15 pm',
-                  '05:15 pm - 06:15 pm',
-                  '08:15 pm - 09:15 pm'
-                ],
-            },
-            {
-                date: '3',
-                day: 'Sunday',
-                month: 'September',
-                year: '2023',
-                times: [
-                    '04:15 pm - 05:15 pm',
-                    '06:15 pm - 07:15 pm',
-                    '08:15 pm - 09:15 pm'
-                ],
-            },
-            {
-                date: '4',
-                day: 'Monday',
-                month: 'September',
-                year: '2023',
-                times: [
-                  '02:15 pm - 04:15 pm',
-                  '05:15 pm - 06:15 pm',
-                  '08:15 pm - 09:15 pm'
-                ],
-            },
-            {
-                date: '5',
-                day: 'Tuesday',
-                month: 'September',
-                year: '2024',
-                times: [
-                  '04:15 pm - 05:15 pm',
-                  '06:15 pm - 07:15 pm',
-                  '08:15 pm - 09:15 pm'
-                ],
-            },
-            {
-                date: '6',
-                day: 'Wednesday',
-                month: 'September',
-                year: '2024',
-                times: [
-                  '04:15 pm - 05:15 pm',
-                  '06:15 pm - 07:15 pm',
-                  '08:15 pm - 09:15 pm'
-                ],
-            },
-            {
-                    date: '1',
-                    day: 'Sunday',
-                    month: 'January',
-                    year: '2023',
-                    times: [
-                        '04:15 pm - 05:15 pm',
-                        '06:15 pm - 07:15 pm',
-                        '08:15 pm - 09:15 pm'
-                    ],
-                },
-                {
-                    date: '2',
-                    day: 'Monday',
-                    month: 'January',
-                    year: '2023',
-                    times: [
-                        '02:15 pm - 04:15 pm',
-                        '05:15 pm - 06:15 pm',
-                        '08:15 pm - 09:15 pm'
-                    ],
-                },
+            // {
+            //     date: '1',
+            //     day: 'Friday',
+            //     month: 'September',
+            //     year: '2023',
+            //     times: [
+            //         '04:15 pm - 05:15 pm',
+            //         '06:15 pm - 07:15 pm',
+            //         '08:15 pm - 09:15 pm' , 
+            //     ],
+            // },
+            // {
+            //     date: '2',
+            //     day: 'Saturday',
+            //     month: 'September',
+            //     year: '2023',
+            //     times: [
+            //       '02:15 pm - 04:15 pm',
+            //       '05:15 pm - 06:15 pm',
+            //       '08:15 pm - 09:15 pm'
+            //     ],
+            // },
+            // {
+            //     date: '3',
+            //     day: 'Sunday',
+            //     month: 'September',
+            //     year: '2023',
+            //     times: [
+            //         '04:15 pm - 05:15 pm',
+            //         '06:15 pm - 07:15 pm',
+            //         '08:15 pm - 09:15 pm'
+            //     ],
+            // },
+            // {
+            //     date: '4',
+            //     day: 'Monday',
+            //     month: 'September',
+            //     year: '2023',
+            //     times: [
+            //       '02:15 pm - 04:15 pm',
+            //       '05:15 pm - 06:15 pm',
+            //       '08:15 pm - 09:15 pm'
+            //     ],
+            // },
+            // {
+            //     date: '5',
+            //     day: 'Tuesday',
+            //     month: 'September',
+            //     year: '2023',
+            //     times: [
+            //       '04:15 pm - 05:15 pm',
+            //       '06:15 pm - 07:15 pm',
+            //       '08:15 pm - 09:15 pm'
+            //     ],
+            // },
+            // {
+            //     date: '6',
+            //     day: 'Wednesday',
+            //     month: 'September',
+            //     year: '2023',
+            //     times: [
+            //       '04:15 pm - 05:15 pm',
+            //       '06:15 pm - 07:15 pm',
+            //       '08:15 pm - 09:15 pm'
+            //     ],
+            // },
         ];
 
         function updateCalendar() {
@@ -231,15 +207,27 @@
             // Start Code Show Days And Month And Year In Calender
             const monthSelect = document.getElementById("monthSelect");
             const optionMonthSelect = document.querySelectorAll(".monthSelect option");
+            const optionYearSelect = document.querySelectorAll(".yearSelect option");
             const currentDate = new Date();
             const currentMonth = currentDate.getMonth();
+            const currentYear = currentDate.getFullYear();
 
+            // Automatically select the month
             optionMonthSelect.forEach(item => {
                 if (item.value === currentMonth.toString()) {
                     item.setAttribute("selected", "selected");
                     item.style.setProperty("display","block","important");
                 } 
             });
+
+              // Automatically select the Year
+            optionYearSelect.forEach(item => {
+                if (item.value === currentYear.toString()) {
+                    item.setAttribute("selected", "selected");
+                    item.style.setProperty("display","block","important");
+                } 
+            });
+
 
             const selectedMonth = parseInt(monthSelect.value);
             const selectedYear = parseInt(yearSelect.value);
@@ -293,25 +281,30 @@
                  });
              }
            // End Function Code All Function
-           
-
     }
 
       // Start Function Code All Function
       function allFunctionsCalender(){
-            //  Add Class active ==> calendar-day
-       let activeDay = null;
-       calendarDays.querySelectorAll('.calendar-day').forEach((day) => {
-           day.addEventListener('click', function () {
-               if (activeDay) {
-                   activeDay.classList.remove('active');
-               }                
-               activeDay = day;                
-               activeDay.classList.add('active');                
-           });
-       });
+        const currentDate = new Date();
+        const currentDay = currentDate.getDate();
+        const calendarDays = document.querySelectorAll('.calendar-day');
+        calendarDays.forEach((day) => {
+            const dayNumber = parseInt(day.textContent); 
+            if (dayNumber === currentDay) {
+                day.classList.add('active');
+            }
 
-       // ==================================================
+            day.addEventListener('click', function () {
+                const activeDay = document.querySelector('.calendar-day.active');
+                if (activeDay) {
+                    activeDay.classList.remove('active');
+                }
+                day.classList.add('active');
+            });
+        });
+                
+// ==================================================
+// ==================================================
 
        // Get day and date function when pressing a specific day 
        const childCalendarDay = document.querySelectorAll('.calendar-day');
@@ -321,19 +314,28 @@
                const dayValue = day.getAttribute('data-day');
                const month = day.getAttribute('data-month');
                const year = day.getAttribute('data-year');
-               console.log(date + "-" + dayValue + "-" + month + "-" + year);      
-               handleCalendarDayClick(date, dayValue, month, year);
+            //    console.log("the array : " , reservations);     
+               handleCalendarDayClick();
+               displayReservationsForNextDays();
            });
        });
 
        // A function that displays reservations 
-       function handleCalendarDayClick(date, dayValue, month, year) {
-           selectedDate = {date, dayValue, month, year};
-           console.log(selectedDate.date + "-" + selectedDate.dayValue + "-" + selectedDate.month + "-" + selectedDate.year);      
+       function handleCalendarDayClick() {
+        //    selectedDate = {date, dayValue, month, year};
+        const activeCalendarDay = document.querySelector('.calendar-day.active');
+        const date = activeCalendarDay.getAttribute('data-date');
+        const dayValue = activeCalendarDay.getAttribute('data-day');
+        const month = activeCalendarDay.getAttribute('data-month');
+        const year = activeCalendarDay.getAttribute('data-year');
+
+
+        //    console.log(date + "-" + dayValue + "-" + month + "-" + year);      
 
            const selectTimesContainer = document.querySelector('.itemsAddTimes.selectTimes');
            const showItemsWithDayContainer = document.querySelector('.itemsTimes.showItemsWithDay');
            const parentItemBookingDays = document.querySelector('.parentItemBookingDays');
+           const titleAllTime = document.querySelector('.titleAllTime');
            const divNoAnyTimes = document.querySelector('.divNoAnyTimes');
 
            var addedTimesCount = selectTimesContainer.querySelectorAll('.itemTime').length;
@@ -344,10 +346,10 @@
 
            const reservationsForDate = reservations.find((reservation) => {
                return (
-                   reservation.date === selectedDate.date &&
-                   reservation.day === selectedDate.dayValue &&
-                   reservation.month === selectedDate.month &&
-                   reservation.year === selectedDate.year
+                   reservation.date === date &&
+                   reservation.day === dayValue &&
+                   reservation.month === month &&
+                   reservation.year === year
                );
            });
 
@@ -380,6 +382,9 @@
                        selectTimesContainer.appendChild(timeItem);
                        showItemsWithDayContainer.appendChild(timeItemClone);
 
+                       const fullDateTitle = document.querySelector('.itemBookingDays h6');
+                       fullDateTitle.textContent = date + ' - ' + month + ' - ' + year;
+
                        var dayTitle = document.querySelector('.itemBookingDays h5');
                        if (dayTitle) {
                            dayTitle.textContent = dayValue;
@@ -405,75 +410,94 @@
                parentItemBookingDays.style.setProperty("display" , "none" , "important");
                divNoAnyTimes.style.setProperty("display" , "block" , "important");
            }
+
+           //    Show All Booking Times
+           const showAllParentItemBookingDays = document.querySelectorAll('.showAllParentItemBookingDays');
+
+           if (showAllParentItemBookingDays.length > 0) {
+               if (reservations.length > 0) {
+                   showAllParentItemBookingDays.forEach(element => {
+                       element.style.setProperty("display", "block", "important");
+                   });
+               } else {
+                   showAllParentItemBookingDays.forEach(element => {
+                       element.style.setProperty("display", "none", "important");
+                   });
+               }
+           }
+           
+        
        }
+
+       displayReservationsForNextDays();
+       handleCalendarDayClick();
 
        // A function for the deletion of the reservation itself 
        function handleTimeDeletion(timeItem, timeItemClone, timeText) {
-           const selectTimesContainer = document.querySelector('.itemsAddTimes.selectTimes');
-           const showItemsWithDayContainer = document.querySelector('.itemsTimes.showItemsWithDay');
-
-           console.log("Deleted time:", timeText);
-       
-           selectTimesContainer.removeChild(timeItem);
-           showItemsWithDayContainer.removeChild(timeItemClone);
-       
-        //    reservations.forEach((reservation) => {
-        //        if ( reservation.date === selectedDate.date &&
-        //            reservation.day === selectedDate.dayValue &&
-        //            reservation.month === selectedDate.month &&
-        //            reservation.year === selectedDate.year
-        //        ) {
-        //            reservation.times = reservation.times.filter((time) => time !== timeText);
-        //        }
-        //    });
-
-           if (selectedDate !== null) {
-            reservations.forEach((reservation) => {
+        const selectTimesContainer = document.querySelector('.itemsAddTimes.selectTimes');
+        const showItemsWithDayContainer = document.querySelector('.itemsTimes.showItemsWithDay');
+        const activeCalendarDay = document.querySelector('.calendar-day.active');
+        const date = activeCalendarDay.getAttribute('data-date');
+        const dayValue = activeCalendarDay.getAttribute('data-day');
+        const month = activeCalendarDay.getAttribute('data-month');
+        const year = activeCalendarDay.getAttribute('data-year');
+        selectedDate = { date, dayValue, month, year };
+    
+        // console.log("Deleted time:", timeText);
+        selectTimesContainer.removeChild(timeItem);
+        showItemsWithDayContainer.removeChild(timeItemClone);
+    
+        if (selectedDate !== null) {
+            reservations.forEach((reservation, index) => {
                 if (
-                    reservation.date === selectedDate.date &&
-                    reservation.day === selectedDate.dayValue &&
-                    reservation.month === selectedDate.month &&
-                    reservation.year === selectedDate.year
+                    reservation.date === date &&
+                    reservation.day === dayValue &&
+                    reservation.month === month &&
+                    reservation.year === year
                 ) {
                     reservation.times = reservation.times.filter((time) => time !== timeText);
+                    // Remove the reservation from the array
+                    if (reservation.times.length === 0) {
+                        reservations.splice(index, 1);
+                    }
                 }
             });
-             }
-        
-       
-           console.log("Updated reservations:", reservations);
-       
-           const reservationsForDate = reservations.find((reservation) => {
-               return (
-                   reservation.date === selectedDate.date &&
-                   reservation.day === selectedDate.dayValue &&
-                   reservation.month === selectedDate.month &&
-                   reservation.year === selectedDate.year
-               );
-           });
-
-           
-           if (reservationsForDate) {
-               const remainingReservationsCounts = reservationsForDate.times.map((time) => {
-                   return reservations.filter((reservation) =>
-                       reservation.date === selectedDate.date &&
-                       reservation.day === selectedDate.dayValue &&
-                       reservation.month === selectedDate.month &&
-                       reservation.year === selectedDate.year &&
-                       reservation.times.includes(time)
-                   ).length;
-               });
-
-               console.log(remainingReservationsCounts.length);
-
-               if (remainingReservationsCounts.length < 1) {
-                   const parentItemBookingDays = document.querySelector('.parentItemBookingDays');
-                   parentItemBookingDays.style.setProperty("display" , "none" , "important");
-               }
-           }
-
-       }
-
+        }
+    
+        // console.log("Updated reservations:", reservations);
+    
+        const reservationsForDate = reservations.find((reservation) => {
+            return (
+                reservation.date === date &&
+                reservation.day === dayValue &&
+                reservation.month === month &&
+                reservation.year === year
+            );
+        });
+    
+        if (reservationsForDate) {
+            const remainingReservationsCounts = reservationsForDate.times.map((time) => {
+                return reservations.filter((reservation) =>
+                    reservation.date === date &&
+                    reservation.day === dayValue &&
+                    reservation.month === month &&
+                    reservation.year === year &&
+                    reservation.times.includes(time)
+                ).length;
+            });
+    
+            // console.log(remainingReservationsCounts.length);
+    
+            if (remainingReservationsCounts.length < 1) {
+                const parentItemBookingDays = document.querySelector('.parentItemBookingDays');
+                parentItemBookingDays.style.setProperty("display", "none", "important");
+                titleAllTime.style.setProperty("display", "none", "important");
+            }
+        }
+        handleCalendarDayClick();
+        displayReservationsForNextDays();
+      }
+    
        // function to take from the form the hour, the minute and the time in the morning or in the evening
        function convertTo12Hour(time) {
            let hour = time.split(':')[0];
@@ -501,11 +525,9 @@
                successMessage.style.display = 'none';
            }, 2000);
        }
-       
-       
+         
        // A function that adds reservations through the model
         let isAlertDisplayed = false;
-
         document.querySelector('.addTimesDayModal .submitAddTime').addEventListener('click', function(event) {
             event.preventDefault();
         
@@ -565,58 +587,53 @@
         
                 document.getElementById('numberFrom').value = '';
                 document.getElementById('numberTo').value = '';
-                handleCalendarDayClick(date, dayValue, month, year);
+                handleCalendarDayClick();
+                displayReservationsForNextDays();
             } else {
                 alert('Time must be entered');
             }
         });
-        
-
-    
 
       // A function that deletes all bookings for the specified day
       document.querySelector('.itemTimeDeleteAllTimeDay').addEventListener('click', function(event) {
-       event.preventDefault();
-       
-       const activeCalendarDay = document.querySelector('.calendar-day.active');
-       if (!activeCalendarDay) {
-           alert('Please select a date to delete reservations.');
-           return;
-       }
-
-       const date = activeCalendarDay.getAttribute('data-date');
-       const dayValue = activeCalendarDay.getAttribute('data-day');
-       const month = activeCalendarDay.getAttribute('data-month');
-       const year = activeCalendarDay.getAttribute('data-year');
-
-       const reservationsForDate = reservations.filter((reservation) => {
-           return (
-               reservation.date === date &&
-               reservation.day === dayValue &&
-               reservation.month === month &&
-               reservation.year === year
-           );
-       });
-   
-       if (reservationsForDate.length === 0) {
-           alert('There are no reservations for the selected date.');
-           return;
-       }
-       else{
-           reservations = reservations.filter((reservation) => {
-               return (
-                   reservation.date !== date ||
-                   reservation.day !== dayValue ||
-                   reservation.month !== month ||
-                   reservation.year !== year
-               );
-           });
-       }
+        event.preventDefault();
         
-       handleCalendarDayClick(date , dayValue , month , year);
-
-       console.log('All reservations for the selected date have been deleted : ' , reservations );
-       });
+        const activeCalendarDay = document.querySelector('.calendar-day.active');
+        if (!activeCalendarDay) {
+            alert('Please select a date to delete reservations.');
+            return;
+        }
+    
+        const date = activeCalendarDay.getAttribute('data-date');
+        const dayValue = activeCalendarDay.getAttribute('data-day');
+        const month = activeCalendarDay.getAttribute('data-month');
+        const year = activeCalendarDay.getAttribute('data-year');
+    
+        let indexToDelete = -1;
+        for (let i = 0; i < reservations.length; i++) {
+            const reservation = reservations[i];
+            if (
+                reservation.date === date &&
+                reservation.day === dayValue &&
+                reservation.month === month &&
+                reservation.year === year
+            ) {
+                indexToDelete = i;
+                break;
+            }
+        }
+    
+        if (indexToDelete !== -1) {
+            reservations.splice(indexToDelete, 1);
+            displayReservationsForNextDays();
+        } else {
+            alert('There are no reservations for the selected date.');
+        }
+        
+        handleCalendarDayClick();
+    
+      });
+    
 
        // Modify booking timing 
        function updateReservationTime(oldTime) {
@@ -652,7 +669,7 @@
                var numberToValue = convertTo12Hour(document.getElementById('newTimeTo').value);
                const editTimeModal = document.getElementById('editTimeModal');
                e.preventDefault();
-               console.log(newTimeFromInput , newTimeToInput);
+            //    console.log(newTimeFromInput , newTimeToInput);
 
                if (newTimeFromInput.trim() === '' || newTimeToInput.trim() === '') {
                    alert('Time must be entered');
@@ -661,7 +678,7 @@
                else{
                    const newTimeFrom = newTimeFromInput;
                    const newTimeTo = newTimeToInput;
-                   console.log(numberFromValue , numberToValue);
+                //    console.log(numberFromValue , numberToValue);
                
                    // Update booking time in matrix
                    if (index !== -1) {
@@ -675,20 +692,148 @@
                        showAlert('Success : ', 'Modified successfully ')
                    }
 
-                   handleCalendarDayClick(date, dayValue, month, year);
+                   handleCalendarDayClick();
+                   displayReservationsForNextDays();
                    $('#editTimeModal').modal('hide');
                }           
            });
            
        }
-      
-    }
+
+        //  View all bookings 
+        function displayReservationsForNextDays() {
+            const showAllBookingTimes = document.querySelector('.showAllBookingTimes');
+            const activeCalendarDay = document.querySelector('.calendar-day.active');
+            const date = activeCalendarDay.getAttribute('data-date');
+            const dayValue = activeCalendarDay.getAttribute('data-day');
+            const month = activeCalendarDay.getAttribute('data-month');
+            const year = activeCalendarDay.getAttribute('data-year');
+
+           const titleAllTime = document.querySelector('.titleAllTime');
+        
+             //نسخة من المصفوفة
+            const copyReservations = reservations.slice(0);
+
+            filteredReservations = copyReservations.filter(reservation =>
+                reservation.date !== date || reservation.day !== dayValue || reservation.month !== month || reservation.year !== year
+            );
+
+            filteredReservations.sort((a, b) => {
+                const dateA = new Date(`${a.year}-${a.month}-${a.date}`);
+                const dateB = new Date(`${b.year}-${b.month}-${b.date}`);
+                return dateA - dateB;
+            });
+
+            if (filteredReservations.length > 0) {
+                titleAllTime.style.setProperty("display" , "block" , "important");
+            }else{
+                titleAllTime.style.setProperty("display" , "none" , "important");
+            }
+        
+            const fragment = document.createDocumentFragment();
+            
+            // console.log("===========>" , filteredReservations);
+          
+            filteredReservations.forEach(reservation => {
+                const reservationsContainer = document.createElement('div');
+                reservationsContainer.className = 'col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-3 text-center col_AllTimeInDay';
+        
+                const parentItemBookingDays = document.createElement('div');
+                parentItemBookingDays.className = 'itemBookingDays pb-4 pt-3 parentItemBookingDays showAllParentItemBookingDays';
+        
+                const reservationsList = document.createElement('div');
+                reservationsList.className = 'itemsTimes showItemsWithDay d-flex justify-content-around flex-wrap align-items-center';
+        
+                const fullDateTitle = document.createElement('h6');
+                fullDateTitle.className = 'clr_black fw-bold mb-3';
+                fullDateTitle.textContent = `${reservation.date} - ${reservation.month} - ${reservation.year}`;
+        
+                const dayTitle = document.createElement('h5');
+                dayTitle.className = 'clr_basic fw-bold mb-3';
+                dayTitle.textContent = reservation.day;
+        
+                parentItemBookingDays.appendChild(fullDateTitle);
+                // console.log("the array : " , reservations);
+        
+                if (Array.isArray(reservation.times) && reservation.times.length > 0) {
+                    reservation.times.forEach(time => {
+                        const reservationsItemTime = document.createElement('div');
+                        reservationsItemTime.className = 'itemTime';
+                        const spanTime = document.createElement('span');
+                        reservationsItemTime.appendChild(spanTime);
+                        spanTime.textContent = time;
+                        reservationsList.appendChild(reservationsItemTime);
+                    });
+                } else {
+
+                    parentItemBookingDays.style.setProperty("display" , "none" , "important");
+                    fullDateTitle.remove();
+                    dayTitle.remove();
+                }
+        
+                parentItemBookingDays.appendChild(dayTitle);
+                parentItemBookingDays.appendChild(reservationsList);
+                reservationsContainer.appendChild(parentItemBookingDays);        
+                fragment.appendChild(reservationsContainer);        
+            });
+        
+            showAllBookingTimes.innerHTML = '';
+            showAllBookingTimes.appendChild(fragment);        
+            handleCalendarDayClick();
+        }
+        
+        
+      }
+
+
     // End Function Code All Function
         monthSelect.addEventListener("change", updateCalendar);
         yearSelect.addEventListener("change", updateCalendar);
         updateCalendar(); 
     });
 // <!-- end Code Add Time in Div Select time -->
+
+// ================================================================================
+// ================================================================================
+
+    // Start Code Ingredient
+    const addButtons = document.querySelectorAll('.addIngredient');
+    const deleteButtons = document.querySelectorAll('.deleteIngredient');
+    const formInputs = document.querySelector('.parentAllInputs');
+
+    addButtons.forEach((addButton) => {
+        addButton.addEventListener('click', function () {
+            const nameInput = document.getElementById('nameIngredient').cloneNode(true);
+            const quantityInput = document.getElementById('valueNameIngredient').cloneNode(true);
+            nameInput.value = '';
+            quantityInput.value = '';
+
+            const divInputName = document.createElement('div');
+            divInputName.className = 'col-lg-7 col-lg-7 col-md-7 col-sm-12 col-12 form-outline mb-3';
+            const divInputQuantity = document.createElement('div');
+            divInputQuantity.className = 'col-lg-4 col-lg-4 col-md-4 col-sm-12 col-12 form-outline mb-3';
+            
+            divInputName.appendChild(nameInput);
+            divInputQuantity.appendChild(quantityInput);
+            
+            const divIconAdd = document.createElement('div');
+            divIconAdd.className = 'col-lg-1 col-lg-1 col-md-1 col-sm-12 col-12 px-0 mb-2 divIconAdd';
+            const deleteButton = document.createElement('i');
+            deleteButton.className = 'ri-delete-bin-fill clr_basic h2 pt-2 deleteIngredient';
+            divIconAdd.appendChild(deleteButton);
+
+            formInputs.appendChild(divInputName);
+            formInputs.appendChild(divInputQuantity);
+            formInputs.appendChild(divIconAdd);
+
+            deleteButton.addEventListener('click', function () {
+                formInputs.removeChild(divInputName); 
+                formInputs.removeChild(divInputQuantity); 
+                formInputs.removeChild(divIconAdd); 
+            });
+        });
+    });
+    // End Code Ingredient
 
 // ================================================================================
 // ================================================================================
