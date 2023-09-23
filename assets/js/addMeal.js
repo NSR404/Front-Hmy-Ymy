@@ -45,46 +45,52 @@
         var reader = new FileReader();
 
         reader.onload = function (event) {
-        var img = document.createElement('img');
-        var deleteIcon = document.createElement('span');
+            var img = document.createElement('img');
+            var deleteIcon = document.createElement('span');
 
-        img.src = event.target.result;
-        img.alt = 'Uploaded Image';
-        img.style.maxWidth = '100%';
-        img.style.height = '100%';
-        img.style.borderRadius = '3px';
-        img.classList.remove('d-none');
+            img.src = event.target.result;
+            img.alt = 'Uploaded Image';
+            img.style.maxWidth = '100%';
+            img.style.height = '100%';
+            img.style.borderRadius = '3px';
+            img.classList.remove('d-none');
 
-        deleteIcon.innerHTML = '<i class="ri-delete-bin-line h4"></i>';
-        deleteIcon.className = 'delete-icon';
+            deleteIcon.innerHTML = '<i class="ri-delete-bin-line h6"></i>';
+            deleteIcon.className = 'delete-icon';
 
-        var imageContainer = document.createElement('div');
-        imageContainer.className = 'col-lg-4 col-md-4 col-sm-6 col-6 px-1 my-2';
-        imageContainer.appendChild(deleteIcon);
-        imageContainer.appendChild(img);
+            var imageContainer = document.createElement('div');
+            imageContainer.className = 'col-lg-4 col-md-4 col-sm-4 col-6 px-1 my-2';
+            var imageContainer2 = document.createElement('div');
+            imageContainer2.className = 'col-lg-3 col-md-3 col-sm-4 col-6 px-1 my-2';
+            imageContainer.appendChild(deleteIcon);
+            imageContainer.appendChild(img);
 
-        if (images1.length < 3) {
-                images1.push(imageContainer);
-                imgContainer1.innerHTML = '';
-                images1.forEach(function (image) {
-                imgContainer1.appendChild(image);
-                });
-        } else {
-                images2.push(imageContainer);
-                imgContainer2.innerHTML = '';
-                images2.forEach(function (image) {
-                imgContainer2.appendChild(image);
-                });
-        }
+            if (images1.length < 3) {
+                        images1.push(imageContainer);
+                        imgContainer1.innerHTML = '';
+                        images1.forEach(function (image) {
+                        imgContainer1.appendChild(image);
+                    });
+            } else {
+                    imageContainer2.appendChild(deleteIcon);
+                    imageContainer2.appendChild(img);
+                    images2.push(imageContainer2);
+                    imgContainer2.innerHTML = '';
+                    images2.forEach(function (image) {
+                    imgContainer2.appendChild(image);
+                    });
+            }
+            
+            deleteIcon.addEventListener('click', function () {
+                    imageContainer.remove();
+                    imageContainer2.remove();
+                    if (images1.includes(imageContainer)) {
+                    images1.splice(images1.indexOf(imageContainer), 1);
+                    } else if (images2.includes(imageContainer)) {
+                    images2.splice(images2.indexOf(imageContainer), 1);
+                    }
+            });
         
-        deleteIcon.addEventListener('click', function () {
-                imageContainer.remove();
-                if (images1.includes(imageContainer)) {
-                images1.splice(images1.indexOf(imageContainer), 1);
-                } else if (images2.includes(imageContainer)) {
-                images2.splice(images2.indexOf(imageContainer), 1);
-                }
-        });
         };
 
         reader.readAsDataURL(file);

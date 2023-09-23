@@ -4681,6 +4681,13 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
     margin-top: 29px;
   }
 
+  @media (max-width:767px) {
+    .addMeal_sec .uploadedMultiImage{
+        max-height: 110px!important;
+        min-height: 110px!important;
+    }
+  }
+
   .addMeal_sec .uploadedMultiImage img{
     position: relative;
   }
@@ -4696,6 +4703,10 @@ html[lang="ar"] .sidebar_sec.sidbarProvider .ul_listPage li a{
     background: var(--basicColor);
     padding: 1px 3px;
     border-radius: 5px;
+  }
+
+  .uploadedMultiImageRow2 img{
+    max-height: 115px!important;
   }
 
 .addMeal_sec .lableImgMeal{
